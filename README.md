@@ -1,8 +1,8 @@
 # Ingénierie des Modèles et Langages Spécifiques aux Domaines
 
-## Internal DSL
+## DSL interne
 
-Langage utilisé : **Groovy**
+Langage utilisé : **Java**
 
 ### Scénarios basiques
 
@@ -11,7 +11,7 @@ Langage utilisé : **Groovy**
 - [ ] Scénario 3
 - [ ] Scénario 4
 
-### Scénarios complexes
+### Scénarios avancés
 
 - *Specifying Execution Frequency*
 - *Remote Communication*
@@ -19,7 +19,7 @@ Langage utilisé : **Groovy**
 - *Supporting the LCD screen*
 - *Handling Analogical Bricks*
 
-## External DSL
+## DSL externe
 
 Langage utilisé : **MPS**
 
@@ -30,7 +30,7 @@ Langage utilisé : **MPS**
 - [ ] Scénario 3
 - [ ] Scénario 4
 
-### Scénarios complexes
+### Scénarios avancés
 
 - *Specifying Execution Frequency*
 - *Remote Communication*
