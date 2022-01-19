@@ -621,7 +621,7 @@
             <uo k="s:originTrace" v="n:6833034162690814837" />
           </node>
           <node concept="Xl_RD" id="2I" role="37wK5m">
-            <property role="Xl_RC" value="high" />
+            <property role="Xl_RC" value="HIGH" />
             <uo k="s:originTrace" v="n:6833034162690814837" />
           </node>
           <node concept="1adDum" id="2J" role="37wK5m">
@@ -656,7 +656,7 @@
             <uo k="s:originTrace" v="n:6833034162690814837" />
           </node>
           <node concept="Xl_RD" id="2Q" role="37wK5m">
-            <property role="Xl_RC" value="low" />
+            <property role="Xl_RC" value="LOW" />
             <uo k="s:originTrace" v="n:6833034162690814837" />
           </node>
           <node concept="1adDum" id="2R" role="37wK5m">

@@ -200,5 +200,11 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="12wGZMgNwHi">
+    <ref role="1M2myG" to="hs33:5VjO5SPiRdV" resolve="Action" />
+    <node concept="EnEH3" id="12wGZMgNwHj" role="1MhHOB">
+      <ref role="EomxK" to="hs33:5VjO5SPiRdX" resolve="signal" />
+    </node>
+  </node>
 </model>
 

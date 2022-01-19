@@ -39,6 +39,7 @@ public class App_TextGen extends TextGenDescriptorBase {
         tgs.append("void state_");
         tgs.append(SPropertyOperations.getString(it, PROPS.name$MnvL));
         tgs.append("();");
+        tgs.newLine();
       }
     });
     tgs.newLine();
@@ -58,6 +59,9 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.append("// Declaring states");
     tgs.newLine();
+    tgs.append("long time = 0; long debounce = 1000;             // Debouncing mechanism initialisation");
+    tgs.newLine();
+    tgs.newLine();
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$obL6);
       final SNode lastItem = Sequence.fromIterable(collection).last();
@@ -74,8 +78,6 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.append("{");
     tgs.newLine();
-    tgs.newLine();
-    tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actuators$oc07)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
@@ -83,12 +85,13 @@ public class App_TextGen extends TextGenDescriptorBase {
         tgs.append("pinMode(");
         tgs.append(SPropertyOperations.getString(it, PROPS.name$MnvL));
         tgs.append(", ");
-        tgs.append("OUTPUT");
+        tgs.append("OUTPUT);");
         tgs.newLine();
       }
     });
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");
+    tgs.newLine();
     tgs.newLine();
     tgs.append("int main(void)");
     tgs.newLine();

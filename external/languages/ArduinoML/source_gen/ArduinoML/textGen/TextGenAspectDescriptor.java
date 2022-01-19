@@ -23,10 +23,14 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
   @Override
   public TextGenDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
     switch (myIndex.index(concept)) {
+      case LanguageConceptSwitch.Action:
+        return new Action_TextGen();
       case LanguageConceptSwitch.Actuator:
         return new Actuator_TextGen();
       case LanguageConceptSwitch.App:
         return new App_TextGen();
+      case LanguageConceptSwitch.State:
+        return new State_TextGen();
     }
     return null;
   }
@@ -43,10 +47,10 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
     }
   }
   private static String getFileName_App(SNode node) {
-    return node.getName();
+    return "main";
   }
   private static String getFileExtension_App(SNode node) {
-    return null;
+    return "c";
   }
 
   private static final class CONCEPTS {

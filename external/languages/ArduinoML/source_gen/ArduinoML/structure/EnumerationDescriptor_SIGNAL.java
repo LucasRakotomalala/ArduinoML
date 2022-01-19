@@ -15,8 +15,8 @@ public class EnumerationDescriptor_SIGNAL extends EnumerationDescriptorBase {
     super(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7375L, "SIGNAL", "r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814837");
   }
 
-  private final EnumerationDescriptor.MemberDescriptor myMember_HIGH_0 = new EnumerationDescriptor.MemberDescriptor("HIGH", "high", 0x5ed3d05e354b7376L, "r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814838");
-  private final EnumerationDescriptor.MemberDescriptor myMember_LOW_0 = new EnumerationDescriptor.MemberDescriptor("LOW", "low", 0x5ed3d05e354b7377L, "r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814839");
+  private final EnumerationDescriptor.MemberDescriptor myMember_HIGH_0 = new EnumerationDescriptor.MemberDescriptor("HIGH", "HIGH", 0x5ed3d05e354b7376L, "r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814838");
+  private final EnumerationDescriptor.MemberDescriptor myMember_LOW_0 = new EnumerationDescriptor.MemberDescriptor("LOW", "LOW", 0x5ed3d05e354b7377L, "r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814839");
 
   private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7375L, 0x5ed3d05e354b7376L, 0x5ed3d05e354b7377L);
   private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_HIGH_0, myMember_LOW_0);

@@ -12,7 +12,6 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
         <property id="1421157252384165432" name="memberId" index="3tVfz5" />
-        <property id="672037151186491528" name="presentation" index="1L1pqM" />
       </concept>
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
         <reference id="1075010451642646892" name="defaultMember" index="1H5jkz" />
@@ -127,12 +126,10 @@
     <node concept="25R33" id="5VjO5SPiRdQ" role="25R1y">
       <property role="3tVfz5" value="6833034162690814838" />
       <property role="TrG5h" value="HIGH" />
-      <property role="1L1pqM" value="high" />
     </node>
     <node concept="25R33" id="5VjO5SPiRdR" role="25R1y">
       <property role="3tVfz5" value="6833034162690814839" />
       <property role="TrG5h" value="LOW" />
-      <property role="1L1pqM" value="low" />
     </node>
   </node>
   <node concept="1TIwiD" id="5VjO5SPiRdV">
