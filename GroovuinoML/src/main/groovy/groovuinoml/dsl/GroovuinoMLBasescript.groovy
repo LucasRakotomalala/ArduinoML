@@ -3,6 +3,7 @@ package main.groovy.groovuinoml.dsl
 import java.util.List;
 
 import io.github.mosser.arduinoml.kernel.behavioral.Action
+import io.github.mosser.arduinoml.kernel.behavioral.Condition
 import io.github.mosser.arduinoml.kernel.behavioral.State
 import io.github.mosser.arduinoml.kernel.structural.Actuator
 import io.github.mosser.arduinoml.kernel.structural.Sensor
@@ -45,6 +46,19 @@ abstract class GroovuinoMLBasescript extends Script {
 	
 	// from state1 to state2 when sensor becomes signal
 	def from(state1) {
+		List<Condition> conditions = new ArrayList<Condition>()
+		def closure
+
+		closure = { sensor -> 
+			[becomes: { signal ->
+				Condition condition = new Condition()
+				condition.setSensor(sensor instanceof String ? (Sensor)((GroovuinoMLBinding)this.getBinding()).getVariable(sensor) : (Sensor)sensor)
+				condition.setValue(signal instanceof String ? (SIGNAL)((GroovuinoMLBinding)this.getBinding()).getVariable(signal) : (SIGNAL)signal)
+				conditions.add(condition)
+				[and: closure]
+			}]
+		}
+
 		[to: { state2 -> 
 			[when: { sensor ->
 				[becomes: { signal -> 
