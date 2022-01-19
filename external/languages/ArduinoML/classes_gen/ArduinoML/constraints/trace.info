@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="13,0,31,0" name="ArduinoML.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:e90df988-a5b6-4ac0-90fc-0b742fc0a0bf(ArduinoML.constraints)/6833034162691020755">
+    <file name="Actuator_Constraints.java">
+      <node id="6833034162691020755" at="26,33,27,32" concept="8" />
+      <node id="6833034162691020756" at="31,58,32,59" concept="8" />
+      <node id="6833034162691020756" at="35,109,36,100" concept="4" />
+      <node id="6833034162691020756" at="37,53,38,150" concept="1" />
+      <node id="6833034162691020756" at="39,7,40,20" concept="5" />
+      <node id="6833034162691021175" at="42,82,43,55" concept="5" />
+      <node id="6833034162691032385" at="47,59,48,60" concept="8" />
+      <node id="6833034162691032385" at="51,109,52,99" concept="4" />
+      <node id="6833034162691032385" at="53,53,54,150" concept="1" />
+      <node id="6833034162691032385" at="55,7,56,20" concept="5" />
+      <node id="6833034162691059712" at="60,41,61,99" concept="5" />
+      <node id="6833034162691020755" at="67,84,68,119" concept="4" />
+      <node id="6833034162691020756" at="68,119,69,59" concept="1" />
+      <node id="6833034162691032385" at="69,59,70,61" concept="1" />
+      <node id="6833034162691020755" at="70,61,71,22" concept="5" />
+      <node id="6833034162691020755" at="75,0,76,0" concept="6" trace="Actuator$cY" />
+      <node id="6833034162691020755" at="76,0,77,0" concept="6" trace="App$c0" />
+      <node id="6833034162691020755" at="80,0,81,0" concept="6" trace="pin$Dk9K" />
+      <node id="6833034162691020755" at="81,0,82,0" concept="6" trace="name$MnvL" />
+      <node id="6833034162691020755" at="85,0,86,0" concept="6" trace="states$obL6" />
+      <node id="6833034162691020755" at="26,0,29,0" concept="0" trace="Actuator_Constraints#()V" />
+      <node id="6833034162691020756" at="31,0,34,0" concept="0" trace="Pin_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="6833034162691020756" at="36,100,39,7" concept="2" />
+      <node id="6833034162691020756" at="42,0,45,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;I)Z" />
+      <node id="6833034162691032385" at="47,0,50,0" concept="0" trace="Name_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="6833034162691032385" at="52,99,55,7" concept="2" />
+      <node id="6833034162691059262" at="60,0,63,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="6833034162691032854" at="58,91,63,22" concept="5" />
+      <node id="6833034162691032385" at="58,0,65,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="6833034162691020755" at="66,0,73,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="6833034162691020756" at="34,0,42,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <node id="6833034162691032385" at="50,0,58,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <scope id="6833034162691020755" at="26,33,27,32" />
+      <scope id="6833034162691020756" at="31,58,32,59" />
+      <scope id="6833034162691020756" at="37,53,38,150" />
+      <scope id="6833034162691020881" at="42,82,43,55" />
+      <scope id="6833034162691032385" at="47,59,48,60" />
+      <scope id="6833034162691032385" at="53,53,54,150" />
+      <scope id="6833034162691059263" at="60,41,61,99" />
+      <scope id="6833034162691020755" at="26,0,29,0" />
+      <scope id="6833034162691020756" at="31,0,34,0">
+        <var name="container" id="6833034162691020756" />
+      </scope>
+      <scope id="6833034162691020756" at="42,0,45,0">
+        <var name="node" id="6833034162691020756" />
+        <var name="propertyValue" id="6833034162691020756" />
+      </scope>
+      <scope id="6833034162691032385" at="47,0,50,0">
+        <var name="container" id="6833034162691032385" />
+      </scope>
+      <scope id="6833034162691059262" at="60,0,63,0">
+        <var name="it" id="6833034162691059262" />
+      </scope>
+      <scope id="6833034162691020755" at="67,84,71,22">
+        <var name="properties" id="6833034162691020755" />
+      </scope>
+      <scope id="6833034162691020756" at="35,109,40,20">
+        <var name="result" id="6833034162691020756" />
+      </scope>
+      <scope id="6833034162691032385" at="51,109,56,20">
+        <var name="result" id="6833034162691032385" />
+      </scope>
+      <scope id="6833034162691032519" at="58,91,63,22" />
+      <scope id="6833034162691032385" at="58,0,65,0">
+        <var name="node" id="6833034162691032385" />
+        <var name="propertyValue" id="6833034162691032385" />
+      </scope>
+      <scope id="6833034162691020755" at="66,0,73,0" />
+      <scope id="6833034162691020756" at="34,0,42,0">
+        <var name="checkingNodeContext" id="6833034162691020756" />
+        <var name="node" id="6833034162691020756" />
+        <var name="propertyValue" id="6833034162691020756" />
+      </scope>
+      <scope id="6833034162691032385" at="50,0,58,0">
+        <var name="checkingNodeContext" id="6833034162691032385" />
+        <var name="node" id="6833034162691032385" />
+        <var name="propertyValue" id="6833034162691032385" />
+      </scope>
+      <unit id="6833034162691020755" at="84,0,87,0" name="ArduinoML.constraints.Actuator_Constraints$LINKS" />
+      <unit id="6833034162691059262" at="59,165,63,7" name="ArduinoML.constraints.Actuator_Constraints$Name_Property$1" />
+      <unit id="6833034162691020755" at="74,0,78,0" name="ArduinoML.constraints.Actuator_Constraints$CONCEPTS" />
+      <unit id="6833034162691020755" at="79,0,83,0" name="ArduinoML.constraints.Actuator_Constraints$PROPS" />
+      <unit id="6833034162691020756" at="30,0,46,0" name="ArduinoML.constraints.Actuator_Constraints$Pin_Property" />
+      <unit id="6833034162691032385" at="46,0,66,0" name="ArduinoML.constraints.Actuator_Constraints$Name_Property" />
+      <unit id="6833034162691020755" at="25,0,88,0" name="ArduinoML.constraints.Actuator_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:e90df988-a5b6-4ac0-90fc-0b742fc0a0bf(ArduinoML.constraints)/6833034162691130247">
+    <file name="State_Constraints.java">
+      <node id="6833034162691130247" at="18,30,19,29" concept="8" />
+      <node id="6833034162691130248" at="27,56,28,177" concept="5" />
+      <node id="6833034162691130247" at="30,6,31,131" concept="4" />
+      <node id="6833034162691130248" at="31,131,32,42" concept="1" />
+      <node id="6833034162691130247" at="32,42,33,22" concept="5" />
+      <node id="6833034162691130247" at="37,0,38,0" concept="6" trace="State$dW" />
+      <node id="6833034162691130247" at="41,0,42,0" concept="6" trace="next$DjVH" />
+      <node id="6833034162691130247" at="18,0,21,0" concept="0" trace="State_Constraints#()V" />
+      <node id="6833034162691130248" at="25,0,30,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="6833034162691130248" at="23,90,30,6" concept="4" />
+      <node id="6833034162691130247" at="22,0,35,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="6833034162691130247" at="18,30,19,29" />
+      <scope id="6833034162691130248" at="27,56,28,177" />
+      <scope id="6833034162691130247" at="18,0,21,0" />
+      <scope id="6833034162691130248" at="25,0,30,0" />
+      <scope id="6833034162691130247" at="23,90,33,22">
+        <var name="d0" id="6833034162691130248" />
+        <var name="references" id="6833034162691130247" />
+      </scope>
+      <scope id="6833034162691130247" at="22,0,35,0" />
+      <unit id="6833034162691130247" at="36,0,39,0" name="ArduinoML.constraints.State_Constraints$CONCEPTS" />
+      <unit id="6833034162691130247" at="40,0,43,0" name="ArduinoML.constraints.State_Constraints$LINKS" />
+      <unit id="6833034162691130248" at="24,48,30,5" name="ArduinoML.constraints.State_Constraints$1" />
+      <unit id="6833034162691130247" at="17,0,44,0" name="ArduinoML.constraints.State_Constraints" />
+    </file>
+  </root>
+</debug-info>
+
