@@ -23,6 +23,17 @@ abstract class GroovuinoMLBasescript extends Script {
 	def actuator(String name) {
 		[pin: { n -> ((GroovuinoMLBinding)this.getBinding()).getGroovuinoMLModel().createActuator(name, n) }]
 	}
+
+	// lcd "name" bus "n" cols "c" rows "r"
+	def lcd(String name) {
+		[bus: { b -> 
+			[cols: {c -> 
+				[rows: {r ->
+					((GroovuinoMLBinding)this.getBinding()).getGroovuinoMLModel().createActuatorLCD(name, b, c, r)
+				}]
+			}]
+		}]
+	}
 	
 	// state "name" means actuator becomes signal [and actuator becomes signal]*n
 	def state(String name) {

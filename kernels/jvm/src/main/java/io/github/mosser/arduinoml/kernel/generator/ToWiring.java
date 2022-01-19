@@ -25,7 +25,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 		context.put("pass", PASS.ONE);
 		w("// Wiring code generated from an ArduinoML model\n");
 		w(String.format("// Application name: %s\n", app.getName())+"\n");
-
+		w("#include <LiquidCrystal.h> \n")
 		w("long debounce = 200;\n");
 		w("\nenum STATE {");
 		String sep ="";
@@ -67,6 +67,26 @@ public class ToWiring extends Visitor<StringBuffer> {
 		}
 		if(context.get("pass") == PASS.TWO) {
 			w(String.format("  pinMode(%d, OUTPUT); // %s [Actuator]\n", actuator.getPin(), actuator.getName()));
+			return;
+		}
+	}
+
+	@Override
+	public void visit(ActuatorLCD actuator) {
+		if(context.get("pass") == PASS.ONE) {
+			w(String.format("\nLiquidCrystal  %s(",actuator.getName());
+			String separator = ""
+			for(Integer nb: actuator.getPins()){
+				w(String.format("%s%d", separator, nb));
+				separator = ",";
+			}
+			
+			w(String.format(");\n"));
+			return;
+		}
+		if(context.get("pass") == PASS.TWO) {
+			w(String.format("  %s.begin(%d, %d); // %s [ActuatorLCD]\n", 
+				actuator.getName(), actuator.getColumns(), actuator.getRows(), actuator.getName()));
 			return;
 		}
 	}

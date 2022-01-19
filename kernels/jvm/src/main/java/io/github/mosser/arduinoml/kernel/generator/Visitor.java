@@ -17,6 +17,7 @@ public abstract class Visitor<T> {
 	public abstract void visit(Action action);
 
 	public abstract void visit(Actuator actuator);
+	public abstract void visit(ActuatorLCD actuatorLCD);
 	public abstract void visit(Sensor sensor);
 
 
