@@ -1,9 +1,9 @@
 sensor "button" onPin 8
 actuator "led" pin 12
-actuator "son" pin 11
+actuator "sound" pin 11
 
-state "on" means "led" becomes "high" and "son" becomes "high"
-state "off" means "led" becomes "low" and "son" becomes "low"
+state "on" means "led" becomes "high" and "sound" becomes "high"
+state "off" means "led" becomes "low" and "sound" becomes "low"
 
 initial "off"
 
