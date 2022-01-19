@@ -10,7 +10,6 @@ public class Condition implements Visitable {
 	private SIGNAL value;
 	private Sensor sensor;
 
-
 	public SIGNAL getValue() {
 		return value;
 	}
