@@ -2,7 +2,7 @@
 
 ## DSL interne
 
-Langage utilisé : **Java**
+Langage utilisé : **Groovy**
 
 ### Scénarios basiques
 
