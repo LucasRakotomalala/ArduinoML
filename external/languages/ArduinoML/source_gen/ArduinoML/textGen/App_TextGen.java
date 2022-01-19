@@ -93,7 +93,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("}");
     tgs.newLine();
     tgs.newLine();
-    tgs.append("int main(void)");
+    tgs.append("void loop()");
     tgs.newLine();
     tgs.append("{");
     tgs.newLine();

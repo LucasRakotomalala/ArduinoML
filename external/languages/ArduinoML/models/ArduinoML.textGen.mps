@@ -355,7 +355,7 @@
         </node>
         <node concept="lc7rE" id="5VjO5SPkCeM" role="3cqZAp">
           <node concept="la8eA" id="5VjO5SPkCeN" role="lcghm">
-            <property role="lacIc" value="int main(void)" />
+            <property role="lacIc" value="void loop()" />
           </node>
           <node concept="l8MVK" id="5VjO5SPkCeO" role="lcghm" />
           <node concept="la8eA" id="5VjO5SPkZnt" role="lcghm">
@@ -470,7 +470,7 @@
             </node>
           </node>
           <node concept="la8eA" id="12wGZMgMpT1" role="lcghm">
-            <property role="lacIc" value=" {" />
+            <property role="lacIc" value="() {" />
           </node>
           <node concept="l8MVK" id="12wGZMgNshx" role="lcghm" />
         </node>
@@ -488,6 +488,7 @@
                   </node>
                 </node>
               </node>
+              <node concept="l8MVK" id="1og1hEZLpn_" role="lcghm" />
             </node>
             <node concept="lc7rE" id="12wGZMgNT9k" role="3cqZAp">
               <node concept="2BGw6n" id="12wGZMgQSH4" role="lcghm" />
@@ -500,7 +501,7 @@
             <node concept="lc7rE" id="12wGZMgNTCP" role="3cqZAp">
               <node concept="2BGw6n" id="12wGZMgQSHH" role="lcghm" />
               <node concept="la8eA" id="12wGZMgNTDV" role="lcghm">
-                <property role="lacIc" value="if (guard) {      // Go to next state if button pressed AND debounce OK\n    time = millis();                            // update the debounce timer\n    state_off();                                // transition from &quot;on&quot; to &quot;off&quot;\n  } else { \n    state_on();                                 // stay in the very same state\n  }" />
+                <property role="lacIc" value="if (guard) {      // Go to next state if button pressed AND debounce" />
               </node>
               <node concept="l8MVK" id="12wGZMgNTKi" role="lcghm" />
             </node>

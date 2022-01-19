@@ -20,7 +20,7 @@ public class State_TextGen extends TextGenDescriptorBase {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.append("void state_");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
-    tgs.append(" {");
+    tgs.append("() {");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
@@ -34,12 +34,13 @@ public class State_TextGen extends TextGenDescriptorBase {
         }
       }
     }
+    tgs.newLine();
     tgs.indent();
     tgs.append("boolean guard = millis() - time > debounce;  // debounce guard");
     tgs.newLine();
     tgs.newLine();
     tgs.indent();
-    tgs.append("if (guard) {      // Go to next state if button pressed AND debounce OK\n    time = millis();                            // update the debounce timer\n    state_off();                                // transition from \"on\" to \"off\"\n  } else { \n    state_on();                                 // stay in the very same state\n  }");
+    tgs.append("if (guard) {      // Go to next state if button pressed AND debounce");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
