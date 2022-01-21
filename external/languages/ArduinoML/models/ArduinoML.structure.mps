@@ -91,6 +91,11 @@
       <property role="TrG5h" value="pin" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="2sNVXaz4V48" role="1TKVEl">
+      <property role="IQ2nx" value="2824865079249580296" />
+      <property role="TrG5h" value="mode" />
+      <ref role="AX2Wp" node="2sNVXaz4V4b" resolve="MODE" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5VjO5SPiRdM">
     <property role="EcuMT" value="6833034162690814834" />
@@ -106,6 +111,13 @@
       <property role="20kJfa" value="actions" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="5VjO5SPiRdV" resolve="Action" />
+    </node>
+    <node concept="1TJgyj" id="2sNVXaz1g8z" role="1TKVEi">
+      <property role="IQ2ns" value="2824865079248618019" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="conditions" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2sNVXaz1fHK" resolve="Condition" />
     </node>
     <node concept="1TJgyj" id="5VjO5SPj2Dd" role="1TKVEi">
       <property role="IQ2ns" value="6833034162690861645" />
@@ -147,6 +159,39 @@
       <property role="20kJfa" value="target" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5VjO5SPiRdK" resolve="Actuator" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2sNVXaz1fHK">
+    <property role="EcuMT" value="2824865079248616304" />
+    <property role="TrG5h" value="Condition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="2sNVXaz1fHN" role="1TKVEi">
+      <property role="IQ2ns" value="2824865079248616307" />
+      <property role="20kJfa" value="evalTarget" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5VjO5SPiRdK" resolve="Actuator" />
+    </node>
+    <node concept="1TJgyi" id="2sNVXaz1fHP" role="1TKVEl">
+      <property role="IQ2nx" value="2824865079248616309" />
+      <property role="TrG5h" value="signalToEval" />
+      <ref role="AX2Wp" node="5VjO5SPiRdP" resolve="SIGNAL" />
+    </node>
+  </node>
+  <node concept="25R3W" id="2sNVXaz4V4b">
+    <property role="3F6X1D" value="2824865079249580299" />
+    <property role="TrG5h" value="MODE" />
+    <ref role="1H5jkz" node="2sNVXaz4V4c" resolve="OUTPUT" />
+    <node concept="25R33" id="2sNVXaz4V4c" role="25R1y">
+      <property role="3tVfz5" value="2824865079249580300" />
+      <property role="TrG5h" value="OUTPUT" />
+    </node>
+    <node concept="25R33" id="2sNVXaz4V4d" role="25R1y">
+      <property role="3tVfz5" value="2824865079249580301" />
+      <property role="TrG5h" value="INPUT" />
+    </node>
+    <node concept="25R33" id="2sNVXaz7$cW" role="25R1y">
+      <property role="3tVfz5" value="2824865079250273084" />
+      <property role="TrG5h" value="INPUT_PULLUP" />
     </node>
   </node>
 </model>

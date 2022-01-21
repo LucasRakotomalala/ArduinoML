@@ -12,13 +12,15 @@ public final class LanguageConceptSwitch {
   public static final int Action = 0;
   public static final int Actuator = 1;
   public static final int App = 2;
-  public static final int State = 3;
+  public static final int Condition = 3;
+  public static final int State = 4;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL);
     builder.put(0x5ed3d05e354b737bL, Action);
     builder.put(0x5ed3d05e354b7370L, Actuator);
     builder.put(0x5ed3d05e354b736eL, App);
+    builder.put(0x2733efd2a304fb70L, Condition);
     builder.put(0x5ed3d05e354b7372L, State);
     myIndex = builder.seal();
   }

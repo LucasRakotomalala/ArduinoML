@@ -6,9 +6,10 @@ import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.Sequence;
+import jetbrains.mps.internal.collections.runtime.IVisitor;
+import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -23,24 +24,35 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.append("() {");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
-    {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actions$och4);
-      final SNode lastItem = Sequence.fromIterable(collection).last();
-      for (SNode item : collection) {
-        tgs.appendNode(item);
-        if (item != lastItem) {
-          tgs.append("\n");
-        }
+    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actions$och4)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        tgs.indent();
+        tgs.appendNode(it);
+        tgs.newLine();
       }
-    }
-    tgs.newLine();
+    });
     tgs.indent();
     tgs.append("boolean guard = millis() - time > debounce;  // debounce guard");
     tgs.newLine();
     tgs.newLine();
     tgs.indent();
-    tgs.append("if (guard) {      // Go to next state if button pressed AND debounce");
+    tgs.append("if (");
+    tgs.newLine();
+    ctx.getBuffer().area().increaseIndent();
+    tgs.indent();
+    tgs.append("guard      // Go to next state if debounce");
+    tgs.newLine();
+    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.conditions$1qp8)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        tgs.indent();
+        tgs.append("&& ");
+        tgs.appendNode(it);
+        tgs.newLine();
+      }
+    });
+    ctx.getBuffer().area().decreaseIndent();
+    tgs.indent();
+    tgs.append(") {");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
@@ -76,6 +88,7 @@ public class State_TextGen extends TextGenDescriptorBase {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink actions$och4 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0x5ed3d05e354b737aL, "actions");
+    /*package*/ static final SContainmentLink conditions$1qp8 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0x2733efd2a3050223L, "conditions");
     /*package*/ static final SReferenceLink next$DjVH = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0x5ed3d05e354c2a4dL, "next");
   }
 }

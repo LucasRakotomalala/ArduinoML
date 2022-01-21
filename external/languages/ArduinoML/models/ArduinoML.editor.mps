@@ -68,6 +68,9 @@
         <node concept="3F0A7n" id="5VjO5SPj3XU" role="3EZMnx">
           <ref role="1NtTu8" to="hs33:5VjO5SPj2De" resolve="pin" />
         </node>
+        <node concept="3F0A7n" id="2sNVXaz4V4o" role="3EZMnx">
+          <ref role="1NtTu8" to="hs33:2sNVXaz4V48" resolve="mode" />
+        </node>
         <node concept="l2Vlx" id="5VjO5SPj3XF" role="2iSdaV" />
       </node>
       <node concept="2iRfu4" id="5VjO5SPj3X_" role="2iSdaV" />
@@ -173,6 +176,20 @@
         </node>
         <node concept="l2Vlx" id="5VjO5SPjhWU" role="2iSdaV" />
       </node>
+      <node concept="35HoNQ" id="2sNVXaz1Rgb" role="3EZMnx" />
+      <node concept="3EZMnI" id="2sNVXaz1g9p" role="3EZMnx">
+        <node concept="VPM3Z" id="2sNVXaz1g9r" role="3F10Kt" />
+        <node concept="3XFhqQ" id="2sNVXaz1g9Y" role="3EZMnx" />
+        <node concept="3F2HdR" id="2sNVXaz1ga4" role="3EZMnx">
+          <ref role="1NtTu8" to="hs33:2sNVXaz1g8z" resolve="conditions" />
+          <node concept="2iRkQZ" id="2sNVXaz1ga7" role="2czzBx" />
+          <node concept="VPM3Z" id="2sNVXaz1ga8" role="3F10Kt" />
+          <node concept="3F0ifn" id="2sNVXaz1gaf" role="2czzBI">
+            <property role="3F0ifm" value="no condition defined" />
+          </node>
+        </node>
+        <node concept="l2Vlx" id="2sNVXaz1g9u" role="2iSdaV" />
+      </node>
       <node concept="3EZMnI" id="5VjO5SPjhX8" role="3EZMnx">
         <node concept="VPM3Z" id="5VjO5SPjhXa" role="3F10Kt" />
         <node concept="3XFhqQ" id="5VjO5SPjhXf" role="3EZMnx" />
@@ -191,6 +208,31 @@
         <node concept="l2Vlx" id="5VjO5SPjhXd" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="5VjO5SPjhWf" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2sNVXaz1fIh">
+    <ref role="1XX52x" to="hs33:2sNVXaz1fHK" resolve="Condition" />
+    <node concept="3EZMnI" id="2sNVXaz1fIj" role="2wV5jI">
+      <node concept="3EZMnI" id="2sNVXaz1fIk" role="3EZMnx">
+        <node concept="VPM3Z" id="2sNVXaz1fIl" role="3F10Kt" />
+        <node concept="1iCGBv" id="2sNVXaz1fIC" role="3EZMnx">
+          <ref role="1NtTu8" to="hs33:2sNVXaz1fHN" resolve="evalTarget" />
+          <node concept="1sVBvm" id="2sNVXaz1fIE" role="1sWHZn">
+            <node concept="3F0A7n" id="2sNVXaz1fIN" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
+        <node concept="3F0ifn" id="2sNVXaz1fJ5" role="3EZMnx">
+          <property role="3F0ifm" value="evaluate to" />
+        </node>
+        <node concept="3F0A7n" id="2sNVXaz1fIp" role="3EZMnx">
+          <ref role="1NtTu8" to="hs33:2sNVXaz1fHP" resolve="signalToEval" />
+        </node>
+        <node concept="l2Vlx" id="2sNVXaz1fIq" role="2iSdaV" />
+      </node>
+      <node concept="2iRfu4" id="2sNVXaz1fIr" role="2iSdaV" />
     </node>
   </node>
 </model>
