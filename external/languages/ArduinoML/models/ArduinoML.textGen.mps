@@ -708,7 +708,7 @@
       <node concept="3clFbS" id="5VjO5SPko2V" role="2VODD2">
         <node concept="lc7rE" id="5VjO5SPko3d" role="3cqZAp">
           <node concept="la8eA" id="5VjO5SPko4C" role="lcghm">
-            <property role="lacIc" value="const int " />
+            <property role="lacIc" value="#define " />
           </node>
           <node concept="l9hG8" id="5VjO5SPko5t" role="lcghm">
             <node concept="2OqwBi" id="5VjO5SPkocS" role="lb14g">
@@ -719,7 +719,7 @@
             </node>
           </node>
           <node concept="la8eA" id="5VjO5SPkoqQ" role="lcghm">
-            <property role="lacIc" value=" = " />
+            <property role="lacIc" value=" " />
           </node>
           <node concept="l9hG8" id="5VjO5SPkos_" role="lcghm">
             <node concept="2YIFZM" id="5VjO5SPkow5" role="lb14g">
@@ -732,9 +732,6 @@
                 </node>
               </node>
             </node>
-          </node>
-          <node concept="la8eA" id="5VjO5SPkqpm" role="lcghm">
-            <property role="lacIc" value=";" />
           </node>
         </node>
       </node>

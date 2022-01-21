@@ -9,9 +9,9 @@ void state_off();
 void state_on();
 
 // Declaring available actuators
-const int theLed = 12;
-const int theBuzzer = 11;
-const int theButton = 8;
+#define theLed 12
+#define theBuzzer 11
+#define theButton 8
 
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
