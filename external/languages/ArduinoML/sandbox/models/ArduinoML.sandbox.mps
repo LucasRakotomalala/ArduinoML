@@ -32,13 +32,6 @@
   </registry>
   <node concept="1FAacK" id="5VjO5SPj3BU">
     <property role="TrG5h" value="LED" />
-    <node concept="1FAacG" id="5VjO5SPj3BV" role="1FAacA">
-      <property role="TrG5h" value="on" />
-      <ref role="1FBZCj" node="5VjO5SPj3C1" resolve="off" />
-      <node concept="1FAac_" id="5VjO5SPj3BW" role="1FAac$">
-        <ref role="1FAafr" node="5VjO5SPj3BX" resolve="theLed" />
-      </node>
-    </node>
     <node concept="1FAacG" id="5VjO5SPj3C1" role="1FAacA">
       <property role="TrG5h" value="off" />
       <property role="1FBYDt" value="true" />
@@ -47,10 +40,28 @@
         <property role="1FAacz" value="5VjO5SPiRdR/LOW" />
         <ref role="1FAafr" node="5VjO5SPj3BX" resolve="theLed" />
       </node>
+      <node concept="1FAac_" id="2sNVXayZB$r" role="1FAac$">
+        <property role="1FAacz" value="5VjO5SPiRdR/LOW" />
+        <ref role="1FAafr" node="2sNVXayZB$l" resolve="theBuzzer" />
+      </node>
+    </node>
+    <node concept="1FAacG" id="5VjO5SPj3BV" role="1FAacA">
+      <property role="TrG5h" value="on" />
+      <ref role="1FBZCj" node="5VjO5SPj3C1" resolve="off" />
+      <node concept="1FAac_" id="5VjO5SPj3BW" role="1FAac$">
+        <ref role="1FAafr" node="5VjO5SPj3BX" resolve="theLed" />
+      </node>
+      <node concept="1FAac_" id="2sNVXayZB$o" role="1FAac$">
+        <ref role="1FAafr" node="2sNVXayZB$l" resolve="theBuzzer" />
+      </node>
     </node>
     <node concept="1FAacI" id="5VjO5SPj3BX" role="1FAacB">
       <property role="TrG5h" value="theLed" />
-      <property role="1FBZCg" value="13" />
+      <property role="1FBZCg" value="12" />
+    </node>
+    <node concept="1FAacI" id="2sNVXayZB$l" role="1FAacB">
+      <property role="TrG5h" value="theBuzzer" />
+      <property role="1FBZCg" value="9" />
     </node>
   </node>
 </model>

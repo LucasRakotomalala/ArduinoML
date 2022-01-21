@@ -9,13 +9,15 @@ void state_on();
 void state_off();
 
 // Declaring available actuators
-int theLed = 13;
+const int theLed = 12;
+const int theBuzzer = 9;
 
 // Declaring states
 long time = 0; long debounce = 1000;             // Debouncing mechanism initialisation
 
 void state_on() {
   digitalWrite(theLed, HIGH);
+digitalWrite(theBuzzer, HIGH);
   boolean guard = millis() - time > debounce;  // debounce guard
 
   if (guard) {      // Go to next state if button pressed AND debounce
@@ -28,6 +30,7 @@ void state_on() {
 
 void state_off() {
   digitalWrite(theLed, LOW);
+digitalWrite(theBuzzer, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
   if (guard) {      // Go to next state if button pressed AND debounce
@@ -42,11 +45,11 @@ void state_off() {
 void setup()
 {
   pinMode(theLed, OUTPUT);
+  pinMode(theBuzzer, OUTPUT);
 }
 
 void loop()
 {
   setup();
   state_off();
-  return 0;
 }

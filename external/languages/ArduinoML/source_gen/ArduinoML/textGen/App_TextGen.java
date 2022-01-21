@@ -110,9 +110,6 @@ public class App_TextGen extends TextGenDescriptorBase {
     }), PROPS.name$MnvL));
     tgs.append("();");
     tgs.newLine();
-    tgs.indent();
-    tgs.append("return 0;");
-    tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");
     tgs.newLine();
