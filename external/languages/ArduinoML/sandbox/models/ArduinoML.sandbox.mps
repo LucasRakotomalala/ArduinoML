@@ -26,6 +26,12 @@
         <child id="6833034162690814840" name="states" index="1FAacA" />
         <child id="6833034162690814841" name="bricks" index="1FAacB" />
       </concept>
+      <concept id="5743974466823962243" name="ArduinoML.structure.Or" flags="ng" index="1MgwNr" />
+      <concept id="5743974466822507820" name="ArduinoML.structure.LogicalOperator" flags="ng" index="1Mq3XO">
+        <child id="5743974466822594913" name="left" index="1MqlcT" />
+        <child id="5743974466822594915" name="right" index="1MqlcV" />
+      </concept>
+      <concept id="5743974466822594918" name="ArduinoML.structure.And" flags="ng" index="1MqlcY" />
       <concept id="5743974466822256391" name="ArduinoML.structure.Brick" flags="ng" index="1Mr0lv">
         <property id="5743974466822256403" name="pin" index="1Mr0lb" />
       </concept>
@@ -83,6 +89,55 @@
     <node concept="1MroAY" id="4YQG_wXVwYi" role="1FAacB">
       <property role="TrG5h" value="theButton" />
       <property role="1Mr0lb" value="8" />
+    </node>
+  </node>
+  <node concept="1FAacK" id="4YQG_wXYGk8">
+    <property role="TrG5h" value="Basic2" />
+    <node concept="1FAacG" id="4YQG_wXYGk9" role="1FAacA">
+      <property role="TrG5h" value="off" />
+      <property role="1FBYDt" value="true" />
+      <ref role="1FBZCj" node="4YQG_wXYGo8" resolve="on" />
+      <node concept="1FAac_" id="4YQG_wXYGka" role="1FAac$">
+        <property role="1FAacz" value="5VjO5SPiRdR/LOW" />
+        <ref role="1FAafr" node="4YQG_wXYGms" resolve="theLed" />
+      </node>
+      <node concept="1MqlcY" id="4YQG_wXYGoH" role="24dIRL">
+        <node concept="24dLiy" id="4YQG_wXYGoN" role="1MqlcT">
+          <property role="24dLiB" value="5VjO5SPiRdR/LOW" />
+          <ref role="24dLix" node="4YQG_wXYGkc" resolve="theButton1" />
+        </node>
+        <node concept="24dLiy" id="4YQG_wXYGoQ" role="1MqlcV">
+          <property role="24dLiB" value="5VjO5SPiRdR/LOW" />
+          <ref role="24dLix" node="4YQG_wXYGlg" resolve="theButton2" />
+        </node>
+      </node>
+    </node>
+    <node concept="1FAacG" id="4YQG_wXYGo8" role="1FAacA">
+      <property role="TrG5h" value="on" />
+      <ref role="1FBZCj" node="4YQG_wXYGk9" resolve="off" />
+      <node concept="1MgwNr" id="4YQG_wXYGoV" role="24dIRL">
+        <node concept="24dLiy" id="4YQG_wXYGp4" role="1MqlcT">
+          <ref role="24dLix" node="4YQG_wXYGkc" resolve="theButton1" />
+        </node>
+        <node concept="24dLiy" id="4YQG_wXYGp7" role="1MqlcV">
+          <ref role="24dLix" node="4YQG_wXYGlg" resolve="theButton2" />
+        </node>
+      </node>
+      <node concept="1FAac_" id="4YQG_wXYGo9" role="1FAac$">
+        <ref role="1FAafr" node="4YQG_wXYGms" resolve="theLed" />
+      </node>
+    </node>
+    <node concept="1MroAY" id="4YQG_wXYGkc" role="1FAacB">
+      <property role="TrG5h" value="theButton1" />
+      <property role="1Mr0lb" value="8" />
+    </node>
+    <node concept="1MroAY" id="4YQG_wXYGlg" role="1FAacB">
+      <property role="TrG5h" value="theButton2" />
+      <property role="1Mr0lb" value="9" />
+    </node>
+    <node concept="1FAacI" id="4YQG_wXYGms" role="1FAacB">
+      <property role="TrG5h" value="theLed" />
+      <property role="1Mr0lb" value="11" />
     </node>
   </node>
 </model>
