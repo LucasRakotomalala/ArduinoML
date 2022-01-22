@@ -2,15 +2,16 @@
 #include <util/delay.h>
 #include <Arduino.h>
 
-/** Generating code for applicationBasic2**/
+/** Generating code for applicationBasic3**/
 
 // Declaring states function headers
 void state_off();
+void state_neutral_off();
 void state_on();
+void state_neutral_on();
 
 // Declaring available actuators
-#define theButton1 8
-#define theButton2 9
+#define theButton 8
 #define theLed 11
 
 // Declaring states
@@ -22,12 +23,26 @@ void state_off() {
 
   if (
     guard      // Go to next state if debounce
-    &&     ((digitalRead(8) == LOW) && (digitalRead(9) == LOW))
+    && (digitalRead(8) == LOW)
+  ) {
+    time = millis();                            // update the debounce timer
+    state_neutral_off();
+  } else {
+    state_off();
+  }
+}
+
+void state_neutral_off() {
+  boolean guard = millis() - time > debounce;  // debounce guard
+
+  if (
+    guard      // Go to next state if debounce
+    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_on();
   } else {
-    state_off();
+    state_neutral_off();
   }
 }
 
@@ -37,20 +52,33 @@ void state_on() {
 
   if (
     guard      // Go to next state if debounce
-    &&     ((digitalRead(8) == HIGH) || (digitalRead(9) == HIGH))
+    && (digitalRead(8) == LOW)
+  ) {
+    time = millis();                            // update the debounce timer
+    state_neutral_on();
+  } else {
+    state_on();
+  }
+}
+
+void state_neutral_on() {
+  boolean guard = millis() - time > debounce;  // debounce guard
+
+  if (
+    guard      // Go to next state if debounce
+    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_off();
   } else {
-    state_on();
+    state_neutral_on();
   }
 }
 
 
 void setup()
 {
-  pinMode(theButton1, INPUT_PULLUP);
-  pinMode(theButton2, INPUT_PULLUP);
+  pinMode(theButton, INPUT_PULLUP);
   pinMode(theLed, OUTPUT);
 }
 
