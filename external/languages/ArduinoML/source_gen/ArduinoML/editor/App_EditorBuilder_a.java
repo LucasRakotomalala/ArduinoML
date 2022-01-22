@@ -136,20 +136,20 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new actuatorsListHandler_g38wqt_b2a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new bricksListHandler_g38wqt_b2a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
-    editorCell.setCellId("refNodeList_actuators");
+    editorCell.setCellId("refNodeList_bricks");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class actuatorsListHandler_g38wqt_b2a extends RefNodeListHandler {
+  private static class bricksListHandler_g38wqt_b2a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public actuatorsListHandler_g38wqt_b2a(SNode ownerNode, EditorContext context) {
+    public bricksListHandler_g38wqt_b2a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -159,10 +159,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.actuators$oc07;
+      return LINKS.bricks$oc07;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.Actuator$cY;
+      return CONCEPTS.Brick$co;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -172,7 +172,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(actuatorsListHandler_g38wqt_b2a.this.getNode(), LINKS.actuators$oc07));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(bricksListHandler_g38wqt_b2a.this.getNode(), LINKS.bricks$oc07));
       try {
         EditorCell emptyCell = null;
         emptyCell = createConstant_1();
@@ -329,12 +329,12 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SConcept Actuator$cY = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7370L, "ArduinoML.structure.Actuator");
+    /*package*/ static final SConcept Brick$co = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L, "ArduinoML.structure.Brick");
     /*package*/ static final SConcept State$dW = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, "ArduinoML.structure.State");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink actuators$oc07 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b736eL, 0x5ed3d05e354b7379L, "actuators");
+    /*package*/ static final SContainmentLink bricks$oc07 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b736eL, 0x5ed3d05e354b7379L, "bricks");
     /*package*/ static final SContainmentLink states$obL6 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b736eL, 0x5ed3d05e354b7378L, "states");
   }
 }

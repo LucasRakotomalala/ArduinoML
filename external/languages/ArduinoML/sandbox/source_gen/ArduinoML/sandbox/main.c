@@ -2,7 +2,7 @@
 #include <util/delay.h>
 #include <Arduino.h>
 
-/** Generating code for applicationLED**/
+/** Generating code for applicationBasic1**/
 
 // Declaring states function headers
 void state_off();
@@ -24,6 +24,7 @@ void state_off() {
   if (
     guard      // Go to next state if debounce
     && (digitalRead(8) == LOW)
+    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_on();

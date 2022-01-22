@@ -313,7 +313,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return LINKS.conditions$1qp8;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.Condition$SU;
+      return CONCEPTS.LogicalExpression$nk;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -482,7 +482,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
     /*package*/ static final SConcept Action$su = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b737bL, "ArduinoML.structure.Action");
-    /*package*/ static final SConcept Condition$SU = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x2733efd2a304fb70L, "ArduinoML.structure.Condition");
+    /*package*/ static final SConcept LogicalExpression$nk = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583df4be35L, "ArduinoML.structure.LogicalExpression");
     /*package*/ static final SConcept LinkAttribute$v_ = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da51L, "jetbrains.mps.lang.core.structure.LinkAttribute");
   }
 

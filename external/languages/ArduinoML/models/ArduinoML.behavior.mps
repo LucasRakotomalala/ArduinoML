@@ -138,7 +138,7 @@
                 <node concept="13iPFW" id="5VjO5SPk7Vz" role="37wK5m" />
                 <node concept="359W_D" id="5VjO5SPk80G" role="37wK5m">
                   <ref role="359W_E" to="hs33:5VjO5SPiRdI" resolve="App" />
-                  <ref role="359W_F" to="hs33:5VjO5SPiRdT" resolve="actuators" />
+                  <ref role="359W_F" to="hs33:5VjO5SPiRdT" resolve="bricks" />
                 </node>
               </node>
             </node>

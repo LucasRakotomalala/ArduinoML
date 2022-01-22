@@ -40,7 +40,7 @@ public final class App__BehaviorDescriptor extends BaseBHDescriptor {
     }
     if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Actuator$cY)) {
 
-      return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.actuators$oc07);
+      return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.bricks$oc07);
     }
     return null;
   }
@@ -93,7 +93,7 @@ public final class App__BehaviorDescriptor extends BaseBHDescriptor {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink states$obL6 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b736eL, 0x5ed3d05e354b7378L, "states");
-    /*package*/ static final SContainmentLink actuators$oc07 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b736eL, 0x5ed3d05e354b7379L, "actuators");
+    /*package*/ static final SContainmentLink bricks$oc07 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b736eL, 0x5ed3d05e354b7379L, "bricks");
   }
 
   private static final class CONCEPTS {

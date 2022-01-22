@@ -11,8 +11,14 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Action;
   private ConceptPresentation props_Actuator;
+  private ConceptPresentation props_And;
   private ConceptPresentation props_App;
-  private ConceptPresentation props_Condition;
+  private ConceptPresentation props_Brick;
+  private ConceptPresentation props_IsSignal;
+  private ConceptPresentation props_LogicalExpression;
+  private ConceptPresentation props_LogicalOperator;
+  private ConceptPresentation props_Or;
+  private ConceptPresentation props_Sensor;
   private ConceptPresentation props_State;
 
   @Override
@@ -34,6 +40,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Actuator = cpb.create();
         }
         return props_Actuator;
+      case LanguageConceptSwitch.And:
+        if (props_And == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("and");
+          props_And = cpb.create();
+        }
+        return props_And;
       case LanguageConceptSwitch.App:
         if (props_App == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -41,13 +54,45 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_App = cpb.create();
         }
         return props_App;
-      case LanguageConceptSwitch.Condition:
-        if (props_Condition == null) {
+      case LanguageConceptSwitch.Brick:
+        if (props_Brick == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Brick = cpb.create();
+        }
+        return props_Brick;
+      case LanguageConceptSwitch.IsSignal:
+        if (props_IsSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByReference(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x2733efd2a304fb70L, 0x2733efd2a304fb73L, "evalTarget", "", "");
-          props_Condition = cpb.create();
+          props_IsSignal = cpb.create();
         }
-        return props_Condition;
+        return props_IsSignal;
+      case LanguageConceptSwitch.LogicalExpression:
+        if (props_LogicalExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_LogicalExpression = cpb.create();
+        }
+        return props_LogicalExpression;
+      case LanguageConceptSwitch.LogicalOperator:
+        if (props_LogicalOperator == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_LogicalOperator = cpb.create();
+        }
+        return props_LogicalOperator;
+      case LanguageConceptSwitch.Or:
+        if (props_Or == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("or");
+          props_Or = cpb.create();
+        }
+        return props_Or;
+      case LanguageConceptSwitch.Sensor:
+        if (props_Sensor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Sensor = cpb.create();
+        }
+        return props_Sensor;
       case LanguageConceptSwitch.State:
         if (props_State == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -46,7 +46,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("// Declaring available actuators");
     tgs.newLine();
     {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actuators$oc07);
+      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$oc07);
       final SNode lastItem = Sequence.fromIterable(collection).last();
       for (SNode item : collection) {
         tgs.appendNode(item);
@@ -79,13 +79,13 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("{");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
-    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actuators$oc07)).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$oc07)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         tgs.indent();
         tgs.append("pinMode(");
         tgs.append(SPropertyOperations.getString(it, PROPS.name$MnvL));
         tgs.append(", ");
-        tgs.append(String.valueOf(SPropertyOperations.getEnum(it, PROPS.mode$boyM)));
+        tgs.append(String.valueOf(SPropertyOperations.getEnum(it, PROPS.mode$cRPF)));
         tgs.append(");");
         tgs.newLine();
       }
@@ -115,12 +115,12 @@ public class App_TextGen extends TextGenDescriptorBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty mode$boyM = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7370L, 0x2733efd2a313b108L, "mode");
+    /*package*/ static final SProperty mode$cRPF = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L, 0x4fb6b2583ddab758L, "mode");
     /*package*/ static final SProperty isInitial$up6D = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0x5ed3d05e354c3a03L, "isInitial");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink states$obL6 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b736eL, 0x5ed3d05e354b7378L, "states");
-    /*package*/ static final SContainmentLink actuators$oc07 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b736eL, 0x5ed3d05e354b7379L, "actuators");
+    /*package*/ static final SContainmentLink bricks$oc07 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b736eL, 0x5ed3d05e354b7379L, "bricks");
   }
 }

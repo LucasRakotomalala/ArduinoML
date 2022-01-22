@@ -9,12 +9,12 @@ void state_off();
 void state_on();
 
 // Declaring available actuators
-const int theLed = 12;
-const int theBuzzer = 11;
-const int theButton = 8;
+#define theLed 12
+#define theBuzzer 11
+#define theButton 8
 
 // Declaring states
-long time = 0; long debounce = 1000;             // Debouncing mechanism initialisation
+long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
 
 void state_off() {
   digitalWrite(theLed, LOW);
@@ -23,7 +23,7 @@ void state_off() {
 
   if (
     guard      // Go to next state if debounce
-    && (digitalRead(8) == HIGH)
+    && (digitalRead(8) == LOW)
   ) {
     time = millis();                            // update the debounce timer
     state_on();
@@ -39,7 +39,7 @@ void state_on() {
 
   if (
     guard      // Go to next state if debounce
-    && (digitalRead(8) == LOW)
+    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_off();
@@ -53,11 +53,10 @@ void setup()
 {
   pinMode(theLed, OUTPUT);
   pinMode(theBuzzer, OUTPUT);
-  pinMode(theButton, INPUT);
+  pinMode(theButton, INPUT_PULLUP);
 }
 
 void loop()
 {
-  setup();
   state_off();
 }

@@ -23,13 +23,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 
-public class Condition_SubstituteMenu extends SubstituteMenuBase {
+public class IsSignal_SubstituteMenu extends SubstituteMenuBase {
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_ivmgla_a(), CONCEPTS.Condition$SU));
-    result.add(new SMP_Subconcepts_ivmgla_b());
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_kgtjk3_a(), CONCEPTS.IsSignal$SU));
+    result.add(new SMP_Subconcepts_kgtjk3_b());
     return result;
   }
 
@@ -37,7 +37,7 @@ public class Condition_SubstituteMenu extends SubstituteMenuBase {
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for Condition. Generated from implicit smart reference attribute.", new SNodePointer("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)", "2824865079248616304")));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for IsSignal. Generated from implicit smart reference attribute.", new SNodePointer("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)", "2824865079248616304")));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -46,11 +46,11 @@ public class Condition_SubstituteMenu extends SubstituteMenuBase {
   }
 
 
-  public class SMP_ReferenceScope_ivmgla_a extends ReferenceScopeSubstituteMenuPart {
+  public class SMP_ReferenceScope_kgtjk3_a extends ReferenceScopeSubstituteMenuPart {
 
-    public SMP_ReferenceScope_ivmgla_a() {
+    public SMP_ReferenceScope_kgtjk3_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
-      super((SAbstractConcept) CONCEPTS.Condition$SU, LINKS.evalTarget$BVDE);
+      super((SAbstractConcept) CONCEPTS.IsSignal$SU, LINKS.evalTarget$BVDE);
     }
     @NotNull
     @Override
@@ -65,15 +65,15 @@ public class Condition_SubstituteMenu extends SubstituteMenuBase {
     }
 
   }
-  public class SMP_Subconcepts_ivmgla_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
+  public class SMP_Subconcepts_kgtjk3_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.Condition$SU);
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.IsSignal$SU);
     }
     @NotNull
     @Override
     public List<SubstituteMenuItem> createItems(SubstituteMenuContext context) {
       context.getEditorMenuTrace().pushTraceInfo();
-      context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("include menus for all the direct subconcepts of " + "Condition", null));
+      context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("include menus for all the direct subconcepts of " + "IsSignal", null));
       try {
         return super.createItems(context);
       } finally {
@@ -88,7 +88,7 @@ public class Condition_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Condition$SU = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x2733efd2a304fb70L, "ArduinoML.structure.Condition");
+    /*package*/ static final SConcept IsSignal$SU = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x2733efd2a304fb70L, "ArduinoML.structure.IsSignal");
   }
 
   private static final class LINKS {

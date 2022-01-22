@@ -16,11 +16,10 @@ public class EnumerationDescriptor_MODE extends EnumerationDescriptorBase {
   }
 
   private final EnumerationDescriptor.MemberDescriptor myMember_OUTPUT_0 = new EnumerationDescriptor.MemberDescriptor("OUTPUT", "OUTPUT", 0x2733efd2a313b10cL, "r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/2824865079249580300");
-  private final EnumerationDescriptor.MemberDescriptor myMember_INPUT_0 = new EnumerationDescriptor.MemberDescriptor("INPUT", "INPUT", 0x2733efd2a313b10dL, "r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/2824865079249580301");
   private final EnumerationDescriptor.MemberDescriptor myMember_INPUT_PULLUP_0 = new EnumerationDescriptor.MemberDescriptor("INPUT_PULLUP", "INPUT_PULLUP", 0x2733efd2a31e433cL, "r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/2824865079250273084");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x2733efd2a313b10bL, 0x2733efd2a313b10cL, 0x2733efd2a313b10dL, 0x2733efd2a31e433cL);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_OUTPUT_0, myMember_INPUT_0, myMember_INPUT_PULLUP_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x2733efd2a313b10bL, 0x2733efd2a313b10cL, 0x2733efd2a31e433cL);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_OUTPUT_0, myMember_INPUT_PULLUP_0);
 
   @Nullable
   @Override
@@ -43,8 +42,6 @@ public class EnumerationDescriptor_MODE extends EnumerationDescriptorBase {
     switch (memberName) {
       case "OUTPUT":
         return myMember_OUTPUT_0;
-      case "INPUT":
-        return myMember_INPUT_0;
       case "INPUT_PULLUP":
         return myMember_INPUT_PULLUP_0;
     }
