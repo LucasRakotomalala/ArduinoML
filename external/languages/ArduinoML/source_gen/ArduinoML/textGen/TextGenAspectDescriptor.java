@@ -49,6 +49,8 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new SignalActuator_TextGen();
       case LanguageConceptSwitch.State:
         return new State_TextGen();
+      case LanguageConceptSwitch.Transition:
+        return new Transition_TextGen();
     }
     return null;
   }

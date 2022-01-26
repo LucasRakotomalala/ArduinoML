@@ -101,18 +101,12 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="5VjO5SPiRdV" resolve="Action" />
     </node>
-    <node concept="1TJgyj" id="2sNVXaz1g8z" role="1TKVEi">
-      <property role="IQ2ns" value="2824865079248618019" />
+    <node concept="1TJgyj" id="WJuM5MHayh" role="1TKVEi">
+      <property role="IQ2ns" value="1094228618062899345" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="conditions" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="4YQG_wXXbSP" resolve="LogicalExpression" />
-    </node>
-    <node concept="1TJgyj" id="5VjO5SPj2Dd" role="1TKVEi">
-      <property role="IQ2ns" value="6833034162690861645" />
-      <property role="20kJfa" value="next" />
+      <property role="20kJfa" value="transition" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5VjO5SPiRdM" resolve="State" />
+      <ref role="20lvS9" node="WJuM5MHauA" resolve="Transition" />
     </node>
     <node concept="1TJgyi" id="5VjO5SPj3C3" role="1TKVEl">
       <property role="IQ2nx" value="6833034162690865667" />
@@ -306,6 +300,27 @@
       <property role="IQ2nx" value="3994557386217113296" />
       <property role="TrG5h" value="signal" />
       <ref role="AX2Wp" node="5VjO5SPiRdP" resolve="SIGNAL" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="WJuM5MHauA">
+    <property role="EcuMT" value="1094228618062899110" />
+    <property role="TrG5h" value="Transition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="WJuM5MHauF" role="1TKVEi">
+      <property role="IQ2ns" value="1094228618062899115" />
+      <property role="20kJfa" value="next" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5VjO5SPiRdM" resolve="State" />
+    </node>
+    <node concept="1TJgyj" id="WJuM5MHauB" role="1TKVEi">
+      <property role="IQ2ns" value="1094228618062899111" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="conditions" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4YQG_wXXbSP" resolve="LogicalExpression" />
+    </node>
+    <node concept="PrWs8" id="WJuM5MHik2" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

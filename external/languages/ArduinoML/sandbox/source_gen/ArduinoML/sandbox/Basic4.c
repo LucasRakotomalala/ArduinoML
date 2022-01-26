@@ -14,108 +14,108 @@ void state_only_led();
 void state_only_led_neutral();
 
 // Declaring available actuators
-#define theButton 0
-<!TextGen not found for 'ArduinoML.structure.Actuator'!>
-<!TextGen not found for 'ArduinoML.structure.Actuator'!>
+#define button 8
+int led = 12;
+int son = 11;
 
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
 
 void state_off() {
-  <!TextGen not found for 'ArduinoML.structure.Action'!>
-  <!TextGen not found for 'ArduinoML.structure.Action'!>
+    digitalWrite(12, LOW);
+    digitalWrite(11, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == LOW)
+    && (digitalRead(8) == LOW)
   ) {
     time = millis();                            // update the debounce timer
     state_off_neutral();
   } else {
-    state_off();
+    state_();
   }
 }
 
 void state_off_neutral() {
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == HIGH)
+    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_only_buzzer();
   } else {
-    state_off_neutral();
+    state_();
   }
 }
 
 void state_only_buzzer() {
-  <!TextGen not found for 'ArduinoML.structure.Action'!>
+    digitalWrite(11, HIGH);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == LOW)
+    && (digitalRead(8) == LOW)
   ) {
     time = millis();                            // update the debounce timer
     state_only_buzzer_neutral();
   } else {
-    state_only_buzzer();
+    state_();
   }
 }
 
 void state_only_buzzer_neutral() {
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == HIGH)
+    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_only_led();
   } else {
-    state_only_buzzer_neutral();
+    state_();
   }
 }
 
 void state_only_led() {
-  <!TextGen not found for 'ArduinoML.structure.Action'!>
-  <!TextGen not found for 'ArduinoML.structure.Action'!>
+    digitalWrite(12, HIGH);
+    digitalWrite(11, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == LOW)
+    && (digitalRead(8) == LOW)
   ) {
     time = millis();                            // update the debounce timer
     state_only_led_neutral();
   } else {
-    state_only_led();
+    state_();
   }
 }
 
 void state_only_led_neutral() {
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == HIGH)
+    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_off();
   } else {
-    state_only_led_neutral();
+    state_();
   }
 }
 
 
 void setup()
 {
-  pinMode(theButton, INPUT_PULLUP);
-  pinMode(theLed, OUTPUT);
-  pinMode(theBuzzer, OUTPUT);
+  pinMode(button, INPUT_PULLUP);
+  pinMode(led, OUTPUT);
+  pinMode(son, OUTPUT);
 }
 
 void loop()

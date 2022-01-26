@@ -26,6 +26,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_SignalAction;
   private ConceptPresentation props_SignalActuator;
   private ConceptPresentation props_State;
+  private ConceptPresentation props_Transition;
 
   @Override
   @Nullable
@@ -146,6 +147,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_State = cpb.create();
         }
         return props_State;
+      case LanguageConceptSwitch.Transition:
+        if (props_Transition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Transition = cpb.create();
+        }
+        return props_Transition;
     }
     return null;
   }

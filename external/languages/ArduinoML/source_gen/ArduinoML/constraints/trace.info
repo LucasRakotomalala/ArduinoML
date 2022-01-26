@@ -14,6 +14,35 @@
       <unit at="13,0,37,0" name="ArduinoML.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
+  <root nodeRef="r:e90df988-a5b6-4ac0-90fc-0b742fc0a0bf(ArduinoML.constraints)/1094228618063423411">
+    <file name="Transition_Constraints.java">
+      <node id="1094228618063423411" at="18,35,19,34" concept="8" />
+      <node id="1094228618063423412" at="27,56,28,177" concept="5" />
+      <node id="1094228618063423411" at="30,6,31,131" concept="4" />
+      <node id="1094228618063423412" at="31,131,32,42" concept="1" />
+      <node id="1094228618063423411" at="32,42,33,22" concept="5" />
+      <node id="1094228618063423411" at="37,0,38,0" concept="6" trace="Transition$x$" />
+      <node id="1094228618063423411" at="38,0,39,0" concept="6" trace="State$dW" />
+      <node id="1094228618063423411" at="42,0,43,0" concept="6" trace="next$BgsG" />
+      <node id="1094228618063423411" at="18,0,21,0" concept="0" trace="Transition_Constraints#()V" />
+      <node id="1094228618063423412" at="25,0,30,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="1094228618063423412" at="23,90,30,6" concept="4" />
+      <node id="1094228618063423411" at="22,0,35,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="1094228618063423411" at="18,35,19,34" />
+      <scope id="1094228618063423412" at="27,56,28,177" />
+      <scope id="1094228618063423411" at="18,0,21,0" />
+      <scope id="1094228618063423412" at="25,0,30,0" />
+      <scope id="1094228618063423411" at="23,90,33,22">
+        <var name="d0" id="1094228618063423412" />
+        <var name="references" id="1094228618063423411" />
+      </scope>
+      <scope id="1094228618063423411" at="22,0,35,0" />
+      <unit id="1094228618063423411" at="41,0,44,0" name="ArduinoML.constraints.Transition_Constraints$LINKS" />
+      <unit id="1094228618063423411" at="36,0,40,0" name="ArduinoML.constraints.Transition_Constraints$CONCEPTS" />
+      <unit id="1094228618063423412" at="24,48,30,5" name="ArduinoML.constraints.Transition_Constraints$1" />
+      <unit id="1094228618063423411" at="17,0,45,0" name="ArduinoML.constraints.Transition_Constraints" />
+    </file>
+  </root>
   <root nodeRef="r:e90df988-a5b6-4ac0-90fc-0b742fc0a0bf(ArduinoML.constraints)/3994557386217055015">
     <file name="Pin_Constraints.java">
       <node id="3994557386217055015" at="20,28,21,27" concept="8" />
@@ -142,34 +171,6 @@
       <scope id="6833034162691020755" at="10,0,13,0" />
       <unit id="6833034162691020755" at="14,0,17,0" name="ArduinoML.constraints.Actuator_Constraints$CONCEPTS" />
       <unit id="6833034162691020755" at="9,0,18,0" name="ArduinoML.constraints.Actuator_Constraints" />
-    </file>
-  </root>
-  <root nodeRef="r:e90df988-a5b6-4ac0-90fc-0b742fc0a0bf(ArduinoML.constraints)/6833034162691130247">
-    <file name="State_Constraints.java">
-      <node id="6833034162691130247" at="18,30,19,29" concept="8" />
-      <node id="6833034162691130248" at="27,56,28,177" concept="5" />
-      <node id="6833034162691130247" at="30,6,31,131" concept="4" />
-      <node id="6833034162691130248" at="31,131,32,42" concept="1" />
-      <node id="6833034162691130247" at="32,42,33,22" concept="5" />
-      <node id="6833034162691130247" at="37,0,38,0" concept="6" trace="State$dW" />
-      <node id="6833034162691130247" at="41,0,42,0" concept="6" trace="next$DjVH" />
-      <node id="6833034162691130247" at="18,0,21,0" concept="0" trace="State_Constraints#()V" />
-      <node id="6833034162691130248" at="25,0,30,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
-      <node id="6833034162691130248" at="23,90,30,6" concept="4" />
-      <node id="6833034162691130247" at="22,0,35,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
-      <scope id="6833034162691130247" at="18,30,19,29" />
-      <scope id="6833034162691130248" at="27,56,28,177" />
-      <scope id="6833034162691130247" at="18,0,21,0" />
-      <scope id="6833034162691130248" at="25,0,30,0" />
-      <scope id="6833034162691130247" at="23,90,33,22">
-        <var name="d0" id="6833034162691130248" />
-        <var name="references" id="6833034162691130247" />
-      </scope>
-      <scope id="6833034162691130247" at="22,0,35,0" />
-      <unit id="6833034162691130247" at="36,0,39,0" name="ArduinoML.constraints.State_Constraints$CONCEPTS" />
-      <unit id="6833034162691130247" at="40,0,43,0" name="ArduinoML.constraints.State_Constraints$LINKS" />
-      <unit id="6833034162691130248" at="24,48,30,5" name="ArduinoML.constraints.State_Constraints$1" />
-      <unit id="6833034162691130247" at="17,0,44,0" name="ArduinoML.constraints.State_Constraints" />
     </file>
   </root>
 </debug-info>

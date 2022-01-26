@@ -1,6 +1,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <Arduino.h>
+#include <LiquidCrystal.h>
 
 /** Generating code for applicationBasic1**/
 
@@ -9,52 +10,51 @@ void state_off();
 void state_on();
 
 // Declaring available actuators
-#define theLed 12
-#define theBuzzer 11
-#define theButton 8
+#define button 8
+int led = 12;
+int son = 11;
 
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
 
 void state_off() {
-  digitalWrite(theLed, LOW);
-  digitalWrite(theBuzzer, LOW);
+    digitalWrite(12, LOW);
+    digitalWrite(11, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
     && (digitalRead(8) == LOW)
-    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_on();
   } else {
-    state_off();
+    state_();
   }
 }
 
 void state_on() {
-  digitalWrite(theLed, HIGH);
-  digitalWrite(theBuzzer, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(11, HIGH);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
     && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_off();
   } else {
-    state_on();
+    state_();
   }
 }
 
 
 void setup()
 {
-  pinMode(theLed, OUTPUT);
-  pinMode(theBuzzer, OUTPUT);
-  pinMode(theButton, INPUT_PULLUP);
+  pinMode(button, INPUT_PULLUP);
+  pinMode(led, OUTPUT);
+  pinMode(son, OUTPUT);
 }
 
 void loop()

@@ -14,18 +14,18 @@ import java.util.HashMap;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class State_Constraints extends BaseConstraintsDescriptor {
-  public State_Constraints() {
-    super(CONCEPTS.State$dW);
+public class Transition_Constraints extends BaseConstraintsDescriptor {
+  public Transition_Constraints() {
+    super(CONCEPTS.Transition$x$);
   }
 
   @Override
   protected Map<SReferenceLink, ReferenceConstraintsDescriptor> getSpecifiedReferences() {
-    BaseReferenceConstraintsDescriptor d0 = new BaseReferenceConstraintsDescriptor(LINKS.next$DjVH, this, true, false) {
+    BaseReferenceConstraintsDescriptor d0 = new BaseReferenceConstraintsDescriptor(LINKS.next$BgsG, this, true, false) {
       @Nullable
       @Override
       public ReferenceScopeProvider getScopeProvider() {
-        return ReferenceScopeProvider.fromHierarchy(CONCEPTS.State$dW, new SNodePointer("r:e90df988-a5b6-4ac0-90fc-0b742fc0a0bf(ArduinoML.constraints)", "6833034162691130372"));
+        return ReferenceScopeProvider.fromHierarchy(CONCEPTS.State$dW, new SNodePointer("r:e90df988-a5b6-4ac0-90fc-0b742fc0a0bf(ArduinoML.constraints)", "1094228618063423508"));
       }
     };
     Map<SReferenceLink, ReferenceConstraintsDescriptor> references = new HashMap<SReferenceLink, ReferenceConstraintsDescriptor>();
@@ -34,10 +34,11 @@ public class State_Constraints extends BaseConstraintsDescriptor {
   }
 
   private static final class CONCEPTS {
+    /*package*/ static final SConcept Transition$x$ = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0xf2f7b2172b4a7a6L, "ArduinoML.structure.Transition");
     /*package*/ static final SConcept State$dW = MetaAdapterFactory.getConcept(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, "ArduinoML.structure.State");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink next$DjVH = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0x5ed3d05e354c2a4dL, "next");
+    /*package*/ static final SReferenceLink next$BgsG = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0xf2f7b2172b4a7a6L, 0xf2f7b2172b4a7abL, "next");
   }
 }

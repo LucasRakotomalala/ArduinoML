@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="evwzmubp3lwgf42ldm1yq4vgez1zrkz">
-  <files names="Actuator_Constraints.java:Brick_Constraints.java:ConstraintsAspectDescriptor.java:Pin_Constraints.java:Sensor_Constraints.java:State_Constraints.java" />
+<product version="3" modelHash="1fra8k7630b8lgur1wtcj1vcl66iha4">
+  <files names="Actuator_Constraints.java:Brick_Constraints.java:ConstraintsAspectDescriptor.java:Pin_Constraints.java:Sensor_Constraints.java:Transition_Constraints.java" />
 </product>
 

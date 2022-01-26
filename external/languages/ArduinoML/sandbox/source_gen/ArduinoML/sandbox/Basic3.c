@@ -12,75 +12,75 @@ void state_on();
 void state_neutral_on();
 
 // Declaring available actuators
-#define theButton 0
-<!TextGen not found for 'ArduinoML.structure.Actuator'!>
+#define button 8
+int led = 12;
 
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
 
 void state_off() {
-  <!TextGen not found for 'ArduinoML.structure.Action'!>
+    digitalWrite(12, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == LOW)
+    && (digitalRead(8) == LOW)
   ) {
     time = millis();                            // update the debounce timer
     state_neutral_off();
   } else {
-    state_off();
+    state_();
   }
 }
 
 void state_neutral_off() {
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == HIGH)
+    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_on();
   } else {
-    state_neutral_off();
+    state_();
   }
 }
 
 void state_on() {
-  <!TextGen not found for 'ArduinoML.structure.Action'!>
+    digitalWrite(12, HIGH);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == LOW)
+    && (digitalRead(8) == LOW)
   ) {
     time = millis();                            // update the debounce timer
     state_neutral_on();
   } else {
-    state_on();
+    state_();
   }
 }
 
 void state_neutral_on() {
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
-    && (digitalRead(0) == HIGH)
+    && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_off();
   } else {
-    state_neutral_on();
+    state_();
   }
 }
 
 
 void setup()
 {
-  pinMode(theButton, INPUT_PULLUP);
-  pinMode(theLed, OUTPUT);
+  pinMode(button, INPUT_PULLUP);
+  pinMode(led, OUTPUT);
 }
 
 void loop()

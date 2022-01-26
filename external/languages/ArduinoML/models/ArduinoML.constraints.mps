@@ -112,15 +112,6 @@
   <node concept="1M2fIO" id="5VjO5SPjDvj">
     <ref role="1M2myG" to="hs33:5VjO5SPiRdK" resolve="Actuator" />
   </node>
-  <node concept="1M2fIO" id="5VjO5SPk4e7">
-    <ref role="1M2myG" to="hs33:5VjO5SPiRdM" resolve="State" />
-    <node concept="1N5Pfh" id="5VjO5SPk4e8" role="1Mr941">
-      <ref role="1N5Vy1" to="hs33:5VjO5SPj2Dd" resolve="next" />
-      <node concept="1dDu$B" id="5VjO5SPk4g4" role="1N6uqs">
-        <ref role="1dDu$A" to="hs33:5VjO5SPiRdM" resolve="State" />
-      </node>
-    </node>
-  </node>
   <node concept="1M2fIO" id="4YQG_wXQL9J">
     <ref role="1M2myG" to="hs33:4YQG_wXQFs7" resolve="Brick" />
     <node concept="EnEH3" id="5VjO5SPjGl1" role="1MhHOB">
@@ -206,6 +197,15 @@
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="WJuM5MJauN">
+    <ref role="1M2myG" to="hs33:WJuM5MHauA" resolve="Transition" />
+    <node concept="1N5Pfh" id="WJuM5MJauO" role="1Mr941">
+      <ref role="1N5Vy1" to="hs33:WJuM5MHauF" resolve="next" />
+      <node concept="1dDu$B" id="WJuM5MJawk" role="1N6uqs">
+        <ref role="1dDu$A" to="hs33:5VjO5SPiRdM" resolve="State" />
       </node>
     </node>
   </node>

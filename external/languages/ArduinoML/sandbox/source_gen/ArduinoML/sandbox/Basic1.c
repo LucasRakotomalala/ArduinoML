@@ -19,17 +19,17 @@ long time = 0; long debounce = 200;             // Debouncing mechanism initiali
 
 void state_off() {
     digitalWrite(12, LOW);
-    digitalWrite(11, LOW);
+    digitalWrite(12, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
     && (digitalRead(8) == LOW)
   ) {
     time = millis();                            // update the debounce timer
     state_on();
   } else {
-    state_off();
+    state_();
   }
 }
 
@@ -38,14 +38,14 @@ void state_on() {
     digitalWrite(11, HIGH);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  if (
+    if (
     guard      // Go to next state if debounce
     && (digitalRead(8) == HIGH)
   ) {
     time = millis();                            // update the debounce timer
     state_off();
   } else {
-    state_on();
+    state_();
   }
 }
 

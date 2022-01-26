@@ -13,7 +13,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
 
 public class State_TextGen extends TextGenDescriptorBase {
   @Override
@@ -36,47 +35,7 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.newLine();
     tgs.indent();
-    tgs.append("if (");
-    tgs.newLine();
-    ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
-    tgs.append("guard      // Go to next state if debounce");
-    tgs.newLine();
-    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.conditions$1qp8)).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        tgs.indent();
-        tgs.append("&& ");
-        tgs.appendNode(it);
-        tgs.newLine();
-      }
-    });
-    ctx.getBuffer().area().decreaseIndent();
-    tgs.indent();
-    tgs.append(") {");
-    tgs.newLine();
-    ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
-    tgs.append("time = millis();                            // update the debounce timer");
-    tgs.newLine();
-    tgs.indent();
-    tgs.append("state_");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.next$DjVH), PROPS.name$MnvL));
-    tgs.append("();");
-    tgs.newLine();
-    ctx.getBuffer().area().decreaseIndent();
-    tgs.indent();
-    tgs.append("} else {");
-    tgs.newLine();
-    ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
-    tgs.append("state_");
-    tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
-    tgs.append("();");
-    tgs.newLine();
-    ctx.getBuffer().area().decreaseIndent();
-    tgs.indent();
-    tgs.append("}");
-    tgs.newLine();
+    tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.transition$MaTz));
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");
     tgs.newLine();
@@ -88,7 +47,6 @@ public class State_TextGen extends TextGenDescriptorBase {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink actions$och4 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0x5ed3d05e354b737aL, "actions");
-    /*package*/ static final SContainmentLink conditions$1qp8 = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0x2733efd2a3050223L, "conditions");
-    /*package*/ static final SReferenceLink next$DjVH = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0x5ed3d05e354c2a4dL, "next");
+    /*package*/ static final SContainmentLink transition$MaTz = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0xf2f7b2172b4a891L, "transition");
   }
 }
