@@ -26,35 +26,89 @@ void state_off() {
     digitalWrite(11, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  ???}
+    if (
+    guard      // Go to next state if debounce
+    && (digitalRead(8) == LOW)
+  ) {
+    time = millis();                            // update the debounce timer
+    state_off_neutral();
+  } else {
+    state_();
+  }
+}
 
 void state_off_neutral() {
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  ???}
+    if (
+    guard      // Go to next state if debounce
+    && (digitalRead(8) == HIGH)
+  ) {
+    time = millis();                            // update the debounce timer
+    state_only_buzzer();
+  } else {
+    state_();
+  }
+}
 
 void state_only_buzzer() {
     digitalWrite(11, HIGH);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  ???}
+    if (
+    guard      // Go to next state if debounce
+    && (digitalRead(8) == LOW)
+  ) {
+    time = millis();                            // update the debounce timer
+    state_only_buzzer_neutral();
+  } else {
+    state_();
+  }
+}
 
 void state_only_buzzer_neutral() {
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  ???}
+    if (
+    guard      // Go to next state if debounce
+    && (digitalRead(8) == HIGH)
+  ) {
+    time = millis();                            // update the debounce timer
+    state_only_led();
+  } else {
+    state_();
+  }
+}
 
 void state_only_led() {
     digitalWrite(12, HIGH);
     digitalWrite(11, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  ???}
+    if (
+    guard      // Go to next state if debounce
+    && (digitalRead(8) == LOW)
+  ) {
+    time = millis();                            // update the debounce timer
+    state_only_led_neutral();
+  } else {
+    state_();
+  }
+}
 
 void state_only_led_neutral() {
   boolean guard = millis() - time > debounce;  // debounce guard
 
-  ???}
+    if (
+    guard      // Go to next state if debounce
+    && (digitalRead(8) == HIGH)
+  ) {
+    time = millis();                            // update the debounce timer
+    state_off();
+  } else {
+    state_();
+  }
+}
 
 
 void setup()

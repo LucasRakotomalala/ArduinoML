@@ -94,6 +94,7 @@ public class App_TextGen extends TextGenDescriptorBase {
           tgs.append(", ");
           tgs.append(String.valueOf(SPropertyOperations.getInteger((SNodeOperations.as(it, CONCEPTS.LCD$ab)), PROPS.rows$QOeA)));
           tgs.append(");");
+          tgs.newLine();
         } else if (SNodeOperations.isInstanceOf(it, CONCEPTS.Actuator$cY)) {
           tgs.indent();
           tgs.append("pinMode(");

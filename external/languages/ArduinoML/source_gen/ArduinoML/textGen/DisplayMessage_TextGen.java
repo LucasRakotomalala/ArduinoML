@@ -17,6 +17,10 @@ public class DisplayMessage_TextGen extends TextGenDescriptorBase {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.indent();
     tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.lcd$JGBC), PROPS.name$MnvL));
+    tgs.append(".clear();");
+    tgs.newLine();
+    tgs.indent();
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.lcd$JGBC), PROPS.name$MnvL));
     tgs.append(".print(");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.message$JH5E));
     tgs.append(");");

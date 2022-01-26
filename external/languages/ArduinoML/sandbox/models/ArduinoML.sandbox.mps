@@ -27,7 +27,19 @@
       <concept id="3994557386217032377" name="ArduinoML.structure.Pin" flags="ng" index="1J3CTY">
         <property id="3994557386217032378" name="pin" index="1J3CTX" />
       </concept>
+      <concept id="3994557386217034077" name="ArduinoML.structure.DisplaySensor" flags="ng" index="1J3Dmq">
+        <reference id="3994557386217034078" name="sensor" index="1J3Dmp" />
+        <reference id="3994557386217034080" name="lcd" index="1J3DmB" />
+      </concept>
+      <concept id="3994557386217034072" name="ArduinoML.structure.DisplayMessage" flags="ng" index="1J3Dmv">
+        <property id="3994557386217034075" name="message" index="1J3Dms" />
+        <reference id="3994557386217034073" name="lcd" index="1J3Dmu" />
+      </concept>
       <concept id="3994557386217034004" name="ArduinoML.structure.SignalActuator" flags="ng" index="1J3Dnj" />
+      <concept id="3994557386216983732" name="ArduinoML.structure.LCD" flags="ng" index="1J3WxN">
+        <property id="3994557386217033295" name="lines" index="1J3CE8" />
+        <property id="3994557386217033297" name="rows" index="1J3CEm" />
+      </concept>
       <concept id="5743974466823962243" name="ArduinoML.structure.Or" flags="ng" index="1MgwNr" />
       <concept id="5743974466822507820" name="ArduinoML.structure.LogicalOperator" flags="ng" index="1Mq3XO">
         <child id="5743974466822594913" name="left" index="1MqlcT" />
@@ -318,6 +330,92 @@
       <property role="TrG5h" value="son" />
       <node concept="1J3CTY" id="1LI9UnkL84m" role="1J3CTS">
         <property role="1J3CTX" value="11" />
+      </node>
+    </node>
+  </node>
+  <node concept="1FAacK" id="1DAf3aeezWD">
+    <property role="TrG5h" value="lcd hello world" />
+    <node concept="1FAacG" id="1DAf3aeezWE" role="1FAacA">
+      <property role="TrG5h" value="hello_world" />
+      <property role="1FBYDt" value="true" />
+      <node concept="1J3Dmv" id="1DAf3aeezZc" role="1FAac$">
+        <property role="1J3Dms" value="&quot;Hello World&quot;" />
+        <ref role="1J3Dmu" node="1DAf3aeezX4" resolve="lcd" />
+      </node>
+      <node concept="1XAXM7" id="1DAf3aeezWF" role="1XAXeK">
+        <ref role="1XAXMa" node="1DAf3aegXmo" resolve="neutral" />
+      </node>
+    </node>
+    <node concept="1FAacG" id="1DAf3aegXmo" role="1FAacA">
+      <property role="TrG5h" value="neutral" />
+      <node concept="1XAXM7" id="1DAf3aegXmp" role="1XAXeK">
+        <ref role="1XAXMa" node="1DAf3aegXmo" resolve="l" />
+      </node>
+    </node>
+    <node concept="1J3WxN" id="1DAf3aeezX4" role="1FAacB">
+      <property role="TrG5h" value="lcd" />
+      <property role="1J3CE8" value="16" />
+      <property role="1J3CEm" value="2" />
+      <node concept="1J3CTY" id="1DAf3aeezX7" role="1J3CTS">
+        <property role="1J3CTX" value="12" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aegiye" role="1J3CTS">
+        <property role="1J3CTX" value="11" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aegiyh" role="1J3CTS">
+        <property role="1J3CTX" value="10" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aegiyl" role="1J3CTS">
+        <property role="1J3CTX" value="9" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aegiyq" role="1J3CTS">
+        <property role="1J3CTX" value="8" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aegiyw" role="1J3CTS">
+        <property role="1J3CTX" value="7" />
+      </node>
+    </node>
+  </node>
+  <node concept="1FAacK" id="1DAf3aeiepU">
+    <property role="TrG5h" value="lcd sensor" />
+    <node concept="1FAacG" id="1DAf3aeiepV" role="1FAacA">
+      <property role="TrG5h" value="hello_world" />
+      <property role="1FBYDt" value="true" />
+      <node concept="1J3Dmq" id="1DAf3aeiepW" role="1FAac$">
+        <ref role="1J3DmB" node="1DAf3aeiepY" resolve="lcd" />
+        <ref role="1J3Dmp" node="1DAf3aeieq5" resolve="button" />
+      </node>
+      <node concept="1XAXM7" id="1DAf3aeiepX" role="1XAXeK">
+        <ref role="1XAXMa" node="1DAf3aeiepV" resolve="hello_world" />
+      </node>
+    </node>
+    <node concept="1J3WxN" id="1DAf3aeiepY" role="1FAacB">
+      <property role="TrG5h" value="lcd" />
+      <property role="1J3CE8" value="16" />
+      <property role="1J3CEm" value="2" />
+      <node concept="1J3CTY" id="1DAf3aeiepZ" role="1J3CTS">
+        <property role="1J3CTX" value="12" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aeieq0" role="1J3CTS">
+        <property role="1J3CTX" value="11" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aeieq1" role="1J3CTS">
+        <property role="1J3CTX" value="10" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aeieq2" role="1J3CTS">
+        <property role="1J3CTX" value="9" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aeieq3" role="1J3CTS">
+        <property role="1J3CTX" value="8" />
+      </node>
+      <node concept="1J3CTY" id="1DAf3aeieq4" role="1J3CTS">
+        <property role="1J3CTX" value="7" />
+      </node>
+    </node>
+    <node concept="1MroAY" id="1DAf3aeieq5" role="1FAacB">
+      <property role="TrG5h" value="button" />
+      <node concept="1J3CTY" id="1DAf3aeieq6" role="1J3CTS">
+        <property role="1J3CTX" value="5" />
       </node>
     </node>
   </node>

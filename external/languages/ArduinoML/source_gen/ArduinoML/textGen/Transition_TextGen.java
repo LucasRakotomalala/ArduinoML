@@ -48,19 +48,6 @@ public class Transition_TextGen extends TextGenDescriptorBase {
     tgs.append("();");
     tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
-    tgs.indent();
-    tgs.append("} else {");
-    tgs.newLine();
-    ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
-    tgs.append("state_");
-    tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
-    tgs.append("();");
-    tgs.newLine();
-    ctx.getBuffer().area().decreaseIndent();
-    tgs.indent();
-    tgs.append("}");
-    tgs.newLine();
   }
 
   private static final class LINKS {
