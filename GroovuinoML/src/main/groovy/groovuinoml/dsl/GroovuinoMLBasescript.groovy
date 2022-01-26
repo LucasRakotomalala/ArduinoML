@@ -27,11 +27,7 @@ abstract class GroovuinoMLBasescript extends Script {
 	// lcd "name" bus "n" cols "c" rows "r"
 	def lcd(String name) {
 		[bus: { b -> 
-			[cols: {c -> 
-				[rows: {r ->
-					((GroovuinoMLBinding)this.getBinding()).getGroovuinoMLModel().createActuatorLCD(name, b, c, r)
-				}]
-			}]
+			((GroovuinoMLBinding)this.getBinding()).getGroovuinoMLModel().createActuatorLCD(name, b)
 		}]
 	}
 	

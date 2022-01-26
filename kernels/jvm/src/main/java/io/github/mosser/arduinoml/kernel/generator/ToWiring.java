@@ -25,7 +25,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 		context.put("pass", PASS.ONE);
 		w("// Wiring code generated from an ArduinoML model\n");
 		w(String.format("// Application name: %s\n", app.getName())+"\n");
-		w("#include <LiquidCrystal.h> \n")
+		w("#include <LiquidCrystal.h> \n");
 		w("long debounce = 200;\n");
 		w("\nenum STATE {");
 		String sep ="";
@@ -74,8 +74,8 @@ public class ToWiring extends Visitor<StringBuffer> {
 	@Override
 	public void visit(ActuatorLCD actuator) {
 		if(context.get("pass") == PASS.ONE) {
-			w(String.format("\nLiquidCrystal  %s(",actuator.getName());
-			String separator = ""
+			w(String.format("\nLiquidCrystal  %s(", actuator.getName()));
+			String separator = "";
 			for(Integer nb: actuator.getPins()){
 				w(String.format("%s%d", separator, nb));
 				separator = ",";
@@ -85,8 +85,8 @@ public class ToWiring extends Visitor<StringBuffer> {
 			return;
 		}
 		if(context.get("pass") == PASS.TWO) {
-			w(String.format("  %s.begin(%d, %d); // %s [ActuatorLCD]\n", 
-				actuator.getName(), actuator.getColumns(), actuator.getRows(), actuator.getName()));
+			w(String.format("  %s.begin(16, 2); // %s [ActuatorLCD]\n", 
+				actuator.getName(), actuator.getName()));
 			return;
 		}
 	}
@@ -138,8 +138,8 @@ public class ToWiring extends Visitor<StringBuffer> {
 			w(String.format("\t\t\tif( ("));
 			String separator = "";
 			for (Condition condition: transition.getConditions()) {
-				w(String.format("%s digitalRead(%s) == %s ", separator,
-						condition.getSensor().getName(), condition.getValue()));
+				w(String.format("%s digitalRead(%d) == %s ", separator,
+						condition.getSensor().getPin(), condition.getValue()));
 				separator = (transition.getLogic() == LOGIC.AND) ? "&&" : "||";
 			}	
 			

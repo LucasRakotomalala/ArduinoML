@@ -18,8 +18,12 @@ contribute(currentType(subType('groovy.lang.Script'))) {
 
 	method type: Script, name: 'sensor', params: [name:String], doc: 'Create a new Sensor'
 	method type: Script, name: 'actuator', params: [name:String], doc: 'Create a new Actuator'
+	method type: Script, name: 'actuatorLCD', params: [name:String], doc: 'Create a new LCD Actuator'
 	method type: void, name: 'pin', params: [pinNumber:Integer], doc: 'Associate Sensor or Actuator to a pin number'
 	method type: void, name: 'onPin', params: [pinNumber:Integer], doc: 'Associate Sensor or Actuator to a pin number'
+	method type: void, name: 'bus', params: [pinNumber:Integer], doc: 'Associate LCD Actuator to a bus number'
+	method type: void, name: 'cols', params: [pinNumber:Integer], doc: 'Define LCD Actuator columns number'
+	method type: void, name: 'rows', params: [pinNumber:Integer], doc: 'Define LCD Actuator rows number'
 
 	method type: Script, name: 'state', params: [name:String], doc: 'Create a new State'
 	method type: Script, name: 'means', params: [actuator:Object], doc: 'Identify which Actuator is concerned by the state'

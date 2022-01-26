@@ -1,6 +1,6 @@
 sensor "button" onPin 8
 actuator "led" pin 12
-lcd "lcd" bus 2 cols 16 rows 2
+lcd "lcd" bus 1
 
 state "on" means "led" becomes "low"
 state "off" means "led" becomes "high"

@@ -1,0 +1,34 @@
+package io.github.mosser.arduinoml.kernel.behavioral;
+
+import io.github.mosser.arduinoml.kernel.generator.Visitable;
+import io.github.mosser.arduinoml.kernel.generator.Visitor;
+import io.github.mosser.arduinoml.kernel.structural.Actuator;
+import io.github.mosser.arduinoml.kernel.structural.SIGNAL;
+
+public class ActionLCD extends Action {
+
+	private String message;
+	private Actuator actuator;
+
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public Actuator getActuator() {
+		return actuator;
+	}
+
+	public void setActuator(Actuator actuator) {
+		this.actuator = actuator;
+	}
+
+	@Override
+	public void accept(Visitor visitor) {
+		visitor.visit(this);
+	}
+}
