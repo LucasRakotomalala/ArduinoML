@@ -1,7 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <Arduino.h>
-#include <LiquidCrystal.h>
 
 /** Generating code for applicationBasic2**/
 
@@ -10,20 +9,20 @@ void state_off();
 void state_on();
 
 // Declaring available actuators
-#define theButton1 0
-#define theButton2 0
-<!TextGen not found for 'ArduinoML.structure.Actuator'!>
+#define theButton1 8
+#define theButton2 9
+#define theLed 11
 
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
 
 void state_off() {
-  <!TextGen not found for 'ArduinoML.structure.Action'!>
+  digitalWrite(theLed, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
   if (
     guard      // Go to next state if debounce
-    &&     ((digitalRead(0) == LOW) && (digitalRead(0) == LOW))
+    &&     ((digitalRead(8) == LOW) && (digitalRead(9) == LOW))
   ) {
     time = millis();                            // update the debounce timer
     state_on();
@@ -33,12 +32,12 @@ void state_off() {
 }
 
 void state_on() {
-  <!TextGen not found for 'ArduinoML.structure.Action'!>
+  digitalWrite(theLed, HIGH);
   boolean guard = millis() - time > debounce;  // debounce guard
 
   if (
     guard      // Go to next state if debounce
-    &&     ((digitalRead(0) == HIGH) || (digitalRead(0) == HIGH))
+    &&     ((digitalRead(8) == HIGH) || (digitalRead(9) == HIGH))
   ) {
     time = millis();                            // update the debounce timer
     state_off();

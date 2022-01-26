@@ -6,31 +6,32 @@ import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
-public class IsSignal_TextGen extends TextGenDescriptorBase {
+public class DisplaySensor_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("(digitalRead(");
-    tgs.append(String.valueOf(SPropertyOperations.getInteger(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.evalTarget$BVDE), LINKS.pins$mKYM)).first(), PROPS.pin$pa2C)));
-    tgs.append(") == ");
-    tgs.append(String.valueOf(SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.signalToEval$BW7G)));
-    tgs.append(")");
+    tgs.indent();
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.lcd$JNev), PROPS.name$MnvL));
+    tgs.append(".print(digitalRead(");
+    tgs.append(String.valueOf(SPropertyOperations.getInteger(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$JHP8), LINKS.pins$mKYM)).first(), PROPS.pin$pa2C)));
+    tgs.append("));");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink evalTarget$BVDE = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x2733efd2a304fb70L, 0x2733efd2a304fb73L, "evalTarget");
+    /*package*/ static final SReferenceLink lcd$JNev = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75861115dL, 0x376f84c758611160L, "lcd");
+    /*package*/ static final SReferenceLink sensor$JHP8 = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75861115dL, 0x376f84c75861115eL, "sensor");
     /*package*/ static final SContainmentLink pins$mKYM = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L, 0x376f84c758610abfL, "pins");
   }
 
   private static final class PROPS {
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
     /*package*/ static final SProperty pin$pa2C = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758610ab9L, 0x376f84c758610abaL, "pin");
-    /*package*/ static final SProperty signalToEval$BW7G = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x2733efd2a304fb70L, 0x2733efd2a304fb75L, "signalToEval");
   }
 }

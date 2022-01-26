@@ -14,11 +14,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_And;
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
+  private ConceptPresentation props_DisplayMessage;
+  private ConceptPresentation props_DisplaySensor;
   private ConceptPresentation props_IsSignal;
+  private ConceptPresentation props_LCD;
   private ConceptPresentation props_LogicalExpression;
   private ConceptPresentation props_LogicalOperator;
   private ConceptPresentation props_Or;
+  private ConceptPresentation props_Pin;
   private ConceptPresentation props_Sensor;
+  private ConceptPresentation props_SignalAction;
+  private ConceptPresentation props_SignalActuator;
   private ConceptPresentation props_State;
 
   @Override
@@ -29,14 +35,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Action:
         if (props_Action == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("action");
           props_Action = cpb.create();
         }
         return props_Action;
       case LanguageConceptSwitch.Actuator:
         if (props_Actuator == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
           props_Actuator = cpb.create();
         }
         return props_Actuator;
@@ -60,6 +64,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Brick = cpb.create();
         }
         return props_Brick;
+      case LanguageConceptSwitch.DisplayMessage:
+        if (props_DisplayMessage == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758611158L, 0x376f84c758611159L, "lcd", "", "");
+          props_DisplayMessage = cpb.create();
+        }
+        return props_DisplayMessage;
+      case LanguageConceptSwitch.DisplaySensor:
+        if (props_DisplaySensor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("DisplaySensor");
+          props_DisplaySensor = cpb.create();
+        }
+        return props_DisplaySensor;
       case LanguageConceptSwitch.IsSignal:
         if (props_IsSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -67,6 +85,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IsSignal = cpb.create();
         }
         return props_IsSignal;
+      case LanguageConceptSwitch.LCD:
+        if (props_LCD == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_LCD = cpb.create();
+        }
+        return props_LCD;
       case LanguageConceptSwitch.LogicalExpression:
         if (props_LogicalExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -86,6 +111,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Or = cpb.create();
         }
         return props_Or;
+      case LanguageConceptSwitch.Pin:
+        if (props_Pin == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Pin");
+          props_Pin = cpb.create();
+        }
+        return props_Pin;
       case LanguageConceptSwitch.Sensor:
         if (props_Sensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -93,6 +125,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Sensor = cpb.create();
         }
         return props_Sensor;
+      case LanguageConceptSwitch.SignalAction:
+        if (props_SignalAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75862463fL, 0x376f84c758624640L, "actuator", "", "");
+          props_SignalAction = cpb.create();
+        }
+        return props_SignalAction;
+      case LanguageConceptSwitch.SignalActuator:
+        if (props_SignalActuator == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_SignalActuator = cpb.create();
+        }
+        return props_SignalActuator;
       case LanguageConceptSwitch.State:
         if (props_State == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

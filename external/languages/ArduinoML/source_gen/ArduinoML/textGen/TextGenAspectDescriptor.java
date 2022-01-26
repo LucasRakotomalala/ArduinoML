@@ -25,20 +25,28 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
   @Override
   public TextGenDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
     switch (myIndex.index(concept)) {
-      case LanguageConceptSwitch.Action:
-        return new Action_TextGen();
-      case LanguageConceptSwitch.Actuator:
-        return new Actuator_TextGen();
       case LanguageConceptSwitch.And:
         return new And_TextGen();
       case LanguageConceptSwitch.App:
         return new App_TextGen();
+      case LanguageConceptSwitch.DisplayMessage:
+        return new DisplayMessage_TextGen();
+      case LanguageConceptSwitch.DisplaySensor:
+        return new DisplaySensor_TextGen();
       case LanguageConceptSwitch.IsSignal:
         return new IsSignal_TextGen();
+      case LanguageConceptSwitch.LCD:
+        return new LCD_TextGen();
       case LanguageConceptSwitch.Or:
         return new Or_TextGen();
+      case LanguageConceptSwitch.Pin:
+        return new Pin_TextGen();
       case LanguageConceptSwitch.Sensor:
         return new Sensor_TextGen();
+      case LanguageConceptSwitch.SignalAction:
+        return new SignalAction_TextGen();
+      case LanguageConceptSwitch.SignalActuator:
+        return new SignalActuator_TextGen();
       case LanguageConceptSwitch.State:
         return new State_TextGen();
     }

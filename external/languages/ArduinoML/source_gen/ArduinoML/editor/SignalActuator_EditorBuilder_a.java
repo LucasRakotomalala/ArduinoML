@@ -8,11 +8,7 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
-import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
-import jetbrains.mps.openapi.editor.style.Style;
-import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.openapi.editor.menus.transformation.SPropertyInfo;
@@ -40,11 +36,11 @@ import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class Sensor_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class SignalActuator_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public Sensor_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public SignalActuator_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -60,19 +56,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private EditorCell createCollection_0() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qb70eh_a");
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_jjqrmd_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
-    editorCell.addEditorCell(createCollection_1());
-    return editorCell;
-  }
-  private EditorCell createCollection_1() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qb70eh_a0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createProperty_0());
     editorCell.addEditorCell(createConstant_1());
@@ -80,8 +67,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "sensor:");
-    editorCell.setCellId("Constant_qb70eh_a0a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "actuator:");
+    editorCell.setCellId("Constant_jjqrmd_a0");
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -111,23 +98,23 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "on pin");
-    editorCell.setCellId("Constant_qb70eh_c0a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, " on pin ");
+    editorCell.setCellId("Constant_jjqrmd_c0");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new pinsListHandler_qb70eh_d0a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new pinsListHandler_jjqrmd_d0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
     editorCell.setCellId("refNodeList_pins");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class pinsListHandler_qb70eh_d0a extends RefNodeListHandler {
+  private static class pinsListHandler_jjqrmd_d0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public pinsListHandler_qb70eh_d0a(SNode ownerNode, EditorContext context) {
+    public pinsListHandler_jjqrmd_d0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -150,7 +137,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(pinsListHandler_qb70eh_d0a.this.getNode(), LINKS.pins$mKYM));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(pinsListHandler_jjqrmd_d0.this.getNode(), LINKS.pins$mKYM));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();

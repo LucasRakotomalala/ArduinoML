@@ -12,14 +12,16 @@ import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 
-public class Sensor_TextGen extends TextGenDescriptorBase {
+public class SignalActuator_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("#define ");
+    tgs.indent();
+    tgs.append("int ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
-    tgs.append(" ");
+    tgs.append(" = ");
     tgs.append(String.valueOf(SPropertyOperations.getInteger(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.pins$mKYM)).first(), PROPS.pin$pa2C)));
+    tgs.append(";");
   }
 
   private static final class PROPS {

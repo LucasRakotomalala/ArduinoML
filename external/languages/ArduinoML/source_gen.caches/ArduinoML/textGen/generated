@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-6wujn99sm6sneka7gcr6p868noxirl">
-  <files names="Action_TextGen.java:Actuator_TextGen.java:And_TextGen.java:App_TextGen.java:IsSignal_TextGen.java:Or_TextGen.java:Sensor_TextGen.java:State_TextGen.java:TextGenAspectDescriptor.java" />
+<product version="3" modelHash="1jyry1vsq57w34d3fidczksd13liv5e">
+  <files names="And_TextGen.java:App_TextGen.java:DisplayMessage_TextGen.java:DisplaySensor_TextGen.java:IsSignal_TextGen.java:LCD_TextGen.java:Or_TextGen.java:Pin_TextGen.java:Sensor_TextGen.java:SignalAction_TextGen.java:SignalActuator_TextGen.java:State_TextGen.java:TextGenAspectDescriptor.java" />
 </product>
 

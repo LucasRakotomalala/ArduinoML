@@ -27,22 +27,6 @@ public class Brick_Constraints extends BaseConstraintsDescriptor {
     super(CONCEPTS.Brick$co);
   }
 
-  public static class Pin_Property extends BasePropertyConstraintsDescriptor {
-    public Pin_Property(ConstraintsDescriptor container) {
-      super(PROPS.pin$c5aj, container, false, false, true);
-    }
-    @Override
-    public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
-      boolean result = staticValidateProperty(node, SPropertyOperations.castInteger(propertyValue));
-      if (!(result) && checkingNodeContext != null) {
-        checkingNodeContext.setBreakingNode(new SNodePointer("r:e90df988-a5b6-4ac0-90fc-0b742fc0a0bf(ArduinoML.constraints)", "6833034162691020880"));
-      }
-      return result;
-    }
-    private static boolean staticValidateProperty(SNode node, int propertyValue) {
-      return propertyValue >= 1 && propertyValue <= 13;
-    }
-  }
   public static class Name_Property extends BasePropertyConstraintsDescriptor {
     public Name_Property(ConstraintsDescriptor container) {
       super(PROPS.name$MnvL, container, false, false, true);
@@ -66,7 +50,6 @@ public class Brick_Constraints extends BaseConstraintsDescriptor {
   @Override
   protected Map<SProperty, PropertyConstraintsDescriptor> getSpecifiedProperties() {
     Map<SProperty, PropertyConstraintsDescriptor> properties = new HashMap<SProperty, PropertyConstraintsDescriptor>();
-    properties.put(PROPS.pin$c5aj, new Pin_Property(this));
     properties.put(PROPS.name$MnvL, new Name_Property(this));
     return properties;
   }
@@ -77,7 +60,6 @@ public class Brick_Constraints extends BaseConstraintsDescriptor {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty pin$c5aj = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L, 0x4fb6b2583ddab713L, "pin");
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
