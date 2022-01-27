@@ -2,16 +2,16 @@ package io.github.mosser.arduinoml.kernel.behavioral;
 
 import io.github.mosser.arduinoml.kernel.generator.Visitor;
 
-public class ActionLCD extends Action {
+public class StaticMessage implements Message {
 
-	private Message message;
+	private String message;
 
-
-	public Message getMessage() {
-		return message;
+	@Override
+	public String getMessage() {
+		return this.message;
 	}
 
-	public void setMessage(Message message) {
+	public void setMessage(String message) {
 		this.message = message;
 	}
 

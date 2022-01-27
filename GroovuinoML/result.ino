@@ -1,38 +1,37 @@
 // Wiring code generated from an ArduinoML model
-// Application name: Lcd
+// Application name: Basic2
 
 #include <LiquidCrystal.h> 
 long debounce = 200;
 
+boolean BounceGuard = false;
+long LastDebounceTime = 0;
+
 enum STATE {on, off};
 STATE currentState = off;
 
-boolean buttonBounceGuard = false;
-long buttonLastDebounceTime = 0;
-
-LiquidCrystal  lcd(2,3,4,5,6,7,8);
-
 void setup(){
-  pinMode(8, INPUT);  // button [Sensor]
-  pinMode(12, OUTPUT); // led [Actuator]
-  lcd.begin(16, 2); // lcd [ActuatorLCD]
+  pinMode(8, INPUT);  // button1 [Sensor]
+  pinMode(9, INPUT);  // button2 [Sensor]
+  pinMode(10, INPUT);  // button3 [Sensor]
+  pinMode(11, OUTPUT); // sound [Actuator]
 }
 
 void loop() {
 	switch(currentState){
 		case on:
-			digitalWrite(12,LOW);
-			buttonBounceGuard = millis() - buttonLastDebounceTime > debounce;
-			if( ( digitalRead(8) == HIGH ) && buttonBounceGuard) {
-				buttonLastDebounceTime = millis();
+			digitalWrite(11,HIGH);
+			BounceGuard = millis() - LastDebounceTime > debounce;
+			if(8 == LOW or 9 == LOW or 10 == LOW && BounceGuard) {
+				LastDebounceTime = millis();
 				currentState = off;
 			}
 		break;
 		case off:
-			digitalWrite(12,HIGH);
-			buttonBounceGuard = millis() - buttonLastDebounceTime > debounce;
-			if( ( digitalRead(8) == HIGH ) && buttonBounceGuard) {
-				buttonLastDebounceTime = millis();
+			digitalWrite(11,LOW);
+			BounceGuard = millis() - LastDebounceTime > debounce;
+			if(8 == HIGH and 9 == HIGH && BounceGuard) {
+				LastDebounceTime = millis();
 				currentState = on;
 			}
 		break;

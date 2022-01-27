@@ -2,16 +2,13 @@ package io.github.mosser.arduinoml.kernel.behavioral;
 
 import io.github.mosser.arduinoml.kernel.generator.Visitable;
 import io.github.mosser.arduinoml.kernel.generator.Visitor;
+import io.github.mosser.arduinoml.kernel.logical.LogicalExp;
 import io.github.mosser.arduinoml.kernel.structural.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Transition implements Visitable {
 
 	private State next;
 	private LOGIC logic = LOGIC.AND; 
-	private List<Condition> conditions = new ArrayList<Condition>();
+	private LogicalExp condition;
 
 
 	public State getNext() {
@@ -30,16 +27,12 @@ public class Transition implements Visitable {
 		this.logic = logic;
 	}
 
-	public List<Condition> getConditions() {
-		return conditions;
+	public LogicalExp getCondition() {
+		return condition;
 	}
 
-	public void setConditions(List<Condition> conditions) {
-		this.conditions = conditions;
-	}
-
-	public void addCondition(Condition condition){
-		this.conditions.add(condition);
+	public void setCondition(LogicalExp condition) {
+		this.condition = condition;
 	}
 
 	@Override

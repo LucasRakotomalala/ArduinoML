@@ -1,9 +1,6 @@
 package io.github.mosser.arduinoml.kernel.structural;
 
 import io.github.mosser.arduinoml.kernel.generator.Visitor;
-
-import java.util.ArrayList;
-import java.util.List;
 public class ActuatorLCD extends Actuator {
 
 	public Integer[] getPins() {

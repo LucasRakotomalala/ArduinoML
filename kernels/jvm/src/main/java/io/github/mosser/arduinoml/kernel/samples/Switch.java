@@ -4,6 +4,7 @@ import io.github.mosser.arduinoml.kernel.App;
 import io.github.mosser.arduinoml.kernel.behavioral.*;
 import io.github.mosser.arduinoml.kernel.generator.ToWiring;
 import io.github.mosser.arduinoml.kernel.generator.Visitor;
+import io.github.mosser.arduinoml.kernel.logical.IsSignal;
 import io.github.mosser.arduinoml.kernel.structural.*;
 
 import java.util.Arrays;
@@ -29,11 +30,11 @@ public class Switch {
 		off.setName("off");
 
 		// Creating actions
-		Action switchTheLightOn = new Action();
+		ActionWrite switchTheLightOn = new ActionWrite();
 		switchTheLightOn.setActuator(led);
 		switchTheLightOn.setValue(SIGNAL.HIGH);
 
-		Action switchTheLightOff = new Action();
+		ActionWrite switchTheLightOff = new ActionWrite();
 		switchTheLightOff.setActuator(led);
 		switchTheLightOff.setValue(SIGNAL.LOW);
 
@@ -42,11 +43,11 @@ public class Switch {
 		off.setActions(Arrays.asList(switchTheLightOff));
 
 		// Creating transitions
-		Condition condition1 = new Condition();
+		IsSignal condition1 = new IsSignal();
 		condition1.setSensor(button);
 		condition1.setValue(SIGNAL.HIGH);
 
-		Condition condition2 = new Condition();
+		IsSignal condition2 = new IsSignal();
 		condition2.setSensor(button);
 		condition2.setValue(SIGNAL.HIGH);
 
@@ -54,11 +55,11 @@ public class Switch {
 		// Creating transitions
 		Transition on2off = new Transition();
 		on2off.setNext(off);
-		on2off.addCondition(condition1);
+		
 
 		Transition off2on = new Transition();
 		off2on.setNext(on);
-		off2on.addCondition(condition2);
+
 
 		// Binding transitions to states
 		on.setTransition(on2off);

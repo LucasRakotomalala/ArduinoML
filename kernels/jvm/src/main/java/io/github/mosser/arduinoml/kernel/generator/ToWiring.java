@@ -2,6 +2,7 @@ package io.github.mosser.arduinoml.kernel.generator;
 
 import io.github.mosser.arduinoml.kernel.App;
 import io.github.mosser.arduinoml.kernel.behavioral.*;
+import io.github.mosser.arduinoml.kernel.logical.*;
 import io.github.mosser.arduinoml.kernel.structural.*;
 
 /**
@@ -27,6 +28,8 @@ public class ToWiring extends Visitor<StringBuffer> {
 		w(String.format("// Application name: %s\n", app.getName())+"\n");
 		w("#include <LiquidCrystal.h> \n");
 		w("long debounce = 200;\n");
+		w("\nboolean BounceGuard = false;\n");
+		w("long LastDebounceTime = 0;\n");
 		w("\nenum STATE {");
 		String sep ="";
 		for(State state: app.getStates()){
@@ -49,6 +52,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 		for(Brick brick: app.getBricks()){
 			brick.accept(this);
 		}
+
 		w("}\n");
 
 		w("\nvoid loop() {\n" +
@@ -95,8 +99,6 @@ public class ToWiring extends Visitor<StringBuffer> {
 	@Override
 	public void visit(Sensor sensor) {
 		if(context.get("pass") == PASS.ONE) {
-			w(String.format("\nboolean %sBounceGuard = false;\n", sensor.getName()));
-			w(String.format("long %sLastDebounceTime = 0;\n", sensor.getName()));
 			return;
 		}
 		if(context.get("pass") == PASS.TWO) {
@@ -132,19 +134,11 @@ public class ToWiring extends Visitor<StringBuffer> {
 			return;
 		}
 		if(context.get("pass") == PASS.TWO) {
-			String sensorName = transition.getConditions().get(0).getSensor().getName();
-			w(String.format("\t\t\t%sBounceGuard = millis() - %sLastDebounceTime > debounce;\n",
-					sensorName, sensorName));
-			w(String.format("\t\t\tif( ("));
-			String separator = "";
-			for (Condition condition: transition.getConditions()) {
-				w(String.format("%s digitalRead(%d) == %s ", separator,
-						condition.getSensor().getPin(), condition.getValue()));
-				separator = (transition.getLogic() == LOGIC.AND) ? "&&" : "||";
-			}	
-			
-			w(String.format(") && %sBounceGuard) {\n", sensorName));
-			w(String.format("\t\t\t\t%sLastDebounceTime = millis();\n", sensorName));
+			w(String.format("\t\t\tBounceGuard = millis() - LastDebounceTime > debounce;\n"));
+			w(String.format("\t\t\tif("));
+			transition.getCondition().accept(this);
+			w(String.format(" && BounceGuard) {\n"));
+			w(String.format("\t\t\t\tLastDebounceTime = millis();\n"));
 			w("\t\t\t\tcurrentState = " + transition.getNext().getName() + ";\n");
 			w("\t\t\t}\n");
 			return;
@@ -152,23 +146,74 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(Condition condition) {
+	public void visit(IsSignal signal) {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
 		if(context.get("pass") == PASS.TWO) {
-			w(String.format("\t\t\t%s == %s",condition.getSensor().getName(),condition.getValue()));
+			w(String.format("(digitalRead(%d) == %s)",signal.getSensor().getPin(), signal.getValue()));
 			return;
 		}
 	}
 
 	@Override
-	public void visit(Action action) {
+	public void visit(And andOp) {
+		if(context.get("pass") == PASS.ONE) {
+			return;
+		}
+		if(context.get("pass") == PASS.TWO) {
+			w(String.format("("));
+			andOp.getLeft().accept(this);
+			w(String.format(" && "));
+			andOp.getRight().accept(this);
+			w(String.format(")"));
+			return;
+		}
+	}
+
+	@Override
+	public void visit(Or orOp) {
+		if(context.get("pass") == PASS.ONE) {
+			return;
+		}
+		if(context.get("pass") == PASS.TWO) {
+			w(String.format("("));
+			orOp.getLeft().accept(this);
+			w(String.format(" || "));
+			orOp.getRight().accept(this);
+			w(String.format(")"));
+			return;
+		}
+	}
+
+	@Override
+	public void visit(ActionWrite action) {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
 		if(context.get("pass") == PASS.TWO) {
 			w(String.format("\t\t\tdigitalWrite(%d,%s);\n",action.getActuator().getPin(),action.getValue()));
+			return;
+		}
+	}
+
+	@Override
+	public void visit(ActionLCD action) {
+		if(context.get("pass") == PASS.ONE) {
+			return;
+		}
+		if(context.get("pass") == PASS.TWO) {
+			return;
+		}
+	}
+
+	@Override
+	public void visit(StaticMessage message) {
+		if(context.get("pass") == PASS.ONE) {
+			return;
+		}
+		if(context.get("pass") == PASS.TWO) {
+			
 			return;
 		}
 	}
