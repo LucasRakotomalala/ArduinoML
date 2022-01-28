@@ -435,5 +435,17 @@
       <node concept="l2Vlx" id="WJuM5MHayY" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="42fLGCoIHJJ">
+    <ref role="1XX52x" to="hs33:42fLGCoIHJ_" resolve="Delay" />
+    <node concept="3EZMnI" id="42fLGCoIHJL" role="2wV5jI">
+      <node concept="3F0ifn" id="42fLGCoIHJV" role="3EZMnx">
+        <property role="3F0ifm" value="delay:" />
+      </node>
+      <node concept="3F0A7n" id="42fLGCoIHK5" role="3EZMnx">
+        <ref role="1NtTu8" to="hs33:42fLGCoIHJA" resolve="millis" />
+      </node>
+      <node concept="l2Vlx" id="42fLGCoIHJO" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

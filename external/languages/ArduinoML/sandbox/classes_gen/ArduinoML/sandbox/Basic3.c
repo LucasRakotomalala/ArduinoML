@@ -29,7 +29,7 @@ void state_off() {
     time = millis();                            // update the debounce timer
     state_neutral_off();
   } else {
-    state_();
+    state_off();
   }
 }
 
@@ -43,7 +43,7 @@ void state_neutral_off() {
     time = millis();                            // update the debounce timer
     state_on();
   } else {
-    state_();
+    state_neutral_off();
   }
 }
 
@@ -58,7 +58,7 @@ void state_on() {
     time = millis();                            // update the debounce timer
     state_neutral_on();
   } else {
-    state_();
+    state_on();
   }
 }
 
@@ -72,7 +72,7 @@ void state_neutral_on() {
     time = millis();                            // update the debounce timer
     state_off();
   } else {
-    state_();
+    state_neutral_on();
   }
 }
 

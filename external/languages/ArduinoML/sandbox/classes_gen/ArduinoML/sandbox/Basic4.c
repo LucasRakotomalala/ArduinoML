@@ -33,7 +33,7 @@ void state_off() {
     time = millis();                            // update the debounce timer
     state_off_neutral();
   } else {
-    state_();
+    state_off();
   }
 }
 
@@ -47,7 +47,7 @@ void state_off_neutral() {
     time = millis();                            // update the debounce timer
     state_only_buzzer();
   } else {
-    state_();
+    state_off_neutral();
   }
 }
 
@@ -62,7 +62,7 @@ void state_only_buzzer() {
     time = millis();                            // update the debounce timer
     state_only_buzzer_neutral();
   } else {
-    state_();
+    state_only_buzzer();
   }
 }
 
@@ -76,7 +76,7 @@ void state_only_buzzer_neutral() {
     time = millis();                            // update the debounce timer
     state_only_led();
   } else {
-    state_();
+    state_only_buzzer_neutral();
   }
 }
 
@@ -92,7 +92,7 @@ void state_only_led() {
     time = millis();                            // update the debounce timer
     state_only_led_neutral();
   } else {
-    state_();
+    state_only_led();
   }
 }
 
@@ -106,7 +106,7 @@ void state_only_led_neutral() {
     time = millis();                            // update the debounce timer
     state_off();
   } else {
-    state_();
+    state_only_led_neutral();
   }
 }
 

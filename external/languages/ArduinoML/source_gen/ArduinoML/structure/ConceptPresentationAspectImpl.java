@@ -14,6 +14,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_And;
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
+  private ConceptPresentation props_Delay;
   private ConceptPresentation props_DisplayMessage;
   private ConceptPresentation props_DisplaySensor;
   private ConceptPresentation props_IsSignal;
@@ -65,6 +66,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Brick = cpb.create();
         }
         return props_Brick;
+      case LanguageConceptSwitch.Delay:
+        if (props_Delay == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Delay");
+          props_Delay = cpb.create();
+        }
+        return props_Delay;
       case LanguageConceptSwitch.DisplayMessage:
         if (props_DisplayMessage == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

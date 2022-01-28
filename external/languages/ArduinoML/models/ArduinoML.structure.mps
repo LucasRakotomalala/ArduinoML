@@ -323,5 +323,15 @@
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
+  <node concept="1TIwiD" id="42fLGCoIHJ_">
+    <property role="EcuMT" value="4652155511397604325" />
+    <property role="TrG5h" value="Delay" />
+    <ref role="1TJDcQ" node="5VjO5SPiRdV" resolve="Action" />
+    <node concept="1TJgyi" id="42fLGCoIHJA" role="1TKVEl">
+      <property role="IQ2nx" value="4652155511397604326" />
+      <property role="TrG5h" value="millis" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
 </model>
 

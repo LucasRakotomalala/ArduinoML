@@ -11,6 +11,9 @@
         <property id="2824865079248616309" name="signalToEval" index="24dLiB" />
         <reference id="2824865079248616307" name="evalTarget" index="24dLix" />
       </concept>
+      <concept id="4652155511397604325" name="ArduinoML.structure.Delay" flags="ng" index="1odhOJ">
+        <property id="4652155511397604326" name="millis" index="1odhOG" />
+      </concept>
       <concept id="6833034162690814834" name="ArduinoML.structure.State" flags="ng" index="1FAacG">
         <property id="6833034162690865667" name="isInitial" index="1FBYDt" />
         <child id="6833034162690814842" name="actions" index="1FAac$" />
@@ -384,6 +387,9 @@
       <node concept="1J3Dmq" id="1DAf3aeiepW" role="1FAac$">
         <ref role="1J3DmB" node="1DAf3aeiepY" resolve="lcd" />
         <ref role="1J3Dmp" node="1DAf3aeieq5" resolve="button" />
+      </node>
+      <node concept="1odhOJ" id="42fLGCoJGzi" role="1FAac$">
+        <property role="1odhOG" value="200" />
       </node>
       <node concept="1XAXM7" id="1DAf3aeiepX" role="1XAXeK">
         <ref role="1XAXMa" node="1DAf3aeiepV" resolve="hello_world" />

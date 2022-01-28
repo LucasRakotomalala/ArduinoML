@@ -3,59 +3,53 @@
 #include <Arduino.h>
 #include <LiquidCrystal.h>
 
-/** Generating code for applicationBasic2**/
+/** Generating code for applicationlcd hello world**/
 
 // Declaring states function headers
-void state_off();
-void state_on();
+void state_hello_world();
+void state_neutral();
 
 // Declaring available actuators
-#define button1 8
-#define button2 9
-int son = 11;
+LiquidCrystal lcd(12, 11, 10, 9, 8, 7);
 
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
 
-void state_off() {
-    digitalWrite(11, LOW);
+void state_hello_world() {
+    lcd.clear();
+  lcd.print("Hello World");
   boolean guard = millis() - time > debounce;  // debounce guard
 
     if (
     guard      // Go to next state if debounce
-    &&     ((digitalRead(8) == LOW) && (digitalRead(9) == LOW))
   ) {
     time = millis();                            // update the debounce timer
-    state_on();
+    state_hello_world();
   } else {
-    state_off();
+    state_hello_world();
   }
 }
 
-void state_on() {
-    digitalWrite(11, HIGH);
+void state_neutral() {
   boolean guard = millis() - time > debounce;  // debounce guard
 
     if (
     guard      // Go to next state if debounce
-    &&     ((digitalRead(8) == HIGH) || (digitalRead(9) == HIGH))
   ) {
     time = millis();                            // update the debounce timer
-    state_off();
+    state_neutral();
   } else {
-    state_on();
+    state_neutral();
   }
 }
 
 
 void setup()
 {
-  pinMode(button1, INPUT_PULLUP);
-  pinMode(button2, INPUT_PULLUP);
-  pinMode(son, OUTPUT);
+  lcd.begin(16, 2);
 }
 
 void loop()
 {
-  state_off();
+  state_hello_world();
 }
