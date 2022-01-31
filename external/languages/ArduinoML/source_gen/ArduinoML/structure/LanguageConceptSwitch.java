@@ -24,12 +24,11 @@ public final class LanguageConceptSwitch {
   public static final int LogicalExpression = 12;
   public static final int LogicalOperator = 13;
   public static final int Or = 14;
-  public static final int Pin = 15;
-  public static final int Sensor = 16;
-  public static final int SignalAction = 17;
-  public static final int SignalActuator = 18;
-  public static final int State = 19;
-  public static final int Transition = 20;
+  public static final int Sensor = 15;
+  public static final int SignalAction = 16;
+  public static final int SignalActuator = 17;
+  public static final int State = 18;
+  public static final int Transition = 19;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL);
@@ -48,7 +47,6 @@ public final class LanguageConceptSwitch {
     builder.put(0x4fb6b2583df4be35L, LogicalExpression);
     builder.put(0x4fb6b2583dde8d2cL, LogicalOperator);
     builder.put(0x4fb6b2583df4be83L, Or);
-    builder.put(0x376f84c758610ab9L, Pin);
     builder.put(0x4fb6b2583ddb3be6L, Sensor);
     builder.put(0x376f84c75862463fL, SignalAction);
     builder.put(0x376f84c758611114L, SignalActuator);

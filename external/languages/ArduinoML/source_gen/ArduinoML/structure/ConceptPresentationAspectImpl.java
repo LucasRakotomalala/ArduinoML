@@ -24,7 +24,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_LogicalExpression;
   private ConceptPresentation props_LogicalOperator;
   private ConceptPresentation props_Or;
-  private ConceptPresentation props_Pin;
   private ConceptPresentation props_Sensor;
   private ConceptPresentation props_SignalAction;
   private ConceptPresentation props_SignalActuator;
@@ -135,13 +134,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Or = cpb.create();
         }
         return props_Or;
-      case LanguageConceptSwitch.Pin:
-        if (props_Pin == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Pin");
-          props_Pin = cpb.create();
-        }
-        return props_Pin;
       case LanguageConceptSwitch.Sensor:
         if (props_Sensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

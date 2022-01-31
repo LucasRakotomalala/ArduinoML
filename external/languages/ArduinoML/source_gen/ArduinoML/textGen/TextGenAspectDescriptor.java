@@ -43,8 +43,6 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new LCD_TextGen();
       case LanguageConceptSwitch.Or:
         return new Or_TextGen();
-      case LanguageConceptSwitch.Pin:
-        return new Pin_TextGen();
       case LanguageConceptSwitch.Sensor:
         return new Sensor_TextGen();
       case LanguageConceptSwitch.SignalAction:

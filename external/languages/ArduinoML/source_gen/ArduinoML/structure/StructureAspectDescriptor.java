@@ -31,7 +31,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptLogicalExpression = createDescriptorForLogicalExpression();
   /*package*/ final ConceptDescriptor myConceptLogicalOperator = createDescriptorForLogicalOperator();
   /*package*/ final ConceptDescriptor myConceptOr = createDescriptorForOr();
-  /*package*/ final ConceptDescriptor myConceptPin = createDescriptorForPin();
   /*package*/ final ConceptDescriptor myConceptSensor = createDescriptorForSensor();
   /*package*/ final ConceptDescriptor myConceptSignalAction = createDescriptorForSignalAction();
   /*package*/ final ConceptDescriptor myConceptSignalActuator = createDescriptorForSignalActuator();
@@ -53,7 +52,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionForActuator, myConceptActuator, myConceptAnd, myConceptApp, myConceptBrick, myConceptClearDisplay, myConceptDelay, myConceptDisplayBrick, myConceptDisplayMessage, myConceptIsSignal, myConceptLCD, myConceptLogicalExpression, myConceptLogicalOperator, myConceptOr, myConceptPin, myConceptSensor, myConceptSignalAction, myConceptSignalActuator, myConceptState, myConceptTransition);
+    return Arrays.asList(myConceptAction, myConceptActionForActuator, myConceptActuator, myConceptAnd, myConceptApp, myConceptBrick, myConceptClearDisplay, myConceptDelay, myConceptDisplayBrick, myConceptDisplayMessage, myConceptIsSignal, myConceptLCD, myConceptLogicalExpression, myConceptLogicalOperator, myConceptOr, myConceptSensor, myConceptSignalAction, myConceptSignalActuator, myConceptState, myConceptTransition);
   }
 
   @Override
@@ -90,8 +89,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptLogicalOperator;
       case LanguageConceptSwitch.Or:
         return myConceptOr;
-      case LanguageConceptSwitch.Pin:
-        return myConceptPin;
       case LanguageConceptSwitch.Sensor:
         return myConceptSensor;
       case LanguageConceptSwitch.SignalAction:
@@ -168,7 +165,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5743974466822256391");
     b.version(2);
-    b.aggregate("pins", 0x376f84c758610abfL).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758610ab9L).optional(false).ordered(true).multiple(true).origin("3994557386217032383").done();
+    b.property("pin", 0x4665c893563f8dadL).type(PrimitiveTypeId.INTEGER).origin("5072681090435485101").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForClearDisplay() {
@@ -225,8 +222,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("ArduinoML.structure.Actuator", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7370L);
     b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3994557386216983732");
     b.version(2);
-    b.property("lines", 0x376f84c758610e4fL).type(PrimitiveTypeId.INTEGER).origin("3994557386217033295").done();
-    b.property("rows", 0x376f84c758610e51L).type(PrimitiveTypeId.INTEGER).origin("3994557386217033297").done();
+    b.alias("lcd");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForLogicalExpression() {
@@ -253,14 +249,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5743974466823962243");
     b.version(2);
     b.alias("or");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForPin() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Pin", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758610ab9L);
-    b.class_(false, false, false);
-    b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3994557386217032377");
-    b.version(2);
-    b.property("pin", 0x376f84c758610abaL).type(PrimitiveTypeId.INTEGER).origin("3994557386217032378").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSensor() {

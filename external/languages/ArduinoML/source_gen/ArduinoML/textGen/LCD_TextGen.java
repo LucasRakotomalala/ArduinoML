@@ -6,12 +6,8 @@ import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.Sequence;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class LCD_TextGen extends TextGenDescriptorBase {
   @Override
@@ -22,24 +18,17 @@ public class LCD_TextGen extends TextGenDescriptorBase {
     tgs.append("LiquidCrystal ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
     tgs.append("(");
-    {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.pins$mKYM);
-      final SNode lastItem = Sequence.fromIterable(collection).last();
-      for (SNode item : collection) {
-        tgs.appendNode(item);
-        if (item != lastItem) {
-          tgs.append(", ");
-        }
-      }
+    if (SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.pin$dabZ) == 1) {
+      tgs.append("2,3,4,5,6,7,8);");
+    } else if (SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.pin$dabZ) == 2) {
+      tgs.append("10,11,12,13,14,15,16);");
+    } else {
+      tgs.append("INVALID BUS VALUE (BUS MUST BE 1 OR 2));");
     }
-    tgs.append(");");
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-  }
-
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink pins$mKYM = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L, 0x376f84c758610abfL, "pins");
+    /*package*/ static final SProperty pin$dabZ = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L, 0x4665c893563f8dadL, "pin");
   }
 }

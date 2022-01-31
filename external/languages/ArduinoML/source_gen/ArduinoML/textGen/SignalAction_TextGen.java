@@ -6,11 +6,9 @@ import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class SignalAction_TextGen extends TextGenDescriptorBase {
@@ -19,7 +17,7 @@ public class SignalAction_TextGen extends TextGenDescriptorBase {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.indent();
     tgs.append("digitalWrite(");
-    tgs.append(String.valueOf(SPropertyOperations.getInteger(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.actuator$AF7C), LINKS.pins$mKYM)).first(), PROPS.pin$pa2C)));
+    tgs.append(String.valueOf(SPropertyOperations.getInteger(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.actuator$AF7C), PROPS.pin$dabZ)));
     tgs.append(", ");
     tgs.append(String.valueOf(SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.signal$EEBD)));
     tgs.append(");");
@@ -27,11 +25,10 @@ public class SignalAction_TextGen extends TextGenDescriptorBase {
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink actuator$AF7C = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75862463fL, 0x376f84c758624640L, "actuator");
-    /*package*/ static final SContainmentLink pins$mKYM = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L, 0x376f84c758610abfL, "pins");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty pin$pa2C = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758610ab9L, 0x376f84c758610abaL, "pin");
+    /*package*/ static final SProperty pin$dabZ = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L, 0x4665c893563f8dadL, "pin");
     /*package*/ static final SProperty signal$EEBD = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75862463fL, 0x376f84c7586246d0L, "signal");
   }
 }

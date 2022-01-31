@@ -10,7 +10,7 @@ void state_hello_world();
 void state_neutral();
 
 // Declaring available actuators
-LiquidCrystal lcd(12, 11, 10, 9, 8, 7);
+LiquidCrystal lcd(2,3,4,5,6,7,8);
 
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation

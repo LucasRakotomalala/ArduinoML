@@ -9,7 +9,7 @@
 void state_hello_world();
 
 // Declaring available actuators
-LiquidCrystal lcd(12, 11, 10, 9, 8, 7);
+LiquidCrystal lcd(2,3,4,5,6,7,8);
 #define button 5
 
 // Declaring states

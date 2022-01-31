@@ -20,7 +20,6 @@
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1153417849900" name="jetbrains.mps.baseLanguage.structure.GreaterThanOrEqualsExpression" flags="nn" index="2d3UOw" />
       <concept id="1153422305557" name="jetbrains.mps.baseLanguage.structure.LessThanOrEqualsExpression" flags="nn" index="2dkUwp" />
       <concept id="4836112446988635817" name="jetbrains.mps.baseLanguage.structure.UndefinedType" flags="in" index="2jxLKc" />
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
@@ -122,9 +121,6 @@
       <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
     </language>
   </registry>
-  <node concept="1M2fIO" id="5VjO5SPjDvj">
-    <ref role="1M2myG" to="hs33:5VjO5SPiRdK" resolve="Actuator" />
-  </node>
   <node concept="1M2fIO" id="4YQG_wXQL9J">
     <ref role="1M2myG" to="hs33:4YQG_wXQFs7" resolve="Brick" />
     <node concept="EnEH3" id="5VjO5SPjGl1" role="1MhHOB">
@@ -186,32 +182,6 @@
   </node>
   <node concept="1M2fIO" id="4YQG_wXQNK1">
     <ref role="1M2myG" to="hs33:4YQG_wXQNJA" resolve="Sensor" />
-  </node>
-  <node concept="1M2fIO" id="3tJxctoomcB">
-    <ref role="1M2myG" to="hs33:3tJxctoogET" resolve="Pin" />
-    <node concept="EnEH3" id="3tJxctoomcC" role="1MhHOB">
-      <ref role="EomxK" to="hs33:3tJxctoogEU" resolve="pin" />
-      <node concept="QB0g5" id="3tJxctoomdp" role="QCWH9">
-        <node concept="3clFbS" id="3tJxctoomdq" role="2VODD2">
-          <node concept="3clFbF" id="5VjO5SPjD_R" role="3cqZAp">
-            <node concept="1Wc70l" id="5VjO5SPjFIs" role="3clFbG">
-              <node concept="2dkUwp" id="5VjO5SPjFO7" role="3uHU7w">
-                <node concept="3cmrfG" id="5VjO5SPjFSM" role="3uHU7w">
-                  <property role="3cmrfH" value="13" />
-                </node>
-                <node concept="1Wqviy" id="5VjO5SPjFN8" role="3uHU7B" />
-              </node>
-              <node concept="2d3UOw" id="5VjO5SPjFqF" role="3uHU7B">
-                <node concept="1Wqviy" id="5VjO5SPjD_Q" role="3uHU7B" />
-                <node concept="3cmrfG" id="5VjO5SPjFuN" role="3uHU7w">
-                  <property role="3cmrfH" value="1" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
   </node>
   <node concept="1M2fIO" id="WJuM5MJauN">
     <ref role="1M2myG" to="hs33:WJuM5MHauA" resolve="Transition" />

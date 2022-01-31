@@ -21,7 +21,6 @@
       <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
-      <concept id="1237308012275" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineStyleClassItem" flags="ln" index="ljvvj" />
       <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
@@ -191,9 +190,8 @@
         <node concept="3F0ifn" id="4YQG_wXQO5u" role="3EZMnx">
           <property role="3F0ifm" value="on pin" />
         </node>
-        <node concept="3F2HdR" id="1LI9UnkI1qb" role="3EZMnx">
-          <ref role="1NtTu8" to="hs33:3tJxctoogEZ" resolve="pins" />
-          <node concept="l2Vlx" id="1LI9UnkI1qd" role="2czzBx" />
+        <node concept="3F0A7n" id="4p_M9dmfTBg" role="3EZMnx">
+          <ref role="1NtTu8" to="hs33:4p_M9dmfSQH" resolve="pin" />
         </node>
         <node concept="l2Vlx" id="4YQG_wXQO5w" role="2iSdaV" />
       </node>
@@ -275,9 +273,8 @@
       <node concept="3F0ifn" id="1LI9UnkIBfU" role="3EZMnx">
         <property role="3F0ifm" value=" on pin " />
       </node>
-      <node concept="3F2HdR" id="1LI9UnkIBga" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:3tJxctoogEZ" resolve="pins" />
-        <node concept="l2Vlx" id="1LI9UnkIBgc" role="2czzBx" />
+      <node concept="3F0A7n" id="4p_M9dmfVS8" role="3EZMnx">
+        <ref role="1NtTu8" to="hs33:4p_M9dmfSQH" resolve="pin" />
       </node>
       <node concept="l2Vlx" id="1LI9UnkIBfz" role="2iSdaV" />
     </node>
@@ -290,37 +287,12 @@
       </node>
       <node concept="3F0A7n" id="1LI9UnkIBxx" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        <node concept="ljvvj" id="1LI9UnkIBxB" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
       </node>
-      <node concept="3XFhqQ" id="1LI9UnkIBxO" role="3EZMnx" />
-      <node concept="3F0ifn" id="1LI9UnkIBy7" role="3EZMnx">
-        <property role="3F0ifm" value="lines:" />
+      <node concept="3F0ifn" id="4p_M9dmfSQu" role="3EZMnx">
+        <property role="3F0ifm" value="on bus" />
       </node>
-      <node concept="3F0A7n" id="1LI9UnkIByl" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:3tJxctoogTf" resolve="lines" />
-      </node>
-      <node concept="3XFhqQ" id="1LI9UnkIBzj" role="3EZMnx">
-        <node concept="pVoyu" id="1LI9UnkIBzt" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="1LI9UnkIB$6" role="3EZMnx">
-        <property role="3F0ifm" value="rows:" />
-      </node>
-      <node concept="3F0A7n" id="1LI9UnkIB$s" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:3tJxctoogTh" resolve="rows" />
-      </node>
-      <node concept="3F0ifn" id="1LI9UnkIBA6" role="3EZMnx">
-        <property role="3F0ifm" value="on pins " />
-        <node concept="pVoyu" id="1LI9UnkIBAj" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F2HdR" id="1LI9UnkIBAT" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:3tJxctoogEZ" resolve="pins" />
-        <node concept="l2Vlx" id="1LI9UnkIBAV" role="2czzBx" />
+      <node concept="3F0A7n" id="4p_M9dmfT7K" role="3EZMnx">
+        <ref role="1NtTu8" to="hs33:4p_M9dmfSQH" resolve="pin" />
       </node>
       <node concept="l2Vlx" id="1LI9UnkIBxk" role="2iSdaV" />
     </node>
@@ -398,12 +370,6 @@
         <ref role="1NtTu8" to="hs33:3tJxctoo$rg" resolve="signal" />
       </node>
       <node concept="l2Vlx" id="1LI9UnkIBE5" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="1LI9UnkJ3MU">
-    <ref role="1XX52x" to="hs33:3tJxctoogET" resolve="Pin" />
-    <node concept="3F0A7n" id="1LI9UnkJ3Nn" role="2wV5jI">
-      <ref role="1NtTu8" to="hs33:3tJxctoogEU" resolve="pin" />
     </node>
   </node>
   <node concept="24kQdi" id="WJuM5MHayQ">

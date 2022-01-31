@@ -168,15 +168,13 @@
     <property role="TrG5h" value="Brick" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="4p_M9dmfSQH" role="1TKVEl">
+      <property role="IQ2nx" value="5072681090435485101" />
+      <property role="TrG5h" value="pin" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="PrWs8" id="4YQG_wXQFs8" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyj" id="3tJxctoogEZ" role="1TKVEi">
-      <property role="IQ2ns" value="3994557386217032383" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="pins" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="3tJxctoogET" resolve="Pin" />
     </node>
   </node>
   <node concept="1TIwiD" id="4YQG_wXQNJA">
@@ -226,27 +224,8 @@
   <node concept="1TIwiD" id="3tJxctoo4MO">
     <property role="EcuMT" value="3994557386216983732" />
     <property role="TrG5h" value="LCD" />
+    <property role="34LRSv" value="lcd" />
     <ref role="1TJDcQ" node="5VjO5SPiRdK" resolve="Actuator" />
-    <node concept="1TJgyi" id="3tJxctoogTf" role="1TKVEl">
-      <property role="IQ2nx" value="3994557386217033295" />
-      <property role="TrG5h" value="lines" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyi" id="3tJxctoogTh" role="1TKVEl">
-      <property role="IQ2nx" value="3994557386217033297" />
-      <property role="TrG5h" value="rows" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="3tJxctoogET">
-    <property role="EcuMT" value="3994557386217032377" />
-    <property role="TrG5h" value="Pin" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-    <node concept="1TJgyi" id="3tJxctoogEU" role="1TKVEl">
-      <property role="IQ2nx" value="3994557386217032378" />
-      <property role="TrG5h" value="pin" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
   </node>
   <node concept="1TIwiD" id="3tJxctooh4k">
     <property role="EcuMT" value="3994557386217034004" />

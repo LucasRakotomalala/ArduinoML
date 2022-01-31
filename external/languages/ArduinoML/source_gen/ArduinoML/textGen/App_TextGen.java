@@ -89,11 +89,7 @@ public class App_TextGen extends TextGenDescriptorBase {
         if (SNodeOperations.isInstanceOf(it, CONCEPTS.LCD$ab)) {
           tgs.indent();
           tgs.append(SPropertyOperations.getString(it, PROPS.name$MnvL));
-          tgs.append(".begin(");
-          tgs.append(String.valueOf(SPropertyOperations.getInteger((SNodeOperations.as(it, CONCEPTS.LCD$ab)), PROPS.lines$QNK$)));
-          tgs.append(", ");
-          tgs.append(String.valueOf(SPropertyOperations.getInteger((SNodeOperations.as(it, CONCEPTS.LCD$ab)), PROPS.rows$QOeA)));
-          tgs.append(");");
+          tgs.append(".begin(16, 2);");
           tgs.newLine();
         } else if (SNodeOperations.isInstanceOf(it, CONCEPTS.Actuator$cY)) {
           tgs.indent();
@@ -139,8 +135,6 @@ public class App_TextGen extends TextGenDescriptorBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty lines$QNK$ = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758604cb4L, 0x376f84c758610e4fL, "lines");
-    /*package*/ static final SProperty rows$QOeA = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758604cb4L, 0x376f84c758610e51L, "rows");
     /*package*/ static final SProperty isInitial$up6D = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b7372L, 0x5ed3d05e354c3a03L, "isInitial");
   }
 
