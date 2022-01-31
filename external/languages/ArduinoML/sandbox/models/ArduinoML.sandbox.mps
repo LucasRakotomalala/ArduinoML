@@ -34,8 +34,8 @@
       <concept id="3994557386217032377" name="ArduinoML.structure.Pin" flags="ng" index="1J3CTY">
         <property id="3994557386217032378" name="pin" index="1J3CTX" />
       </concept>
-      <concept id="3994557386217034077" name="ArduinoML.structure.DisplaySensor" flags="ng" index="1J3Dmq">
-        <reference id="3994557386217034078" name="sensor" index="1J3Dmp" />
+      <concept id="3994557386217034077" name="ArduinoML.structure.DisplayBrick" flags="ng" index="1J3Dmq">
+        <reference id="5072681090435037163" name="brick" index="gnnXS" />
       </concept>
       <concept id="3994557386217034072" name="ArduinoML.structure.DisplayMessage" flags="ng" index="1J3Dmv">
         <property id="3994557386217034075" name="message" index="1J3Dms" />
@@ -392,8 +392,8 @@
       <node concept="gvgUo" id="4p_M9dmccyl" role="1FAac$">
         <ref role="ggak_" node="1DAf3aeiepY" resolve="lcd" />
       </node>
-      <node concept="1J3Dmq" id="4p_M9dmcvK_" role="1FAac$">
-        <ref role="1J3Dmp" node="1DAf3aeieq5" resolve="button" />
+      <node concept="1J3Dmq" id="4p_M9dmfcrA" role="1FAac$">
+        <ref role="gnnXS" node="4p_M9dmeyhi" resolve="button" />
         <ref role="ggak_" node="1DAf3aeiepY" resolve="lcd" />
       </node>
       <node concept="1odhOJ" id="42fLGCoJGzi" role="1FAac$">
@@ -426,9 +426,9 @@
         <property role="1J3CTX" value="7" />
       </node>
     </node>
-    <node concept="1MroAY" id="1DAf3aeieq5" role="1FAacB">
+    <node concept="1MroAY" id="4p_M9dmeyhi" role="1FAacB">
       <property role="TrG5h" value="button" />
-      <node concept="1J3CTY" id="1DAf3aeieq6" role="1J3CTS">
+      <node concept="1J3CTY" id="4p_M9dmeyhl" role="1J3CTS">
         <property role="1J3CTX" value="5" />
       </node>
     </node>

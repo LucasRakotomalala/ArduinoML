@@ -32,11 +32,11 @@ import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class DisplaySensor_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class DisplayBrick_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public DisplaySensor_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public DisplayBrick_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -53,7 +53,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_6i4pi0_a");
+    editorCell.setCellId("Collection_qrs0hy_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createConstant_0());
@@ -64,19 +64,19 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "display value of");
-    editorCell.setCellId("Constant_6i4pi0_a0");
+    editorCell.setCellId("Constant_qrs0hy_a0");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefCell_0() {
-    final SReferenceLink referenceLink = LINKS.sensor$JHP8;
+    final SReferenceLink referenceLink = LINKS.brick$KvUH;
     SReferenceCellProvider provider = new SReferenceCellProvider(getNode(), referenceLink, getEditorContext()) {
       protected EditorCell createReferenceCell(final SNode targetNode) {
         EditorCell cell = getUpdateSession().updateReferencedNodeCell(new Computable<EditorCell>() {
           public EditorCell compute() {
             return new Inline_Builder0(getEditorContext(), getNode(), targetNode).createCell();
           }
-        }, targetNode, LINKS.sensor$JHP8);
+        }, targetNode, LINKS.brick$KvUH);
         CellUtil.setupIDeprecatableStyles(targetNode, cell);
         setSemanticNodeToCells(cell, getNode());
         installDeleteActions_notnull(cell);
@@ -84,12 +84,12 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     };
 
-    provider.setNoTargetText("<no sensor>");
+    provider.setNoTargetText("<no brick>");
     EditorCell editorCell = provider.createCell();
 
     if (editorCell.getSRole() == null) {
       editorCell.setReferenceCell(true);
-      editorCell.setSRole(LINKS.sensor$JHP8);
+      editorCell.setSRole(LINKS.brick$KvUH);
     }
     editorCell.setSubstituteInfo(new SReferenceSubstituteInfo(editorCell, referenceLink));
     Iterable<SNode> referenceAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.LinkAttribute$v_);
@@ -153,7 +153,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_1() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "on");
-    editorCell.setCellId("Constant_6i4pi0_c0");
+    editorCell.setCellId("Constant_qrs0hy_c0");
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -242,7 +242,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink sensor$JHP8 = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75861115dL, 0x376f84c75861115eL, "sensor");
+    /*package*/ static final SReferenceLink brick$KvUH = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75861115dL, 0x4665c8935638b7ebL, "brick");
     /*package*/ static final SReferenceLink actuator$3ykZ = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c89356256db3L, 0x4665c89356256db6L, "actuator");
   }
 

@@ -17,8 +17,8 @@ public final class LanguageConceptSwitch {
   public static final int Brick = 5;
   public static final int ClearDisplay = 6;
   public static final int Delay = 7;
-  public static final int DisplayMessage = 8;
-  public static final int DisplaySensor = 9;
+  public static final int DisplayBrick = 8;
+  public static final int DisplayMessage = 9;
   public static final int IsSignal = 10;
   public static final int LCD = 11;
   public static final int LogicalExpression = 12;
@@ -41,8 +41,8 @@ public final class LanguageConceptSwitch {
     builder.put(0x4fb6b2583ddab707L, Brick);
     builder.put(0x4665c8935618c60bL, ClearDisplay);
     builder.put(0x408fc6ca18badbe5L, Delay);
+    builder.put(0x376f84c75861115dL, DisplayBrick);
     builder.put(0x376f84c758611158L, DisplayMessage);
-    builder.put(0x376f84c75861115dL, DisplaySensor);
     builder.put(0x2733efd2a304fb70L, IsSignal);
     builder.put(0x376f84c758604cb4L, LCD);
     builder.put(0x4fb6b2583df4be35L, LogicalExpression);

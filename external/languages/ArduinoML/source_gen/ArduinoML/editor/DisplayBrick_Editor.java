@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class DisplaySensor_Editor extends DefaultNodeEditor {
+public class DisplayBrick_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new DisplaySensor_EditorBuilder_a(editorContext, node).createCell();
+    return new DisplayBrick_EditorBuilder_a(editorContext, node).createCell();
   }
 }

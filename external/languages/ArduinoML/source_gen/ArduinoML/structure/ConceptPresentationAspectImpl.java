@@ -17,8 +17,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Brick;
   private ConceptPresentation props_ClearDisplay;
   private ConceptPresentation props_Delay;
+  private ConceptPresentation props_DisplayBrick;
   private ConceptPresentation props_DisplayMessage;
-  private ConceptPresentation props_DisplaySensor;
   private ConceptPresentation props_IsSignal;
   private ConceptPresentation props_LCD;
   private ConceptPresentation props_LogicalExpression;
@@ -88,6 +88,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Delay = cpb.create();
         }
         return props_Delay;
+      case LanguageConceptSwitch.DisplayBrick:
+        if (props_DisplayBrick == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("display brick");
+          props_DisplayBrick = cpb.create();
+        }
+        return props_DisplayBrick;
       case LanguageConceptSwitch.DisplayMessage:
         if (props_DisplayMessage == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -95,13 +102,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DisplayMessage = cpb.create();
         }
         return props_DisplayMessage;
-      case LanguageConceptSwitch.DisplaySensor:
-        if (props_DisplaySensor == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("display sensor");
-          props_DisplaySensor = cpb.create();
-        }
-        return props_DisplaySensor;
       case LanguageConceptSwitch.IsSignal:
         if (props_IsSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

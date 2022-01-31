@@ -350,13 +350,13 @@
     </node>
   </node>
   <node concept="24kQdi" id="1LI9UnkIBCI">
-    <ref role="1XX52x" to="hs33:3tJxctooh5t" resolve="DisplaySensor" />
+    <ref role="1XX52x" to="hs33:3tJxctooh5t" resolve="DisplayBrick" />
     <node concept="3EZMnI" id="1LI9UnkIBCN" role="2wV5jI">
       <node concept="3F0ifn" id="1LI9UnkIBCU" role="3EZMnx">
         <property role="3F0ifm" value="display value of" />
       </node>
       <node concept="1iCGBv" id="1LI9UnkIBD0" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:3tJxctooh5u" resolve="sensor" />
+        <ref role="1NtTu8" to="hs33:4p_M9dmebvF" resolve="brick" />
         <node concept="1sVBvm" id="1LI9UnkIBD2" role="1sWHZn">
           <node concept="3F0A7n" id="1LI9UnkIBDa" role="2wV5jI">
             <property role="1Intyy" value="true" />

@@ -13,26 +13,26 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
-public class DisplaySensor_TextGen extends TextGenDescriptorBase {
+public class DisplayBrick_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.indent();
     tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.actuator$3ykZ), PROPS.name$MnvL));
     tgs.append(".print(\"");
-    tgs.append(String.valueOf(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$JHP8), PROPS.name$MnvL)));
+    tgs.append(String.valueOf(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.brick$KvUH), PROPS.name$MnvL)));
     tgs.append(" := \");");
     tgs.newLine();
     tgs.indent();
     tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.actuator$3ykZ), PROPS.name$MnvL));
     tgs.append(".print(digitalRead(");
-    tgs.append(String.valueOf(SPropertyOperations.getInteger(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$JHP8), LINKS.pins$mKYM)).first(), PROPS.pin$pa2C)));
+    tgs.append(String.valueOf(SPropertyOperations.getInteger(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.brick$KvUH), LINKS.pins$mKYM)).first(), PROPS.pin$pa2C)));
     tgs.append("));");
   }
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink actuator$3ykZ = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c89356256db3L, 0x4665c89356256db6L, "actuator");
-    /*package*/ static final SReferenceLink sensor$JHP8 = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75861115dL, 0x376f84c75861115eL, "sensor");
+    /*package*/ static final SReferenceLink brick$KvUH = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75861115dL, 0x4665c8935638b7ebL, "brick");
     /*package*/ static final SContainmentLink pins$mKYM = MetaAdapterFactory.getContainmentLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L, 0x376f84c758610abfL, "pins");
   }
 

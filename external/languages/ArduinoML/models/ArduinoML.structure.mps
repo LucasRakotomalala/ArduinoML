@@ -266,14 +266,14 @@
   </node>
   <node concept="1TIwiD" id="3tJxctooh5t">
     <property role="EcuMT" value="3994557386217034077" />
-    <property role="TrG5h" value="DisplaySensor" />
-    <property role="34LRSv" value="display sensor" />
+    <property role="TrG5h" value="DisplayBrick" />
+    <property role="34LRSv" value="display brick" />
     <ref role="1TJDcQ" node="4p_M9dm9mQN" resolve="ActionForActuator" />
-    <node concept="1TJgyj" id="3tJxctooh5u" role="1TKVEi">
-      <property role="IQ2ns" value="3994557386217034078" />
-      <property role="20kJfa" value="sensor" />
+    <node concept="1TJgyj" id="4p_M9dmebvF" role="1TKVEi">
+      <property role="IQ2ns" value="5072681090435037163" />
+      <property role="20kJfa" value="brick" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="4YQG_wXQNJA" resolve="Sensor" />
+      <ref role="20lvS9" node="4YQG_wXQFs7" resolve="Brick" />
     </node>
   </node>
   <node concept="1TIwiD" id="3tJxctoo$oZ">

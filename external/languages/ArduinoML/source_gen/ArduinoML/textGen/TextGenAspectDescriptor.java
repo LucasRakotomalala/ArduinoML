@@ -33,10 +33,10 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new ClearDisplay_TextGen();
       case LanguageConceptSwitch.Delay:
         return new Delay_TextGen();
+      case LanguageConceptSwitch.DisplayBrick:
+        return new DisplayBrick_TextGen();
       case LanguageConceptSwitch.DisplayMessage:
         return new DisplayMessage_TextGen();
-      case LanguageConceptSwitch.DisplaySensor:
-        return new DisplaySensor_TextGen();
       case LanguageConceptSwitch.IsSignal:
         return new IsSignal_TextGen();
       case LanguageConceptSwitch.LCD:

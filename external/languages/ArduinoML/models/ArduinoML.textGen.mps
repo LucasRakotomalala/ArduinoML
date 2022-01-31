@@ -243,7 +243,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="3tJxctooihV">
-    <ref role="WuzLi" to="hs33:3tJxctooh5t" resolve="DisplaySensor" />
+    <ref role="WuzLi" to="hs33:3tJxctooh5t" resolve="DisplayBrick" />
     <node concept="11bSqf" id="3tJxctooihW" role="11c4hB">
       <node concept="3clFbS" id="3tJxctooihX" role="2VODD2">
         <node concept="lc7rE" id="42fLGCoMA9Z" role="3cqZAp">
@@ -272,7 +272,7 @@
                 <node concept="2OqwBi" id="42fLGCoMAad" role="2Oq$k0">
                   <node concept="117lpO" id="42fLGCoMAae" role="2Oq$k0" />
                   <node concept="3TrEf2" id="42fLGCoMAaf" role="2OqNvi">
-                    <ref role="3Tt5mk" to="hs33:3tJxctooh5u" resolve="sensor" />
+                    <ref role="3Tt5mk" to="hs33:4p_M9dmebvF" resolve="brick" />
                   </node>
                 </node>
                 <node concept="3TrcHB" id="42fLGCoMBNh" role="2OqNvi">
@@ -314,7 +314,7 @@
                     <node concept="2OqwBi" id="3tJxctoojIf" role="2Oq$k0">
                       <node concept="117lpO" id="3tJxctoojB$" role="2Oq$k0" />
                       <node concept="3TrEf2" id="3tJxctoojRg" role="2OqNvi">
-                        <ref role="3Tt5mk" to="hs33:3tJxctooh5u" resolve="sensor" />
+                        <ref role="3Tt5mk" to="hs33:4p_M9dmebvF" resolve="brick" />
                       </node>
                     </node>
                     <node concept="3Tsc0h" id="3tJxctook5k" role="2OqNvi">
