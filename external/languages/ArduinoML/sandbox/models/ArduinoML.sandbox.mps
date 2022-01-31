@@ -344,6 +344,9 @@
     <node concept="1FAacG" id="1DAf3aeezWE" role="1FAacA">
       <property role="TrG5h" value="hello_world" />
       <property role="1FBYDt" value="true" />
+      <node concept="gvgUo" id="4p_M9dm9mQJ" role="1FAac$">
+        <ref role="gvgUv" node="1DAf3aeezX4" resolve="lcd" />
+      </node>
       <node concept="1J3Dmv" id="1DAf3aeezZc" role="1FAac$">
         <property role="1J3Dms" value="&quot;Hello World&quot;" />
         <ref role="1J3Dmu" node="1DAf3aeezX4" resolve="lcd" />
