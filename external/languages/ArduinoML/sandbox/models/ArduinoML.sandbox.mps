@@ -347,7 +347,7 @@
         <ref role="ggak_" node="1DAf3aeezX4" resolve="lcd" />
       </node>
       <node concept="1J3Dmv" id="4p_M9dmccy9" role="1FAac$">
-        <property role="1J3Dms" value="&quot;Hellow World&quot;" />
+        <property role="1J3Dms" value="&quot;Hello World&quot;" />
         <ref role="ggak_" node="1DAf3aeezX4" resolve="lcd" />
       </node>
       <node concept="1XAXM7" id="1DAf3aeezWF" role="1XAXeK">
