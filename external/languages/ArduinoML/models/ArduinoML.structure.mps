@@ -333,5 +333,17 @@
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
+  <node concept="1TIwiD" id="4p_M9dm6cob">
+    <property role="EcuMT" value="5072681090432943627" />
+    <property role="TrG5h" value="ClearDisplay" />
+    <property role="34LRSv" value="clear" />
+    <ref role="1TJDcQ" node="5VjO5SPiRdV" resolve="Action" />
+    <node concept="1TJgyj" id="4p_M9dm6coc" role="1TKVEi">
+      <property role="IQ2ns" value="5072681090432943628" />
+      <property role="20kJfa" value="lcd" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3tJxctoo4MO" resolve="LCD" />
+    </node>
+  </node>
 </model>
 

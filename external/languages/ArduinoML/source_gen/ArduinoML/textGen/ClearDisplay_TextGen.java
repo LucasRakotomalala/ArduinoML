@@ -11,23 +11,20 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SProperty;
 
-public class DisplayMessage_TextGen extends TextGenDescriptorBase {
+public class ClearDisplay_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.indent();
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.lcd$JGBC), PROPS.name$MnvL));
-    tgs.append(".print(");
-    tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.message$JH5E));
-    tgs.append(");");
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.lcd$eFf8), PROPS.name$MnvL));
+    tgs.append(".clear();");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink lcd$JGBC = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758611158L, 0x376f84c758611159L, "lcd");
+    /*package*/ static final SReferenceLink lcd$eFf8 = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c8935618c60bL, 0x4665c8935618c60cL, "lcd");
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty message$JH5E = MetaAdapterFactory.getProperty(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758611158L, 0x376f84c75861115bL, "message");
   }
 }

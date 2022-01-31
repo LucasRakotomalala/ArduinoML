@@ -11,6 +11,9 @@
         <property id="2824865079248616309" name="signalToEval" index="24dLiB" />
         <reference id="2824865079248616307" name="evalTarget" index="24dLix" />
       </concept>
+      <concept id="5072681090432943627" name="ArduinoML.structure.ClearDisplay" flags="ng" index="gvgUo">
+        <reference id="5072681090432943628" name="lcd" index="gvgUv" />
+      </concept>
       <concept id="4652155511397604325" name="ArduinoML.structure.Delay" flags="ng" index="1odhOJ">
         <property id="4652155511397604326" name="millis" index="1odhOG" />
       </concept>
@@ -384,6 +387,9 @@
     <node concept="1FAacG" id="1DAf3aeiepV" role="1FAacA">
       <property role="TrG5h" value="hello_world" />
       <property role="1FBYDt" value="true" />
+      <node concept="gvgUo" id="4p_M9dm7YKA" role="1FAac$">
+        <ref role="gvgUv" node="1DAf3aeiepY" resolve="lcd" />
+      </node>
       <node concept="1J3Dmq" id="1DAf3aeiepW" role="1FAac$">
         <ref role="1J3DmB" node="1DAf3aeiepY" resolve="lcd" />
         <ref role="1J3Dmp" node="1DAf3aeieq5" resolve="button" />

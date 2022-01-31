@@ -14,20 +14,21 @@ public final class LanguageConceptSwitch {
   public static final int And = 2;
   public static final int App = 3;
   public static final int Brick = 4;
-  public static final int Delay = 5;
-  public static final int DisplayMessage = 6;
-  public static final int DisplaySensor = 7;
-  public static final int IsSignal = 8;
-  public static final int LCD = 9;
-  public static final int LogicalExpression = 10;
-  public static final int LogicalOperator = 11;
-  public static final int Or = 12;
-  public static final int Pin = 13;
-  public static final int Sensor = 14;
-  public static final int SignalAction = 15;
-  public static final int SignalActuator = 16;
-  public static final int State = 17;
-  public static final int Transition = 18;
+  public static final int ClearDisplay = 5;
+  public static final int Delay = 6;
+  public static final int DisplayMessage = 7;
+  public static final int DisplaySensor = 8;
+  public static final int IsSignal = 9;
+  public static final int LCD = 10;
+  public static final int LogicalExpression = 11;
+  public static final int LogicalOperator = 12;
+  public static final int Or = 13;
+  public static final int Pin = 14;
+  public static final int Sensor = 15;
+  public static final int SignalAction = 16;
+  public static final int SignalActuator = 17;
+  public static final int State = 18;
+  public static final int Transition = 19;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL);
@@ -36,6 +37,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x4fb6b2583ddfe166L, And);
     builder.put(0x5ed3d05e354b736eL, App);
     builder.put(0x4fb6b2583ddab707L, Brick);
+    builder.put(0x4665c8935618c60bL, ClearDisplay);
     builder.put(0x408fc6ca18badbe5L, Delay);
     builder.put(0x376f84c758611158L, DisplayMessage);
     builder.put(0x376f84c75861115dL, DisplaySensor);

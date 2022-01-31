@@ -21,6 +21,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAnd = createDescriptorForAnd();
   /*package*/ final ConceptDescriptor myConceptApp = createDescriptorForApp();
   /*package*/ final ConceptDescriptor myConceptBrick = createDescriptorForBrick();
+  /*package*/ final ConceptDescriptor myConceptClearDisplay = createDescriptorForClearDisplay();
   /*package*/ final ConceptDescriptor myConceptDelay = createDescriptorForDelay();
   /*package*/ final ConceptDescriptor myConceptDisplayMessage = createDescriptorForDisplayMessage();
   /*package*/ final ConceptDescriptor myConceptDisplaySensor = createDescriptorForDisplaySensor();
@@ -51,7 +52,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActuator, myConceptAnd, myConceptApp, myConceptBrick, myConceptDelay, myConceptDisplayMessage, myConceptDisplaySensor, myConceptIsSignal, myConceptLCD, myConceptLogicalExpression, myConceptLogicalOperator, myConceptOr, myConceptPin, myConceptSensor, myConceptSignalAction, myConceptSignalActuator, myConceptState, myConceptTransition);
+    return Arrays.asList(myConceptAction, myConceptActuator, myConceptAnd, myConceptApp, myConceptBrick, myConceptClearDisplay, myConceptDelay, myConceptDisplayMessage, myConceptDisplaySensor, myConceptIsSignal, myConceptLCD, myConceptLogicalExpression, myConceptLogicalOperator, myConceptOr, myConceptPin, myConceptSensor, myConceptSignalAction, myConceptSignalActuator, myConceptState, myConceptTransition);
   }
 
   @Override
@@ -68,6 +69,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptApp;
       case LanguageConceptSwitch.Brick:
         return myConceptBrick;
+      case LanguageConceptSwitch.ClearDisplay:
+        return myConceptClearDisplay;
       case LanguageConceptSwitch.Delay:
         return myConceptDelay;
       case LanguageConceptSwitch.DisplayMessage:
@@ -154,6 +157,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5743974466822256391");
     b.version(2);
     b.aggregate("pins", 0x376f84c758610abfL).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758610ab9L).optional(false).ordered(true).multiple(true).origin("3994557386217032383").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForClearDisplay() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "ClearDisplay", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c8935618c60bL);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Action", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b737bL);
+    b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5072681090432943627");
+    b.version(2);
+    b.associate("lcd", 0x4665c8935618c60cL).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758604cb4L).optional(false).origin("5072681090432943628").done();
+    b.alias("clear");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDelay() {

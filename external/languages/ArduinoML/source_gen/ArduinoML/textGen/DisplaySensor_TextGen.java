@@ -19,10 +19,6 @@ public class DisplaySensor_TextGen extends TextGenDescriptorBase {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.indent();
     tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.lcd$JNev), PROPS.name$MnvL));
-    tgs.append(".clear();");
-    tgs.newLine();
-    tgs.indent();
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.lcd$JNev), PROPS.name$MnvL));
     tgs.append(".print(\"");
     tgs.append(String.valueOf(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$JHP8), PROPS.name$MnvL)));
     tgs.append(" := \");");

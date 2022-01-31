@@ -29,6 +29,8 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new And_TextGen();
       case LanguageConceptSwitch.App:
         return new App_TextGen();
+      case LanguageConceptSwitch.ClearDisplay:
+        return new ClearDisplay_TextGen();
       case LanguageConceptSwitch.Delay:
         return new Delay_TextGen();
       case LanguageConceptSwitch.DisplayMessage:
