@@ -2,13 +2,13 @@ package io.github.mosser.arduinoml.kernel.behavioral;
 
 import io.github.mosser.arduinoml.kernel.generator.Visitor;
 
-public class StaticMessage implements Message {
+public class DisplayMessage extends ActionForActuator {
 
 	private String message;
 
-	@Override
+
 	public String getMessage() {
-		return this.message;
+		return message;
 	}
 
 	public void setMessage(String message) {

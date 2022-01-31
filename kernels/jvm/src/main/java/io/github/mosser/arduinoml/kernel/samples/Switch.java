@@ -18,7 +18,7 @@ public class Switch {
 		button.setName("button");
 		button.setPin(9);
 
-		Actuator led = new Actuator();
+		SignalActuator led = new SignalActuator();
 		led.setName("LED");
 		led.setPin(12);
 
@@ -30,11 +30,11 @@ public class Switch {
 		off.setName("off");
 
 		// Creating actions
-		ActionWrite switchTheLightOn = new ActionWrite();
+		SignalAction switchTheLightOn = new SignalAction();
 		switchTheLightOn.setActuator(led);
 		switchTheLightOn.setValue(SIGNAL.HIGH);
 
-		ActionWrite switchTheLightOff = new ActionWrite();
+		SignalAction switchTheLightOff = new SignalAction();
 		switchTheLightOff.setActuator(led);
 		switchTheLightOff.setValue(SIGNAL.LOW);
 
