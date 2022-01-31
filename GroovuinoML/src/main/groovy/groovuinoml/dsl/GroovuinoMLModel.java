@@ -4,7 +4,7 @@ import java.util.*;
 
 import groovy.lang.Binding;
 import io.github.mosser.arduinoml.kernel.App;
-import io.github.mosser.arduinoml.kernel.behavioral.ActionWrite;
+import io.github.mosser.arduinoml.kernel.behavioral.SignalAction;
 import io.github.mosser.arduinoml.kernel.behavioral.Action;
 import io.github.mosser.arduinoml.kernel.behavioral.State;
 import io.github.mosser.arduinoml.kernel.behavioral.Transition;
@@ -14,8 +14,8 @@ import io.github.mosser.arduinoml.kernel.logical.Or;
 import io.github.mosser.arduinoml.kernel.logical.LogicalExp;
 import io.github.mosser.arduinoml.kernel.generator.ToWiring;
 import io.github.mosser.arduinoml.kernel.generator.Visitor;
-import io.github.mosser.arduinoml.kernel.structural.Actuator;
-import io.github.mosser.arduinoml.kernel.structural.ActuatorLCD;
+import io.github.mosser.arduinoml.kernel.structural.SignalActuator;
+import io.github.mosser.arduinoml.kernel.structural.LCDActuator;
 import io.github.mosser.arduinoml.kernel.structural.Brick;
 import io.github.mosser.arduinoml.kernel.structural.SIGNAL;
 import io.github.mosser.arduinoml.kernel.structural.Sensor;
@@ -23,6 +23,7 @@ import io.github.mosser.arduinoml.kernel.structural.Sensor;
 public class GroovuinoMLModel {
 	private List<Brick> bricks;
 	private List<State> states;
+	private List<Action> actions;
 	private State initialState;
 	
 	private Binding binding;
@@ -30,7 +31,12 @@ public class GroovuinoMLModel {
 	public GroovuinoMLModel(Binding binding) {
 		this.bricks = new ArrayList<Brick>();
 		this.states = new ArrayList<State>();
+		this.actions = new ArrayList<Action>();
 		this.binding = binding;
+	}
+
+	public void addAction(Action action) {
+		this.actions.add(action);
 	}
 	
 	public void createSensor(String name, Integer pinNumber) {
@@ -42,8 +48,8 @@ public class GroovuinoMLModel {
 //		System.out.println("> sensor " + name + " on pin " + pinNumber);
 	}
 	
-	public void createActuator(String name, Integer pinNumber) {
-		Actuator actuator = new Actuator();
+	public void createSignalActuator(String name, Integer pinNumber) {
+		SignalActuator actuator = new SignalActuator();
 		actuator.setName(name);
 		actuator.setPin(pinNumber);
 		this.bricks.add(actuator);
@@ -51,7 +57,7 @@ public class GroovuinoMLModel {
 	}
 	
 	public void createActuatorLCD(String name, Integer bus) {
-		ActuatorLCD actuator = new ActuatorLCD();
+		LCDActuator actuator = new LCDActuator();
 		actuator.setName(name);
 		actuator.setPin(bus);
 		this.bricks.add(actuator);
@@ -84,6 +90,7 @@ public class GroovuinoMLModel {
 		app.setName(appName);
 		app.setBricks(this.bricks);
 		app.setStates(this.states);
+		app.setActions(this.actions);
 		app.setInitial(this.initialState);
 		Visitor codeGenerator = new ToWiring();
 		app.accept(codeGenerator);

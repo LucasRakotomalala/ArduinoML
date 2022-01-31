@@ -1,5 +1,5 @@
 // Wiring code generated from an ArduinoML model
-// Application name: Basic2
+// Application name: Lcd
 
 #include <LiquidCrystal.h> 
 long debounce = 200;
@@ -10,27 +10,30 @@ long LastDebounceTime = 0;
 enum STATE {on, off};
 STATE currentState = off;
 
+LiquidCrystal  lcd(2,3,4,5,6,7,8);
+
 void setup(){
-  pinMode(8, INPUT);  // button1 [Sensor]
-  pinMode(9, INPUT);  // button2 [Sensor]
-  pinMode(10, INPUT);  // button3 [Sensor]
-  pinMode(11, OUTPUT); // sound [Actuator]
+  pinMode(8, INPUT);  // button [Sensor]
+  pinMode(12, OUTPUT); // led [Actuator]
+  lcd.begin(16, 2); // lcd [ActuatorLCD]
 }
 
 void loop() {
 	switch(currentState){
 		case on:
-			digitalWrite(11,HIGH);
+			digitalWrite(12,LOW);
+			lcd.print("Hello world!");
 			BounceGuard = millis() - LastDebounceTime > debounce;
-			if(8 == LOW or 9 == LOW or 10 == LOW && BounceGuard) {
+			if((digitalRead(8) == HIGH) && BounceGuard) {
 				LastDebounceTime = millis();
 				currentState = off;
 			}
 		break;
 		case off:
-			digitalWrite(11,LOW);
+			digitalWrite(12,HIGH);
+			lcd.print(digitalRead(8));
 			BounceGuard = millis() - LastDebounceTime > debounce;
-			if(8 == HIGH and 9 == HIGH && BounceGuard) {
+			if((digitalRead(8) == HIGH) && BounceGuard) {
 				LastDebounceTime = millis();
 				currentState = on;
 			}

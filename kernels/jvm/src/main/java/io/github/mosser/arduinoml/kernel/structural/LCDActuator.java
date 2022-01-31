@@ -1,7 +1,8 @@
 package io.github.mosser.arduinoml.kernel.structural;
 
 import io.github.mosser.arduinoml.kernel.generator.Visitor;
-public class ActuatorLCD extends Actuator {
+
+public class LCDActuator extends Actuator {
 
 	public Integer[] getPins() {
 		if(this.getPin() == 1) {

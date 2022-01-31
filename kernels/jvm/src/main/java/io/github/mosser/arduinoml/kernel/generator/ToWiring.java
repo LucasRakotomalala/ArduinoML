@@ -1,5 +1,7 @@
 package io.github.mosser.arduinoml.kernel.generator;
 
+import java.util.ArrayList;
+
 import io.github.mosser.arduinoml.kernel.App;
 import io.github.mosser.arduinoml.kernel.behavioral.*;
 import io.github.mosser.arduinoml.kernel.logical.*;
@@ -10,7 +12,6 @@ import io.github.mosser.arduinoml.kernel.structural.*;
  */
 public class ToWiring extends Visitor<StringBuffer> {
 	enum PASS {ONE, TWO}
-
 
 	public ToWiring() {
 		this.result = new StringBuffer();
@@ -55,8 +56,11 @@ public class ToWiring extends Visitor<StringBuffer> {
 
 		w("}\n");
 
-		w("\nvoid loop() {\n" +
-			"\tswitch(currentState){\n");
+		w("\nvoid loop() {\n");
+		for(Action action: app.getActions()){
+			action.accept(this);
+		}
+		w("\tswitch(currentState){\n");
 		for(State state: app.getStates()){
 			state.accept(this);
 		}
@@ -65,7 +69,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(Actuator actuator) {
+	public void visit(SignalActuator actuator) {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
@@ -76,7 +80,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(ActuatorLCD actuator) {
+	public void visit(LCDActuator actuator) {
 		if(context.get("pass") == PASS.ONE) {
 			w(String.format("\nLiquidCrystal  %s(", actuator.getName()));
 			String separator = "";
@@ -187,7 +191,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(ActionWrite action) {
+	public void visit(SignalAction action) {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
@@ -198,22 +202,45 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(ActionLCD action) {
+	public void visit(DisplayMessage action) {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
 		if(context.get("pass") == PASS.TWO) {
+			w(String.format("\t\t\t%s.print(\"%s\");\n",action.getActuator().getName(),action.getMessage()));
 			return;
 		}
 	}
 
 	@Override
-	public void visit(StaticMessage message) {
+	public void visit(DisplayBrick action) {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
 		if(context.get("pass") == PASS.TWO) {
-			
+			w(String.format("\t\t\t%s.print(digitalRead(%d));\n",action.getActuator().getName(),action.getBrick().getPin()));
+			return;
+		}
+	}
+
+	@Override
+	public void visit(ClearDisplay action) {
+		if(context.get("pass") == PASS.ONE) {
+			return;
+		}
+		if(context.get("pass") == PASS.TWO) {
+			w(String.format("\t\t\t%s.clear();\n",action.getActuator().getName()));
+			return;
+		}
+	}
+
+	@Override
+	public void visit(DelayAction action) {
+		if(context.get("pass") == PASS.ONE) {
+			return;
+		}
+		if(context.get("pass") == PASS.TWO) {
+			w(String.format("\t\t\tdelay(%d);\n",action.getDelay()));
 			return;
 		}
 	}

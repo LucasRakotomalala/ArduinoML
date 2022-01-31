@@ -2,12 +2,18 @@ package main.groovy.groovuinoml.dsl
 
 import java.util.List;
 
-import io.github.mosser.arduinoml.kernel.behavioral.ActionWrite;
+import io.github.mosser.arduinoml.kernel.behavioral.SignalAction;
+import io.github.mosser.arduinoml.kernel.behavioral.DisplayMessage;
+import io.github.mosser.arduinoml.kernel.behavioral.DisplayBrick;
+import io.github.mosser.arduinoml.kernel.behavioral.ClearDisplay
+import io.github.mosser.arduinoml.kernel.behavioral.DelayAction
 import io.github.mosser.arduinoml.kernel.behavioral.Action;
 import io.github.mosser.arduinoml.kernel.behavioral.State
 import io.github.mosser.arduinoml.kernel.behavioral.Transition
-import io.github.mosser.arduinoml.kernel.structural.Actuator
+import io.github.mosser.arduinoml.kernel.structural.SignalActuator
+import io.github.mosser.arduinoml.kernel.structural.LCDActuator
 import io.github.mosser.arduinoml.kernel.structural.Sensor
+import io.github.mosser.arduinoml.kernel.structural.Brick
 import io.github.mosser.arduinoml.kernel.structural.SIGNAL
 import io.github.mosser.arduinoml.kernel.logical.LogicalExp;
 import io.github.mosser.arduinoml.kernel.logical.IsSignal;
@@ -24,10 +30,10 @@ abstract class GroovuinoMLBasescript extends Script {
 	
 	// actuator "name" pin n
 	def actuator(String name) {
-		[pin: { n -> ((GroovuinoMLBinding)this.getBinding()).getGroovuinoMLModel().createActuator(name, n) }]
+		[pin: { n -> ((GroovuinoMLBinding)this.getBinding()).getGroovuinoMLModel().createSignalActuator(name, n) }]
 	}
 
-	// lcd "name" bus "n" cols "c" rows "r"
+	// lcd "name" bus "n" 
 	def lcd(String name) {
 		[bus: { b -> 
 			((GroovuinoMLBinding)this.getBinding()).getGroovuinoMLModel().createActuatorLCD(name, b)
@@ -40,11 +46,33 @@ abstract class GroovuinoMLBasescript extends Script {
 		((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createState(name, actions)
 		// recursive closure to allow multiple and statements
 		def closure
+
+
 		closure = { actuator -> 
 			[becomes: { signal ->
-				ActionWrite action = new ActionWrite()
-				action.setActuator(actuator instanceof String ? (Actuator)((GroovuinoMLBinding)this.getBinding()).getVariable(actuator) : (Actuator)actuator)
+				SignalAction action = new SignalAction()
+				action.setActuator(actuator instanceof String ? (SignalActuator)((GroovuinoMLBinding)this.getBinding()).getVariable(actuator) : (SignalActuator)actuator)
 				action.setValue(signal instanceof String ? (SIGNAL)((GroovuinoMLBinding)this.getBinding()).getVariable(signal) : (SIGNAL)signal)
+				actions.add(action)
+				[and: closure]
+			},
+			display_message: { input ->
+				DisplayMessage action = new DisplayMessage()
+				action.setActuator(actuator instanceof String ? (LCDActuator)((GroovuinoMLBinding)this.getBinding()).getVariable(actuator) : (LCDActuator)actuator)
+				action.setMessage((String)input)
+				actions.add(action)
+				[and: closure]
+			}, 
+			display_sensor : { input ->
+				DisplayBrick action = new DisplayBrick()
+				action.setActuator(actuator instanceof String ? (LCDActuator)((GroovuinoMLBinding)this.getBinding()).getVariable(actuator) : (LCDActuator)actuator)
+				action.setBrick(input instanceof String ? (Brick)((GroovuinoMLBinding)this.getBinding()).getVariable(input) : (Brick)input)
+				actions.add(action)
+				[and: closure]
+			},
+			clear : { ->
+				ClearDisplay action = new ClearDisplay()
+				action.setActuator(actuator instanceof String ? (LCDActuator)((GroovuinoMLBinding)this.getBinding()).getVariable(actuator) : (LCDActuator)actuator)
 				actions.add(action)
 				[and: closure]
 			}]
@@ -102,7 +130,7 @@ abstract class GroovuinoMLBasescript extends Script {
 					IsSignal isSignal = new IsSignal()
 					isSignal.setSensor(sensor instanceof String ? (Sensor)((GroovuinoMLBinding)this.getBinding()).getVariable(sensor) : (Sensor)sensor)
 					isSignal.setValue(signal instanceof String ? (SIGNAL)((GroovuinoMLBinding)this.getBinding()).getVariable(signal) : (SIGNAL)signal)
-					//stateOne.getTransition().setCondition(isSignal)
+					stateOne.getTransition().setCondition(isSignal)
 					condition = isSignal;
 					[and: logicAnd, or: logicOr]
 				}]

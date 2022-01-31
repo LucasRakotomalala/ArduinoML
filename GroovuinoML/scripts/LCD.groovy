@@ -2,8 +2,8 @@ sensor "button" onPin 8
 actuator "led" pin 12
 lcd "lcd" bus 1
 
-state "on" means "led" becomes "low"  // add display message?
-state "off" means "led" becomes "high"
+state "on" means "led" becomes "low" and "lcd" display_message "Hello world!"
+state "off" means "led" becomes "high" and "lcd" display_sensor "button"
 
 initial "off"
 
