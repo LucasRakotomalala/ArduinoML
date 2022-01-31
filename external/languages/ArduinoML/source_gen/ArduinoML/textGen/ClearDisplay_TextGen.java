@@ -16,12 +16,12 @@ public class ClearDisplay_TextGen extends TextGenDescriptorBase {
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.indent();
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.lcd$eFf8), PROPS.name$MnvL));
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.actuator$3ykZ), PROPS.name$MnvL));
     tgs.append(".clear();");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink lcd$eFf8 = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c8935618c60bL, 0x4665c8935618c60cL, "lcd");
+    /*package*/ static final SReferenceLink actuator$3ykZ = MetaAdapterFactory.getReferenceLink(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c89356256db3L, 0x4665c89356256db6L, "actuator");
   }
 
   private static final class PROPS {

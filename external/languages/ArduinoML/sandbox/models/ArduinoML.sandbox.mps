@@ -11,9 +11,10 @@
         <property id="2824865079248616309" name="signalToEval" index="24dLiB" />
         <reference id="2824865079248616307" name="evalTarget" index="24dLix" />
       </concept>
-      <concept id="5072681090432943627" name="ArduinoML.structure.ClearDisplay" flags="ng" index="gvgUo">
-        <reference id="5072681090432943628" name="lcd" index="gvgUv" />
+      <concept id="5072681090433772979" name="ArduinoML.structure.ActionForActuator" flags="ng" index="ggakw">
+        <reference id="5072681090433772982" name="actuator" index="ggak_" />
       </concept>
+      <concept id="5072681090432943627" name="ArduinoML.structure.ClearDisplay" flags="ng" index="gvgUo" />
       <concept id="4652155511397604325" name="ArduinoML.structure.Delay" flags="ng" index="1odhOJ">
         <property id="4652155511397604326" name="millis" index="1odhOG" />
       </concept>
@@ -35,11 +36,9 @@
       </concept>
       <concept id="3994557386217034077" name="ArduinoML.structure.DisplaySensor" flags="ng" index="1J3Dmq">
         <reference id="3994557386217034078" name="sensor" index="1J3Dmp" />
-        <reference id="3994557386217034080" name="lcd" index="1J3DmB" />
       </concept>
       <concept id="3994557386217034072" name="ArduinoML.structure.DisplayMessage" flags="ng" index="1J3Dmv">
         <property id="3994557386217034075" name="message" index="1J3Dms" />
-        <reference id="3994557386217034073" name="lcd" index="1J3Dmu" />
       </concept>
       <concept id="3994557386217034004" name="ArduinoML.structure.SignalActuator" flags="ng" index="1J3Dnj" />
       <concept id="3994557386216983732" name="ArduinoML.structure.LCD" flags="ng" index="1J3WxN">
@@ -344,12 +343,12 @@
     <node concept="1FAacG" id="1DAf3aeezWE" role="1FAacA">
       <property role="TrG5h" value="hello_world" />
       <property role="1FBYDt" value="true" />
-      <node concept="gvgUo" id="4p_M9dm9mQJ" role="1FAac$">
-        <ref role="gvgUv" node="1DAf3aeezX4" resolve="lcd" />
+      <node concept="gvgUo" id="4p_M9dmbw0J" role="1FAac$">
+        <ref role="ggak_" node="1DAf3aeezX4" resolve="lcd" />
       </node>
-      <node concept="1J3Dmv" id="1DAf3aeezZc" role="1FAac$">
-        <property role="1J3Dms" value="&quot;Hello World&quot;" />
-        <ref role="1J3Dmu" node="1DAf3aeezX4" resolve="lcd" />
+      <node concept="1J3Dmv" id="4p_M9dmccy9" role="1FAac$">
+        <property role="1J3Dms" value="&quot;Hellow World&quot;" />
+        <ref role="ggak_" node="1DAf3aeezX4" resolve="lcd" />
       </node>
       <node concept="1XAXM7" id="1DAf3aeezWF" role="1XAXeK">
         <ref role="1XAXMa" node="1DAf3aegXmo" resolve="neutral" />
@@ -390,12 +389,12 @@
     <node concept="1FAacG" id="1DAf3aeiepV" role="1FAacA">
       <property role="TrG5h" value="hello_world" />
       <property role="1FBYDt" value="true" />
-      <node concept="gvgUo" id="4p_M9dm7YKA" role="1FAac$">
-        <ref role="gvgUv" node="1DAf3aeiepY" resolve="lcd" />
+      <node concept="gvgUo" id="4p_M9dmccyl" role="1FAac$">
+        <ref role="ggak_" node="1DAf3aeiepY" resolve="lcd" />
       </node>
-      <node concept="1J3Dmq" id="1DAf3aeiepW" role="1FAac$">
-        <ref role="1J3DmB" node="1DAf3aeiepY" resolve="lcd" />
+      <node concept="1J3Dmq" id="4p_M9dmcvK_" role="1FAac$">
         <ref role="1J3Dmp" node="1DAf3aeieq5" resolve="button" />
+        <ref role="ggak_" node="1DAf3aeiepY" resolve="lcd" />
       </node>
       <node concept="1odhOJ" id="42fLGCoJGzi" role="1FAac$">
         <property role="1odhOG" value="200" />

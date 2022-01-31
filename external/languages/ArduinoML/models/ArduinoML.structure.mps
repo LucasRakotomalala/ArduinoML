@@ -256,13 +256,8 @@
   <node concept="1TIwiD" id="3tJxctooh5o">
     <property role="EcuMT" value="3994557386217034072" />
     <property role="TrG5h" value="DisplayMessage" />
-    <ref role="1TJDcQ" node="5VjO5SPiRdV" resolve="Action" />
-    <node concept="1TJgyj" id="3tJxctooh5p" role="1TKVEi">
-      <property role="IQ2ns" value="3994557386217034073" />
-      <property role="20kJfa" value="lcd" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3tJxctoo4MO" resolve="LCD" />
-    </node>
+    <property role="34LRSv" value="display message" />
+    <ref role="1TJDcQ" node="4p_M9dm9mQN" resolve="ActionForActuator" />
     <node concept="1TJgyi" id="3tJxctooh5r" role="1TKVEl">
       <property role="IQ2nx" value="3994557386217034075" />
       <property role="TrG5h" value="message" />
@@ -272,18 +267,13 @@
   <node concept="1TIwiD" id="3tJxctooh5t">
     <property role="EcuMT" value="3994557386217034077" />
     <property role="TrG5h" value="DisplaySensor" />
-    <ref role="1TJDcQ" node="5VjO5SPiRdV" resolve="Action" />
+    <property role="34LRSv" value="display sensor" />
+    <ref role="1TJDcQ" node="4p_M9dm9mQN" resolve="ActionForActuator" />
     <node concept="1TJgyj" id="3tJxctooh5u" role="1TKVEi">
       <property role="IQ2ns" value="3994557386217034078" />
       <property role="20kJfa" value="sensor" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="4YQG_wXQNJA" resolve="Sensor" />
-    </node>
-    <node concept="1TJgyj" id="3tJxctooh5w" role="1TKVEi">
-      <property role="IQ2ns" value="3994557386217034080" />
-      <property role="20kJfa" value="lcd" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3tJxctoo4MO" resolve="LCD" />
     </node>
   </node>
   <node concept="1TIwiD" id="3tJxctoo$oZ">
@@ -337,12 +327,18 @@
     <property role="EcuMT" value="5072681090432943627" />
     <property role="TrG5h" value="ClearDisplay" />
     <property role="34LRSv" value="clear" />
+    <ref role="1TJDcQ" node="4p_M9dm9mQN" resolve="ActionForActuator" />
+  </node>
+  <node concept="1TIwiD" id="4p_M9dm9mQN">
+    <property role="EcuMT" value="5072681090433772979" />
+    <property role="TrG5h" value="ActionForActuator" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="5VjO5SPiRdV" resolve="Action" />
-    <node concept="1TJgyj" id="4p_M9dm6coc" role="1TKVEi">
-      <property role="IQ2ns" value="5072681090432943628" />
-      <property role="20kJfa" value="lcd" />
+    <node concept="1TJgyj" id="4p_M9dm9mQQ" role="1TKVEi">
+      <property role="IQ2ns" value="5072681090433772982" />
+      <property role="20kJfa" value="actuator" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3tJxctoo4MO" resolve="LCD" />
+      <ref role="20lvS9" node="5VjO5SPiRdK" resolve="Actuator" />
     </node>
   </node>
 </model>

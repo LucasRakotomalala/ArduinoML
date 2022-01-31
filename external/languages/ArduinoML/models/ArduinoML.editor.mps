@@ -338,7 +338,7 @@
         <property role="3F0ifm" value="on" />
       </node>
       <node concept="1iCGBv" id="1LI9UnkIBC1" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:3tJxctooh5p" resolve="lcd" />
+        <ref role="1NtTu8" to="hs33:4p_M9dm9mQQ" resolve="actuator" />
         <node concept="1sVBvm" id="1LI9UnkIBC3" role="1sWHZn">
           <node concept="3F0A7n" id="1LI9UnkIBCd" role="2wV5jI">
             <property role="1Intyy" value="true" />
@@ -368,7 +368,7 @@
         <property role="3F0ifm" value="on" />
       </node>
       <node concept="1iCGBv" id="1LI9UnkIBDC" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:3tJxctooh5w" resolve="lcd" />
+        <ref role="1NtTu8" to="hs33:4p_M9dm9mQQ" resolve="actuator" />
         <node concept="1sVBvm" id="1LI9UnkIBDE" role="1sWHZn">
           <node concept="3F0A7n" id="1LI9UnkIBDQ" role="2wV5jI">
             <property role="1Intyy" value="true" />
@@ -454,7 +454,7 @@
         <property role="3F0ifm" value="clear display of" />
       </node>
       <node concept="1iCGBv" id="4p_M9dm6coB" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:4p_M9dm6coc" resolve="lcd" />
+        <ref role="1NtTu8" to="hs33:4p_M9dm9mQQ" resolve="actuator" />
         <node concept="1sVBvm" id="4p_M9dm6coD" role="1sWHZn">
           <node concept="3F0A7n" id="4p_M9dm6coO" role="2wV5jI">
             <property role="1Intyy" value="true" />

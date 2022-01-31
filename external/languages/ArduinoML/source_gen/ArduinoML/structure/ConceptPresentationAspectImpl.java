@@ -10,6 +10,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Action;
+  private ConceptPresentation props_ActionForActuator;
   private ConceptPresentation props_Actuator;
   private ConceptPresentation props_And;
   private ConceptPresentation props_App;
@@ -41,6 +42,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Action = cpb.create();
         }
         return props_Action;
+      case LanguageConceptSwitch.ActionForActuator:
+        if (props_ActionForActuator == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ActionForActuator = cpb.create();
+        }
+        return props_ActionForActuator;
       case LanguageConceptSwitch.Actuator:
         if (props_Actuator == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -84,14 +91,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.DisplayMessage:
         if (props_DisplayMessage == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758611158L, 0x376f84c758611159L, "lcd", "", "");
+          cpb.rawPresentation("display message");
           props_DisplayMessage = cpb.create();
         }
         return props_DisplayMessage;
       case LanguageConceptSwitch.DisplaySensor:
         if (props_DisplaySensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("DisplaySensor");
+          cpb.rawPresentation("display sensor");
           props_DisplaySensor = cpb.create();
         }
         return props_DisplaySensor;

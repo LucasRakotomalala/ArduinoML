@@ -227,11 +227,11 @@
     <file name="DisplayMessage_TextGen.java">
       <node id="3994557386217034171" at="16,54,17,55" concept="6" />
       <node id="3994557386217034210" at="17,55,18,17" concept="2" />
-      <node id="3994557386217035861" at="18,17,19,129" concept="2" />
-      <node id="3994557386217034248" at="19,129,20,26" concept="2" />
+      <node id="3994557386217035861" at="18,17,19,134" concept="2" />
+      <node id="3994557386217034248" at="19,134,20,26" concept="2" />
       <node id="3994557386217034407" at="20,26,21,89" concept="2" />
       <node id="3994557386217034348" at="21,89,22,21" concept="2" />
-      <node id="3994557386217034171" at="26,0,27,0" concept="9" trace="lcd$JGBC" />
+      <node id="3994557386217034171" at="26,0,27,0" concept="9" trace="actuator$3ykZ" />
       <node id="3994557386217034171" at="30,0,31,0" concept="9" trace="name$MnvL" />
       <node id="3994557386217034171" at="31,0,32,0" concept="9" trace="message$JH5E" />
       <node id="3994557386217034171" at="15,0,24,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
@@ -254,17 +254,17 @@
     <file name="DisplaySensor_TextGen.java">
       <node id="3994557386217038971" at="18,54,19,55" concept="6" />
       <node id="4652155511398621824" at="19,55,20,17" concept="2" />
-      <node id="4652155511398621825" at="20,17,21,129" concept="2" />
-      <node id="4652155511398621831" at="21,129,22,28" concept="2" />
+      <node id="4652155511398621825" at="20,17,21,134" concept="2" />
+      <node id="4652155511398621831" at="21,134,22,28" concept="2" />
       <node id="4652155511398621832" at="22,28,23,148" concept="2" />
       <node id="4652155511398621843" at="23,148,24,27" concept="2" />
       <node id="4652155511398630144" at="24,27,25,18" concept="2" />
       <node id="4652155511398051725" at="25,18,26,17" concept="2" />
-      <node id="3994557386217038992" at="26,17,27,129" concept="2" />
-      <node id="3994557386217038998" at="27,129,28,38" concept="2" />
+      <node id="3994557386217038992" at="26,17,27,134" concept="2" />
+      <node id="3994557386217038998" at="27,134,28,38" concept="2" />
       <node id="3994557386217044360" at="28,38,29,225" concept="2" />
       <node id="3994557386217039003" at="29,225,30,22" concept="2" />
-      <node id="3994557386217038971" at="34,0,35,0" concept="9" trace="lcd$JNev" />
+      <node id="3994557386217038971" at="34,0,35,0" concept="9" trace="actuator$3ykZ" />
       <node id="3994557386217038971" at="35,0,36,0" concept="9" trace="sensor$JHP8" />
       <node id="3994557386217038971" at="36,0,37,0" concept="9" trace="pins$mKYM" />
       <node id="3994557386217038971" at="40,0,41,0" concept="9" trace="name$MnvL" />
@@ -370,9 +370,9 @@
     <file name="ClearDisplay_TextGen.java">
       <node id="5072681090432943671" at="16,54,17,55" concept="6" />
       <node id="5072681090432943711" at="17,55,18,17" concept="2" />
-      <node id="5072681090432943749" at="18,17,19,129" concept="2" />
-      <node id="5072681090432948664" at="19,129,20,28" concept="2" />
-      <node id="5072681090432943671" at="24,0,25,0" concept="9" trace="lcd$eFf8" />
+      <node id="5072681090432943749" at="18,17,19,134" concept="2" />
+      <node id="5072681090432948664" at="19,134,20,28" concept="2" />
+      <node id="5072681090432943671" at="24,0,25,0" concept="9" trace="actuator$3ykZ" />
       <node id="5072681090432943671" at="28,0,29,0" concept="9" trace="name$MnvL" />
       <node id="5072681090432943671" at="15,0,22,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
       <scope id="5072681090432943671" at="16,54,20,28">
