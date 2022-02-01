@@ -2,6 +2,7 @@
 #include <util/delay.h>
 #include <Arduino.h>
 #include <LiquidCrystal.h>
+#include <string.h>
 
 /** Generating code for applicationlcd hello world**/
 
@@ -10,14 +11,15 @@ void state_hello_world();
 void state_neutral();
 
 // Declaring available actuators
-LiquidCrystal lcd(12, 11, 10, 9, 8, 7);
+LiquidCrystal lcd(2,3,4,5,6,7,8);
 
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
 
 void state_hello_world() {
-    lcd.clear();
+    lcd.setCursor(0, 0);
   lcd.print("Hello World");
+
   boolean guard = millis() - time > debounce;  // debounce guard
 
     if (

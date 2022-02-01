@@ -2,6 +2,7 @@
 #include <util/delay.h>
 #include <Arduino.h>
 #include <LiquidCrystal.h>
+#include <string.h>
 
 /** Generating code for applicationBasic4**/
 

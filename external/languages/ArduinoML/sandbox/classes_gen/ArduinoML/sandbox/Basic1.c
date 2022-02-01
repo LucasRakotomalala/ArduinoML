@@ -2,6 +2,7 @@
 #include <util/delay.h>
 #include <Arduino.h>
 #include <LiquidCrystal.h>
+#include <string.h>
 
 /** Generating code for applicationBasic1**/
 
@@ -19,7 +20,7 @@ long time = 0; long debounce = 200;             // Debouncing mechanism initiali
 
 void state_off() {
     digitalWrite(12, LOW);
-    digitalWrite(12, LOW);
+    digitalWrite(11, LOW);
   boolean guard = millis() - time > debounce;  // debounce guard
 
     if (
