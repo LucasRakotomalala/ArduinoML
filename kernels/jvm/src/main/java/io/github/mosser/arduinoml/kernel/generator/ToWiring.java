@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import io.github.mosser.arduinoml.kernel.App;
 import io.github.mosser.arduinoml.kernel.behavioral.*;
+import io.github.mosser.arduinoml.kernel.behavioral.message.*;
 import io.github.mosser.arduinoml.kernel.logical.*;
 import io.github.mosser.arduinoml.kernel.structural.*;
 
@@ -22,50 +23,54 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(App app) {
+	public void visit(App app) throws Exception{
 		//first pass, create global vars
-		context.put("pass", PASS.ONE);
-		w("// Wiring code generated from an ArduinoML model\n");
-		w(String.format("// Application name: %s\n", app.getName())+"\n");
-		w("#include <LiquidCrystal.h> \n");
-		w("long debounce = 200;\n");
-		w("\nboolean BounceGuard = false;\n");
-		w("long LastDebounceTime = 0;\n");
-		w("\nenum STATE {");
-		String sep ="";
-		for(State state: app.getStates()){
-			w(sep);
-			state.accept(this);
-			sep=", ";
-		}
-		w("};\n");
-		if (app.getInitial() != null) {
-			w("STATE currentState = " + app.getInitial().getName()+";\n");
-		}
+		try {
+			context.put("pass", PASS.ONE);
+			w("// Wiring code generated from an ArduinoML model\n");
+			w(String.format("// Application name: %s\n", app.getName())+"\n");
+			w("#include <LiquidCrystal.h> \n");
+			w("long debounce = 200;\n");
+			w("\nboolean BounceGuard = false;\n");
+			w("long LastDebounceTime = 0;\n");
+			w("\nenum STATE {");
+			String sep ="";
+			for(State state: app.getStates()){
+				w(sep);
+				state.accept(this);
+				sep=", ";
+			}
+			w("};\n");
+			if (app.getInitial() != null) {
+				w("STATE currentState = " + app.getInitial().getName()+";\n");
+			}
 
-		for(Brick brick: app.getBricks()){
-			brick.accept(this);
-		}
+			for(Brick brick: app.getBricks()){
+				brick.accept(this);
+			}
 
-		//second pass, setup and loop
-		context.put("pass",PASS.TWO);
-		w("\nvoid setup(){\n");
-		for(Brick brick: app.getBricks()){
-			brick.accept(this);
-		}
+			//second pass, setup and loop
+			context.put("pass",PASS.TWO);
+			w("\nvoid setup(){\n");
+			for(Brick brick: app.getBricks()){
+				brick.accept(this);
+			}
 
-		w("}\n");
+			w("}\n");
 
-		w("\nvoid loop() {\n");
-		for(Action action: app.getActions()){
-			action.accept(this);
+			w("\nvoid loop() {\n");
+			for(Action action: app.getActions()){
+				action.accept(this);
+			}
+			w("\tswitch(currentState){\n");
+			for(State state: app.getStates()){
+				state.accept(this);
+			}
+			w("\t}\n" +
+				"}");
+		} catch (Exception e) {
+			throw e;
 		}
-		w("\tswitch(currentState){\n");
-		for(State state: app.getStates()){
-			state.accept(this);
-		}
-		w("\t}\n" +
-			"}");
 	}
 
 	@Override
@@ -112,28 +117,34 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(State state) {
-		if(context.get("pass") == PASS.ONE){
-			w(state.getName());
-			return;
-		}
-		if(context.get("pass") == PASS.TWO) {
-			w("\t\tcase " + state.getName() + ":\n");
-			for (Action action : state.getActions()) {
-				action.accept(this);
+	public void visit(State state) throws Exception{
+		
+			if(context.get("pass") == PASS.ONE){
+				w(state.getName());
+				return;
 			}
+			if(context.get("pass") == PASS.TWO) {
+				w("\t\tcase " + state.getName() + ":\n");
+				try {
+					for (Action action : state.getActions()) {
+						action.accept(this);
+					}
+				} catch (Exception e) {
+					throw e;
+				}
 
-			if (state.getTransition() != null) {
-				state.getTransition().accept(this);
-				w("\t\tbreak;\n");
+				if (state.getTransition() != null) {
+					state.getTransition().accept(this);
+					w("\t\tbreak;\n");
+				}
+				return;
 			}
-			return;
-		}
+		
 
 	}
 
 	@Override
-	public void visit(Transition transition) {
+	public void visit(Transition transition) throws Exception {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
@@ -161,7 +172,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(And andOp) {
+	public void visit(And andOp) throws Exception {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
@@ -176,7 +187,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(Or orOp) {
+	public void visit(Or orOp) throws Exception {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
@@ -202,23 +213,42 @@ public class ToWiring extends Visitor<StringBuffer> {
 	}
 
 	@Override
-	public void visit(DisplayMessage action) {
+	public void visit(DisplayOnLCD action) throws Exception {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
 		if(context.get("pass") == PASS.TWO) {
-			w(String.format("\t\t\t%s.print(\"%s\");\n",action.getActuator().getName(),action.getMessage()));
+			if (!action.checkSize()) throw new Exception("message too long for the lcd");
+			w(String.format("\t\t\t%s.setCursor(0,%d);\n", action.getActuator().getName(), action.getRow()));
+			w(String.format("\t\t\t%s.print(\"                 \");\n", action.getActuator().getName()));
+			w(String.format("\t\t\t%s.setCursor(0,%d);\n", action.getActuator().getName(), action.getRow()));
+			for (Message message : action.getMessages()) {
+				w(String.format("\t\t\t%s.print(",action.getActuator().getName()));
+				message.accept(this);
+				w(String.format(");\n"));
+			}
 			return;
 		}
 	}
 
 	@Override
-	public void visit(DisplayBrick action) {
+	public void visit(StringMessage message) {
 		if(context.get("pass") == PASS.ONE) {
 			return;
 		}
 		if(context.get("pass") == PASS.TWO) {
-			w(String.format("\t\t\t%s.print(digitalRead(%d));\n",action.getActuator().getName(),action.getBrick().getPin()));
+			w(String.format("\"%s\"",message.getMessage()));
+			return;
+		}
+	}
+
+	@Override
+	public void visit(BrickMessage message) {
+		if(context.get("pass") == PASS.ONE) {
+			return;
+		}
+		if(context.get("pass") == PASS.TWO) {
+			w(String.format("(digitalRead(%d)) ? \"ON\" : \"OFF\" ",message.getBrick().getPin()));
 			return;
 		}
 	}
