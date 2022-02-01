@@ -21,6 +21,7 @@
       <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
+      <concept id="1237308012275" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineStyleClassItem" flags="ln" index="ljvvj" />
       <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
@@ -429,6 +430,79 @@
         </node>
       </node>
       <node concept="l2Vlx" id="4p_M9dm6coq" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3b5DOKrU1xZ">
+    <ref role="1XX52x" to="hs33:3b5DOKrRf3E" resolve="BrickMessage" />
+    <node concept="3EZMnI" id="3b5DOKrU1y1" role="2wV5jI">
+      <node concept="3F0ifn" id="3b5DOKrU1y2" role="3EZMnx">
+        <property role="3F0ifm" value="display value of" />
+      </node>
+      <node concept="1iCGBv" id="3b5DOKrU1y3" role="3EZMnx">
+        <ref role="1NtTu8" to="hs33:3b5DOKrRf3F" resolve="brick" />
+        <node concept="1sVBvm" id="3b5DOKrU1y4" role="1sWHZn">
+          <node concept="3F0A7n" id="3b5DOKrU1y5" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="3b5DOKrU1zP" role="3EZMnx">
+        <property role="3F0ifm" value="on row" />
+      </node>
+      <node concept="3F0A7n" id="3b5DOKrU1$b" role="3EZMnx">
+        <ref role="1NtTu8" to="hs33:3b5DOKrRf3_" resolve="row" />
+      </node>
+      <node concept="l2Vlx" id="3b5DOKrU1ya" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3b5DOKrU1y_">
+    <ref role="1XX52x" to="hs33:3b5DOKrRf3B" resolve="StringMessage" />
+    <node concept="3EZMnI" id="3b5DOKrU1yB" role="2wV5jI">
+      <node concept="3F0ifn" id="3b5DOKrU1yC" role="3EZMnx">
+        <property role="3F0ifm" value="display" />
+      </node>
+      <node concept="3F0A7n" id="3b5DOKrU1yD" role="3EZMnx">
+        <ref role="1NtTu8" to="hs33:3b5DOKrRf3C" resolve="message" />
+      </node>
+      <node concept="3F0ifn" id="3b5DOKrU1zo" role="3EZMnx">
+        <property role="3F0ifm" value="on row" />
+      </node>
+      <node concept="3F0A7n" id="3b5DOKrU1zy" role="3EZMnx">
+        <ref role="1NtTu8" to="hs33:3b5DOKrRf3_" resolve="row" />
+      </node>
+      <node concept="l2Vlx" id="3b5DOKrU1yI" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3b5DOKrU1z4">
+    <ref role="1XX52x" to="hs33:3b5DOKrRf3r" resolve="DisplayOnLCD" />
+    <node concept="3EZMnI" id="3b5DOKrU1z6" role="2wV5jI">
+      <node concept="3F0ifn" id="3b5DOKrUWsN" role="3EZMnx">
+        <property role="3F0ifm" value="to display on" />
+      </node>
+      <node concept="1iCGBv" id="3b5DOKrUWt4" role="3EZMnx">
+        <ref role="1NtTu8" to="hs33:4p_M9dm9mQQ" resolve="actuator" />
+        <node concept="1sVBvm" id="3b5DOKrUWt6" role="1sWHZn">
+          <node concept="3F0A7n" id="3b5DOKrUWtp" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+        <node concept="ljvvj" id="3b5DOKrUWtu" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3XFhqQ" id="3b5DOKrU1$v" role="3EZMnx" />
+      <node concept="3F2HdR" id="3b5DOKrU1$S" role="3EZMnx">
+        <ref role="1NtTu8" to="hs33:3b5DOKrRf3u" resolve="toWrite" />
+        <node concept="2iRkQZ" id="3b5DOKrU1$V" role="2czzBx" />
+        <node concept="VPM3Z" id="3b5DOKrU1$W" role="3F10Kt" />
+        <node concept="3F0ifn" id="3b5DOKrU1_5" role="2czzBI">
+          <property role="3F0ifm" value="Nothing to display" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="3b5DOKrU1z9" role="2iSdaV" />
+      <node concept="35HoNQ" id="3b5DOKrWxvH" role="3EZMnx" />
     </node>
   </node>
 </model>

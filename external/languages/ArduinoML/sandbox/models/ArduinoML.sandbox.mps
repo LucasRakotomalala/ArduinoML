@@ -15,6 +15,18 @@
         <reference id="5072681090433772982" name="actuator" index="ggak_" />
       </concept>
       <concept id="5072681090432943627" name="ArduinoML.structure.ClearDisplay" flags="ng" index="gvgUo" />
+      <concept id="3658514217635213531" name="ArduinoML.structure.DisplayOnLCD" flags="ng" index="D6lun">
+        <child id="3658514217635213534" name="toWrite" index="D6lui" />
+      </concept>
+      <concept id="3658514217635213546" name="ArduinoML.structure.BrickMessage" flags="ng" index="D6luA">
+        <reference id="3658514217635213547" name="brick" index="D6luB" />
+      </concept>
+      <concept id="3658514217635213543" name="ArduinoML.structure.StringMessage" flags="ng" index="D6luF">
+        <property id="3658514217635213544" name="message" index="D6lu$" />
+      </concept>
+      <concept id="3658514217635213536" name="ArduinoML.structure.Message" flags="ng" index="D6luG">
+        <property id="3658514217635213541" name="row" index="D6luD" />
+      </concept>
       <concept id="4652155511397604325" name="ArduinoML.structure.Delay" flags="ng" index="1odhOJ">
         <property id="4652155511397604326" name="millis" index="1odhOG" />
       </concept>
@@ -30,12 +42,6 @@
       <concept id="3994557386217113151" name="ArduinoML.structure.SignalAction" flags="ng" index="1J3sbS">
         <property id="3994557386217113296" name="signal" index="1J3s8n" />
         <reference id="3994557386217113152" name="actuator" index="1J3sa7" />
-      </concept>
-      <concept id="3994557386217034077" name="ArduinoML.structure.DisplayBrick" flags="ng" index="1J3Dmq">
-        <reference id="5072681090435037163" name="brick" index="gnnXS" />
-      </concept>
-      <concept id="3994557386217034072" name="ArduinoML.structure.DisplayMessage" flags="ng" index="1J3Dmv">
-        <property id="3994557386217034075" name="message" index="1J3Dms" />
       </concept>
       <concept id="3994557386217034004" name="ArduinoML.structure.SignalActuator" flags="ng" index="1J3Dnj" />
       <concept id="3994557386216983732" name="ArduinoML.structure.LCD" flags="ng" index="1J3WxN" />
@@ -319,12 +325,12 @@
     <node concept="1FAacG" id="1DAf3aeezWE" role="1FAacA">
       <property role="TrG5h" value="hello_world" />
       <property role="1FBYDt" value="true" />
-      <node concept="gvgUo" id="4p_M9dmbw0J" role="1FAac$">
+      <node concept="D6lun" id="3b5DOKrWxut" role="1FAac$">
         <ref role="ggak_" node="4p_M9dmh8Kb" resolve="lcd" />
-      </node>
-      <node concept="1J3Dmv" id="4p_M9dmccy9" role="1FAac$">
-        <property role="1J3Dms" value="&quot;Hello World&quot;" />
-        <ref role="ggak_" node="4p_M9dmh8Kb" resolve="lcd" />
+        <node concept="D6luF" id="3b5DOKrWxuC" role="D6lui">
+          <property role="D6lu$" value="&quot;Hello World&quot;" />
+          <property role="D6luD" value="0" />
+        </node>
       </node>
       <node concept="1XAXM7" id="1DAf3aeezWF" role="1XAXeK">
         <ref role="1XAXMa" node="1DAf3aegXmo" resolve="neutral" />
@@ -340,14 +346,17 @@
   <node concept="1FAacK" id="1DAf3aeiepU">
     <property role="TrG5h" value="lcd sensor" />
     <node concept="1FAacG" id="1DAf3aeiepV" role="1FAacA">
-      <property role="TrG5h" value="hello_world" />
+      <property role="TrG5h" value="display_sensor" />
       <property role="1FBYDt" value="true" />
       <node concept="gvgUo" id="4p_M9dmccyl" role="1FAac$">
         <ref role="ggak_" node="4p_M9dmhrCD" resolve="lcd" />
       </node>
-      <node concept="1J3Dmq" id="4p_M9dmfcrA" role="1FAac$">
-        <ref role="gnnXS" node="4p_M9dmhrCX" resolve="button" />
+      <node concept="D6lun" id="3b5DOKrXjVH" role="1FAac$">
         <ref role="ggak_" node="4p_M9dmhrCD" resolve="lcd" />
+        <node concept="D6luA" id="3b5DOKrXjVQ" role="D6lui">
+          <property role="D6luD" value="0" />
+          <ref role="D6luB" node="4p_M9dmhrCX" resolve="button" />
+        </node>
       </node>
       <node concept="1odhOJ" id="42fLGCoJGzi" role="1FAac$">
         <property role="1odhOG" value="200" />

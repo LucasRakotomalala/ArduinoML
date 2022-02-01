@@ -15,19 +15,23 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_And;
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
+  private ConceptPresentation props_BrickMessage;
   private ConceptPresentation props_ClearDisplay;
   private ConceptPresentation props_Delay;
   private ConceptPresentation props_DisplayBrick;
   private ConceptPresentation props_DisplayMessage;
+  private ConceptPresentation props_DisplayOnLCD;
   private ConceptPresentation props_IsSignal;
   private ConceptPresentation props_LCD;
   private ConceptPresentation props_LogicalExpression;
   private ConceptPresentation props_LogicalOperator;
+  private ConceptPresentation props_Message;
   private ConceptPresentation props_Or;
   private ConceptPresentation props_Sensor;
   private ConceptPresentation props_SignalAction;
   private ConceptPresentation props_SignalActuator;
   private ConceptPresentation props_State;
+  private ConceptPresentation props_StringMessage;
   private ConceptPresentation props_Transition;
 
   @Override
@@ -73,10 +77,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Brick = cpb.create();
         }
         return props_Brick;
+      case LanguageConceptSwitch.BrickMessage:
+        if (props_BrickMessage == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_BrickMessage = cpb.create();
+        }
+        return props_BrickMessage;
       case LanguageConceptSwitch.ClearDisplay:
         if (props_ClearDisplay == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("clear");
+          cpb.rawPresentation("clear lcd");
           props_ClearDisplay = cpb.create();
         }
         return props_ClearDisplay;
@@ -101,6 +112,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DisplayMessage = cpb.create();
         }
         return props_DisplayMessage;
+      case LanguageConceptSwitch.DisplayOnLCD:
+        if (props_DisplayOnLCD == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("display lcd");
+          props_DisplayOnLCD = cpb.create();
+        }
+        return props_DisplayOnLCD;
       case LanguageConceptSwitch.IsSignal:
         if (props_IsSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -127,6 +145,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_LogicalOperator = cpb.create();
         }
         return props_LogicalOperator;
+      case LanguageConceptSwitch.Message:
+        if (props_Message == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Message = cpb.create();
+        }
+        return props_Message;
       case LanguageConceptSwitch.Or:
         if (props_Or == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -162,6 +186,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_State = cpb.create();
         }
         return props_State;
+      case LanguageConceptSwitch.StringMessage:
+        if (props_StringMessage == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_StringMessage = cpb.create();
+        }
+        return props_StringMessage;
       case LanguageConceptSwitch.Transition:
         if (props_Transition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

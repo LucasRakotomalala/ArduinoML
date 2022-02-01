@@ -22,19 +22,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAnd = createDescriptorForAnd();
   /*package*/ final ConceptDescriptor myConceptApp = createDescriptorForApp();
   /*package*/ final ConceptDescriptor myConceptBrick = createDescriptorForBrick();
+  /*package*/ final ConceptDescriptor myConceptBrickMessage = createDescriptorForBrickMessage();
   /*package*/ final ConceptDescriptor myConceptClearDisplay = createDescriptorForClearDisplay();
   /*package*/ final ConceptDescriptor myConceptDelay = createDescriptorForDelay();
   /*package*/ final ConceptDescriptor myConceptDisplayBrick = createDescriptorForDisplayBrick();
   /*package*/ final ConceptDescriptor myConceptDisplayMessage = createDescriptorForDisplayMessage();
+  /*package*/ final ConceptDescriptor myConceptDisplayOnLCD = createDescriptorForDisplayOnLCD();
   /*package*/ final ConceptDescriptor myConceptIsSignal = createDescriptorForIsSignal();
   /*package*/ final ConceptDescriptor myConceptLCD = createDescriptorForLCD();
   /*package*/ final ConceptDescriptor myConceptLogicalExpression = createDescriptorForLogicalExpression();
   /*package*/ final ConceptDescriptor myConceptLogicalOperator = createDescriptorForLogicalOperator();
+  /*package*/ final ConceptDescriptor myConceptMessage = createDescriptorForMessage();
   /*package*/ final ConceptDescriptor myConceptOr = createDescriptorForOr();
   /*package*/ final ConceptDescriptor myConceptSensor = createDescriptorForSensor();
   /*package*/ final ConceptDescriptor myConceptSignalAction = createDescriptorForSignalAction();
   /*package*/ final ConceptDescriptor myConceptSignalActuator = createDescriptorForSignalActuator();
   /*package*/ final ConceptDescriptor myConceptState = createDescriptorForState();
+  /*package*/ final ConceptDescriptor myConceptStringMessage = createDescriptorForStringMessage();
   /*package*/ final ConceptDescriptor myConceptTransition = createDescriptorForTransition();
   /*package*/ final EnumerationDescriptor myEnumerationMODE = new EnumerationDescriptor_MODE();
   /*package*/ final EnumerationDescriptor myEnumerationSIGNAL = new EnumerationDescriptor_SIGNAL();
@@ -52,7 +56,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionForActuator, myConceptActuator, myConceptAnd, myConceptApp, myConceptBrick, myConceptClearDisplay, myConceptDelay, myConceptDisplayBrick, myConceptDisplayMessage, myConceptIsSignal, myConceptLCD, myConceptLogicalExpression, myConceptLogicalOperator, myConceptOr, myConceptSensor, myConceptSignalAction, myConceptSignalActuator, myConceptState, myConceptTransition);
+    return Arrays.asList(myConceptAction, myConceptActionForActuator, myConceptActuator, myConceptAnd, myConceptApp, myConceptBrick, myConceptBrickMessage, myConceptClearDisplay, myConceptDelay, myConceptDisplayBrick, myConceptDisplayMessage, myConceptDisplayOnLCD, myConceptIsSignal, myConceptLCD, myConceptLogicalExpression, myConceptLogicalOperator, myConceptMessage, myConceptOr, myConceptSensor, myConceptSignalAction, myConceptSignalActuator, myConceptState, myConceptStringMessage, myConceptTransition);
   }
 
   @Override
@@ -71,6 +75,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptApp;
       case LanguageConceptSwitch.Brick:
         return myConceptBrick;
+      case LanguageConceptSwitch.BrickMessage:
+        return myConceptBrickMessage;
       case LanguageConceptSwitch.ClearDisplay:
         return myConceptClearDisplay;
       case LanguageConceptSwitch.Delay:
@@ -79,6 +85,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDisplayBrick;
       case LanguageConceptSwitch.DisplayMessage:
         return myConceptDisplayMessage;
+      case LanguageConceptSwitch.DisplayOnLCD:
+        return myConceptDisplayOnLCD;
       case LanguageConceptSwitch.IsSignal:
         return myConceptIsSignal;
       case LanguageConceptSwitch.LCD:
@@ -87,6 +95,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptLogicalExpression;
       case LanguageConceptSwitch.LogicalOperator:
         return myConceptLogicalOperator;
+      case LanguageConceptSwitch.Message:
+        return myConceptMessage;
       case LanguageConceptSwitch.Or:
         return myConceptOr;
       case LanguageConceptSwitch.Sensor:
@@ -97,6 +107,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptSignalActuator;
       case LanguageConceptSwitch.State:
         return myConceptState;
+      case LanguageConceptSwitch.StringMessage:
+        return myConceptStringMessage;
       case LanguageConceptSwitch.Transition:
         return myConceptTransition;
       default:
@@ -168,13 +180,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("pin", 0x4665c893563f8dadL).type(PrimitiveTypeId.INTEGER).origin("5072681090435485101").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForBrickMessage() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "BrickMessage", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x32c5a74c1bdcf0eaL);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Message", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x32c5a74c1bdcf0e0L);
+    b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3658514217635213546");
+    b.version(2);
+    b.associate("brick", 0x32c5a74c1bdcf0ebL).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L).optional(false).origin("3658514217635213547").done();
+    b.alias("message brick");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForClearDisplay() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "ClearDisplay", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c8935618c60bL);
     b.class_(false, false, false);
     b.super_("ArduinoML.structure.ActionForActuator", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c89356256db3L);
     b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5072681090432943627");
     b.version(2);
-    b.alias("clear");
+    b.alias("clear lcd");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDelay() {
@@ -204,6 +226,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("message", 0x376f84c75861115bL).type(PrimitiveTypeId.STRING).origin("3994557386217034075").done();
     b.alias("display message");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForDisplayOnLCD() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "DisplayOnLCD", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x32c5a74c1bdcf0dbL);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.ActionForActuator", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c89356256db3L);
+    b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3658514217635213531");
+    b.version(2);
+    b.aggregate("toWrite", 0x32c5a74c1bdcf0deL).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x32c5a74c1bdcf0e0L).optional(false).ordered(true).multiple(true).origin("3658514217635213534").done();
+    b.alias("display lcd");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIsSignal() {
@@ -240,6 +272,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("left", 0x4fb6b2583ddfe161L).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583df4be35L).optional(false).ordered(true).multiple(false).origin("5743974466822594913").done();
     b.aggregate("right", 0x4fb6b2583ddfe163L).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583df4be35L).optional(false).ordered(true).multiple(false).origin("5743974466822594915").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForMessage() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Message", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x32c5a74c1bdcf0e0L);
+    b.class_(false, true, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3658514217635213536");
+    b.version(2);
+    b.property("row", 0x32c5a74c1bdcf0e5L).type(PrimitiveTypeId.INTEGER).origin("3658514217635213541").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForOr() {
@@ -288,6 +329,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("actions", 0x5ed3d05e354b737aL).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x5ed3d05e354b737bL).optional(true).ordered(true).multiple(true).origin("6833034162690814842").done();
     b.aggregate("transition", 0xf2f7b2172b4a891L).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0xf2f7b2172b4a7a6L).optional(false).ordered(true).multiple(false).origin("1094228618062899345").done();
     b.alias("state");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStringMessage() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "StringMessage", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x32c5a74c1bdcf0e7L);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Message", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x32c5a74c1bdcf0e0L);
+    b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3658514217635213543");
+    b.version(2);
+    b.property("message", 0x32c5a74c1bdcf0e8L).type(PrimitiveTypeId.STRING).origin("3658514217635213544").done();
+    b.alias("message string");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTransition() {

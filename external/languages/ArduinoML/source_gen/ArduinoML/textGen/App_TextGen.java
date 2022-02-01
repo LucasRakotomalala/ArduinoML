@@ -31,6 +31,8 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.append("#include <LiquidCrystal.h>");
     tgs.newLine();
+    tgs.append("#include <string.h>");
+    tgs.newLine();
     tgs.newLine();
     tgs.append("/** Generating code for application");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));

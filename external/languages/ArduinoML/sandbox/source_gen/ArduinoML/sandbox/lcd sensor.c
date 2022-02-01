@@ -2,11 +2,12 @@
 #include <util/delay.h>
 #include <Arduino.h>
 #include <LiquidCrystal.h>
+#include <string.h>
 
 /** Generating code for applicationlcd sensor**/
 
 // Declaring states function headers
-void state_hello_world();
+void state_display_sensor();
 
 // Declaring available actuators
 LiquidCrystal lcd(2,3,4,5,6,7,8);
@@ -15,10 +16,19 @@ LiquidCrystal lcd(2,3,4,5,6,7,8);
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
 
-void state_hello_world() {
+void state_display_sensor() {
     lcd.clear();
-    lcd.print("button := ");
-  lcd.print(digitalRead(5));
+    lcd.setCursor(0, 0);
+  {
+    char str[17];
+    char val[2];
+    strcpy(str, "button");
+    strcat(str, ":=");
+    sprintf(val, "%d", digitalRead(5));
+    strcat(str, val);
+    lcd.print(str);
+  }
+
     delay(200);
 
   boolean guard = millis() - time > debounce;  // debounce guard
@@ -27,9 +37,9 @@ void state_hello_world() {
     guard      // Go to next state if debounce
   ) {
     time = millis();                            // update the debounce timer
-    state_hello_world();
+    state_display_sensor();
   } else {
-    state_hello_world();
+    state_display_sensor();
   }
 }
 
@@ -42,5 +52,5 @@ void setup()
 
 void loop()
 {
-  state_hello_world();
+  state_display_sensor();
 }

@@ -305,7 +305,7 @@
   <node concept="1TIwiD" id="4p_M9dm6cob">
     <property role="EcuMT" value="5072681090432943627" />
     <property role="TrG5h" value="ClearDisplay" />
-    <property role="34LRSv" value="clear" />
+    <property role="34LRSv" value="clear lcd" />
     <ref role="1TJDcQ" node="4p_M9dm9mQN" resolve="ActionForActuator" />
   </node>
   <node concept="1TIwiD" id="4p_M9dm9mQN">
@@ -318,6 +318,56 @@
       <property role="20kJfa" value="actuator" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5VjO5SPiRdK" resolve="Actuator" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3b5DOKrRf3r">
+    <property role="EcuMT" value="3658514217635213531" />
+    <property role="TrG5h" value="DisplayOnLCD" />
+    <property role="34LRSv" value="display lcd" />
+    <ref role="1TJDcQ" node="4p_M9dm9mQN" resolve="ActionForActuator" />
+    <node concept="1TJgyj" id="3b5DOKrRf3u" role="1TKVEi">
+      <property role="IQ2ns" value="3658514217635213534" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="toWrite" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" node="3b5DOKrRf3w" resolve="Message" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3b5DOKrRf3w">
+    <property role="EcuMT" value="3658514217635213536" />
+    <property role="TrG5h" value="Message" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="3b5DOKrRf3x" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="3b5DOKrRf3_" role="1TKVEl">
+      <property role="IQ2nx" value="3658514217635213541" />
+      <property role="TrG5h" value="row" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3b5DOKrRf3B">
+    <property role="EcuMT" value="3658514217635213543" />
+    <property role="TrG5h" value="StringMessage" />
+    <property role="34LRSv" value="message string" />
+    <ref role="1TJDcQ" node="3b5DOKrRf3w" resolve="Message" />
+    <node concept="1TJgyi" id="3b5DOKrRf3C" role="1TKVEl">
+      <property role="IQ2nx" value="3658514217635213544" />
+      <property role="TrG5h" value="message" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3b5DOKrRf3E">
+    <property role="EcuMT" value="3658514217635213546" />
+    <property role="TrG5h" value="BrickMessage" />
+    <property role="34LRSv" value="message brick" />
+    <ref role="1TJDcQ" node="3b5DOKrRf3w" resolve="Message" />
+    <node concept="1TJgyj" id="3b5DOKrRf3F" role="1TKVEi">
+      <property role="IQ2ns" value="3658514217635213547" />
+      <property role="20kJfa" value="brick" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4YQG_wXQFs7" resolve="Brick" />
     </node>
   </node>
 </model>
