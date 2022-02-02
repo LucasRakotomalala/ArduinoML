@@ -22,7 +22,7 @@ void loop() {
 		case on:
 			digitalWrite(11,HIGH);
 			BounceGuard = millis() - LastDebounceTime > debounce;
-			if((((digitalRead(8) == LOW) || (digitalRead(9) == LOW)) || (digitalRead(10) == LOW)) && BounceGuard) {
+			if(((digitalRead(8) == LOW) || (digitalRead(9) == LOW)) && BounceGuard) {
 				LastDebounceTime = millis();
 				currentState = off;
 			}

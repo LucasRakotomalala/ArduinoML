@@ -2,9 +2,11 @@ package main.groovy.groovuinoml.dsl
 
 import java.util.List;
 
+import io.github.mosser.arduinoml.kernel.behavioral.message.Message;
+import io.github.mosser.arduinoml.kernel.behavioral.message.StringMessage;
+import io.github.mosser.arduinoml.kernel.behavioral.message.BrickMessage;
 import io.github.mosser.arduinoml.kernel.behavioral.SignalAction;
-import io.github.mosser.arduinoml.kernel.behavioral.DisplayMessage;
-import io.github.mosser.arduinoml.kernel.behavioral.DisplayBrick;
+import io.github.mosser.arduinoml.kernel.behavioral.DisplayOnLCD;
 import io.github.mosser.arduinoml.kernel.behavioral.ClearDisplay
 import io.github.mosser.arduinoml.kernel.behavioral.DelayAction
 import io.github.mosser.arduinoml.kernel.behavioral.Action;
@@ -43,10 +45,26 @@ abstract class GroovuinoMLBasescript extends Script {
 	// state "name" means actuator becomes signal [and actuator becomes signal]*n
 	def state(String name) {
 		List<Action> actions = new ArrayList<Action>()
+		List<Message> messages
 		((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createState(name, actions)
 		// recursive closure to allow multiple and statements
 		def closure
+		def message
+		def brick
 
+		message = { msg ->
+			StringMessage sm = new StringMessage();
+			sm.setMessage(msg);
+			messages.add(sm);
+			[and: closure, message: message, brick: brick]
+		}
+
+		brick = { b ->
+			BrickMessage bm = new BrickMessage();
+			bm.setBrick(b instanceof String ? (Brick)((GroovuinoMLBinding)this.getBinding()).getVariable(b) : (Brick)b);
+			messages.add(bm);
+			[and: closure, message: message, brick: brick]
+		}
 
 		closure = { actuator -> 
 			[becomes: { signal ->
@@ -56,25 +74,14 @@ abstract class GroovuinoMLBasescript extends Script {
 				actions.add(action)
 				[and: closure]
 			},
-			display_message: { input ->
-				DisplayMessage action = new DisplayMessage()
+			display_on_row : { row ->
+				DisplayOnLCD action = new DisplayOnLCD()
 				action.setActuator(actuator instanceof String ? (LCDActuator)((GroovuinoMLBinding)this.getBinding()).getVariable(actuator) : (LCDActuator)actuator)
-				action.setMessage((String)input)
+				action.setRow(row);
+				messages = new ArrayList<Message>()
+				action.setMessages(messages)
 				actions.add(action)
-				[and: closure]
-			}, 
-			display_sensor : { input ->
-				DisplayBrick action = new DisplayBrick()
-				action.setActuator(actuator instanceof String ? (LCDActuator)((GroovuinoMLBinding)this.getBinding()).getVariable(actuator) : (LCDActuator)actuator)
-				action.setBrick(input instanceof String ? (Brick)((GroovuinoMLBinding)this.getBinding()).getVariable(input) : (Brick)input)
-				actions.add(action)
-				[and: closure]
-			},
-			clear : { ->
-				ClearDisplay action = new ClearDisplay()
-				action.setActuator(actuator instanceof String ? (LCDActuator)((GroovuinoMLBinding)this.getBinding()).getVariable(actuator) : (LCDActuator)actuator)
-				actions.add(action)
-				[and: closure]
+				[message: message, brick: brick]
 			}]
 		}
 		[means: closure]

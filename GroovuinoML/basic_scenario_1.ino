@@ -4,11 +4,11 @@
 #include <LiquidCrystal.h> 
 long debounce = 200;
 
+boolean BounceGuard = false;
+long LastDebounceTime = 0;
+
 enum STATE {on, off};
 STATE currentState = off;
-
-boolean buttonBounceGuard = false;
-long buttonLastDebounceTime = 0;
 
 void setup(){
   pinMode(8, INPUT);  // button [Sensor]
@@ -21,18 +21,18 @@ void loop() {
 		case on:
 			digitalWrite(12,HIGH);
 			digitalWrite(11,HIGH);
-			buttonBounceGuard = millis() - buttonLastDebounceTime > debounce;
-			if( ( digitalRead(8) == LOW ) && buttonBounceGuard) {
-				buttonLastDebounceTime = millis();
+			BounceGuard = millis() - LastDebounceTime > debounce;
+			if((digitalRead(8) == LOW) && BounceGuard) {
+				LastDebounceTime = millis();
 				currentState = off;
 			}
 		break;
 		case off:
 			digitalWrite(12,LOW);
 			digitalWrite(11,LOW);
-			buttonBounceGuard = millis() - buttonLastDebounceTime > debounce;
-			if( ( digitalRead(8) == HIGH ) && buttonBounceGuard) {
-				buttonLastDebounceTime = millis();
+			BounceGuard = millis() - LastDebounceTime > debounce;
+			if((digitalRead(8) == HIGH) && BounceGuard) {
+				LastDebounceTime = millis();
 				currentState = on;
 			}
 		break;

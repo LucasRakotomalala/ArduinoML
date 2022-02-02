@@ -4,11 +4,11 @@
 #include <LiquidCrystal.h> 
 long debounce = 200;
 
+boolean BounceGuard = false;
+long LastDebounceTime = 0;
+
 enum STATE {soundOn, ledOn, allOff};
 STATE currentState = allOff;
-
-boolean buttonBounceGuard = false;
-long buttonLastDebounceTime = 0;
 
 void setup(){
   pinMode(8, INPUT);  // button [Sensor]
@@ -21,27 +21,27 @@ void loop() {
 		case soundOn:
 			digitalWrite(11,HIGH);
 			digitalWrite(12,LOW);
-			buttonBounceGuard = millis() - buttonLastDebounceTime > debounce;
-			if( ( digitalRead(8) == HIGH ) && buttonBounceGuard) {
-				buttonLastDebounceTime = millis();
+			BounceGuard = millis() - LastDebounceTime > debounce;
+			if((digitalRead(8) == HIGH) && BounceGuard) {
+				LastDebounceTime = millis();
 				currentState = ledOn;
 			}
 		break;
 		case ledOn:
 			digitalWrite(11,LOW);
 			digitalWrite(12,HIGH);
-			buttonBounceGuard = millis() - buttonLastDebounceTime > debounce;
-			if( ( digitalRead(8) == HIGH ) && buttonBounceGuard) {
-				buttonLastDebounceTime = millis();
+			BounceGuard = millis() - LastDebounceTime > debounce;
+			if((digitalRead(8) == HIGH) && BounceGuard) {
+				LastDebounceTime = millis();
 				currentState = allOff;
 			}
 		break;
 		case allOff:
 			digitalWrite(11,LOW);
 			digitalWrite(12,LOW);
-			buttonBounceGuard = millis() - buttonLastDebounceTime > debounce;
-			if( ( digitalRead(8) == HIGH ) && buttonBounceGuard) {
-				buttonLastDebounceTime = millis();
+			BounceGuard = millis() - LastDebounceTime > debounce;
+			if((digitalRead(8) == HIGH) && BounceGuard) {
+				LastDebounceTime = millis();
 				currentState = soundOn;
 			}
 		break;

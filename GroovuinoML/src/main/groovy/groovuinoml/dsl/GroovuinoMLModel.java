@@ -25,9 +25,9 @@ public class GroovuinoMLModel {
 	private List<State> states;
 	private List<Action> actions;
 	private State initialState;
-	
+
 	private Binding binding;
-	
+
 	public GroovuinoMLModel(Binding binding) {
 		this.bricks = new ArrayList<Brick>();
 		this.states = new ArrayList<State>();
@@ -38,16 +38,16 @@ public class GroovuinoMLModel {
 	public void addAction(Action action) {
 		this.actions.add(action);
 	}
-	
+
 	public void createSensor(String name, Integer pinNumber) {
 		Sensor sensor = new Sensor();
 		sensor.setName(name);
 		sensor.setPin(pinNumber);
 		this.bricks.add(sensor);
 		this.binding.setVariable(name, sensor);
-//		System.out.println("> sensor " + name + " on pin " + pinNumber);
+		// System.out.println("> sensor " + name + " on pin " + pinNumber);
 	}
-	
+
 	public void createSignalActuator(String name, Integer pinNumber) {
 		SignalActuator actuator = new SignalActuator();
 		actuator.setName(name);
@@ -55,7 +55,7 @@ public class GroovuinoMLModel {
 		this.bricks.add(actuator);
 		this.binding.setVariable(name, actuator);
 	}
-	
+
 	public void createActuatorLCD(String name, Integer bus) {
 		LCDActuator actuator = new LCDActuator();
 		actuator.setName(name);
@@ -71,7 +71,7 @@ public class GroovuinoMLModel {
 		this.states.add(state);
 		this.binding.setVariable(name, state);
 	}
-	
+
 	public void createTransition(State from, State to, LogicalExp condition) {
 		Transition transition = new Transition();
 		transition.setNext(to);
@@ -79,13 +79,13 @@ public class GroovuinoMLModel {
 		from.setTransition(transition);
 	}
 
-	
 	public void setInitialState(State state) {
 		this.initialState = state;
 	}
-	
+
 	@SuppressWarnings("rawtypes")
 	public Object generateCode(String appName) {
+
 		App app = new App();
 		app.setName(appName);
 		app.setBricks(this.bricks);
@@ -93,8 +93,12 @@ public class GroovuinoMLModel {
 		app.setActions(this.actions);
 		app.setInitial(this.initialState);
 		Visitor codeGenerator = new ToWiring();
-		app.accept(codeGenerator);
-		
+		try {
+			app.accept(codeGenerator);
+		} catch (Exception e) {
+			return null;
+		}
 		return codeGenerator.getResult();
+
 	}
 }

@@ -74,7 +74,12 @@ public class Switch {
 
 		// Generating Code
 		Visitor codeGenerator = new ToWiring();
-		theSwitch.accept(codeGenerator);
+		try {
+			theSwitch.accept(codeGenerator);
+		} catch (Exception e){
+			System.out.println(e);
+		}
+		
 
 		// Printing the generated code on the console
 		System.out.println(codeGenerator.getResult());

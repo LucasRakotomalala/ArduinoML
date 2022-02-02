@@ -60,7 +60,11 @@ public class App implements NamedElement, Visitable {
 	}
 
 	@Override
-	public void accept(Visitor visitor) {
-		visitor.visit(this);
+	public void accept(Visitor visitor) throws Exception {
+		try {
+			visitor.visit(this);
+		} catch (Exception e){
+			throw e;
+		}
 	}
 }
