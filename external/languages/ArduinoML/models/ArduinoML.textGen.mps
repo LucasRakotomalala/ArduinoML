@@ -1624,26 +1624,9 @@
                           <property role="lacIc" value=".setCursor(" />
                         </node>
                         <node concept="l9hG8" id="3b5DOKrSlH6" role="lcghm">
-                          <node concept="2YIFZM" id="3b5DOKrSn4P" role="lb14g">
-                            <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                            <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
-                            <node concept="2OqwBi" id="3b5DOKrSprr" role="37wK5m">
-                              <node concept="37vLTw" id="3b5DOKrSpkA" role="2Oq$k0">
-                                <ref role="3cqZAo" node="3b5DOKrScci" resolve="it" />
-                              </node>
-                              <node concept="3TrcHB" id="3b5DOKrSpWn" role="2OqNvi">
-                                <ref role="3TsBF5" to="hs33:3b5DOKrRf3_" resolve="row" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="la8eA" id="3b5DOKrSoYD" role="lcghm">
-                          <property role="lacIc" value=", " />
-                        </node>
-                        <node concept="l9hG8" id="3b5DOKrSqQe" role="lcghm">
                           <node concept="2YIFZM" id="3b5DOKrSqZL" role="lb14g">
-                            <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
                             <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+                            <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
                             <node concept="3EllGN" id="3b5DOKrSr_y" role="37wK5m">
                               <node concept="2OqwBi" id="3b5DOKrSrQt" role="3ElVtu">
                                 <node concept="37vLTw" id="3b5DOKrSrEX" role="2Oq$k0">
@@ -1655,6 +1638,23 @@
                               </node>
                               <node concept="37vLTw" id="3b5DOKrSr3Z" role="3ElQJh">
                                 <ref role="3cqZAo" node="3b5DOKrSfGw" resolve="map_cursor_pos" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="la8eA" id="3b5DOKrSoYD" role="lcghm">
+                          <property role="lacIc" value=", " />
+                        </node>
+                        <node concept="l9hG8" id="3b5DOKrSqQe" role="lcghm">
+                          <node concept="2YIFZM" id="Y$OS4eHdnf" role="lb14g">
+                            <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                            <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+                            <node concept="2OqwBi" id="Y$OS4eHf5M" role="37wK5m">
+                              <node concept="37vLTw" id="Y$OS4eHdxY" role="2Oq$k0">
+                                <ref role="3cqZAo" node="3b5DOKrScci" resolve="it" />
+                              </node>
+                              <node concept="3TrcHB" id="Y$OS4eHfNq" role="2OqNvi">
+                                <ref role="3TsBF5" to="hs33:3b5DOKrRf3_" resolve="row" />
                               </node>
                             </node>
                           </node>

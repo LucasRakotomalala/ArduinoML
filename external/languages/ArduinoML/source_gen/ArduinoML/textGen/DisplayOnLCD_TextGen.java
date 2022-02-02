@@ -64,9 +64,9 @@ public class DisplayOnLCD_TextGen extends TextGenDescriptorBase {
         tgs.indent();
         tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.actuator$3ykZ), PROPS.name$MnvL));
         tgs.append(".setCursor(");
-        tgs.append(String.valueOf(SPropertyOperations.getInteger(it, PROPS.row$8$fx)));
-        tgs.append(", ");
         tgs.append(String.valueOf(MapSequence.fromMap(map_cursor_pos).get(SPropertyOperations.getInteger(it, PROPS.row$8$fx))));
+        tgs.append(", ");
+        tgs.append(String.valueOf(SPropertyOperations.getInteger(it, PROPS.row$8$fx)));
         tgs.append(");");
         tgs.newLine();
         {

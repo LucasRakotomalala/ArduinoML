@@ -331,6 +331,10 @@
           <property role="D6lu$" value="&quot;Hello World&quot;" />
           <property role="D6luD" value="0" />
         </node>
+        <node concept="D6luF" id="Y$OS4eInWL" role="D6lui">
+          <property role="D6lu$" value="&quot;Bye World&quot;" />
+          <property role="D6luD" value="1" />
+        </node>
       </node>
       <node concept="1XAXM7" id="1DAf3aeezWF" role="1XAXeK">
         <ref role="1XAXMa" node="1DAf3aegXmo" resolve="neutral" />
@@ -371,7 +375,7 @@
     </node>
     <node concept="1MroAY" id="4p_M9dmhrCX" role="1FAacB">
       <property role="TrG5h" value="button" />
-      <property role="gm$kY" value="5" />
+      <property role="gm$kY" value="10" />
     </node>
   </node>
 </model>
