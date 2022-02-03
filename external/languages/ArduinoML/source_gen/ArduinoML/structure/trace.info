@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1163670490218:jetbrains.mps.baseLanguage.structure.SwitchStatement" />
+  <root>
+    <file name="ConceptPresentationAspectImpl.java">
+      <unit at="11,0,207,0" name="ArduinoML.structure.ConceptPresentationAspectImpl" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <unit at="10,0,74,0" name="ArduinoML.structure.LanguageConceptSwitch" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <unit at="18,0,355,0" name="ArduinoML.structure.StructureAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/1094228618062899110">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="1094228618062899110" at="35,0,36,0" concept="2" trace="props_Transition" />
+      <node id="1094228618062899110" at="197,39,198,76" concept="5" />
+      <node id="1094228618062899110" at="198,76,199,35" concept="1" />
+      <node id="1094228618062899110" at="199,35,200,42" concept="1" />
+      <node id="1094228618062899110" at="201,9,202,32" concept="6" />
+      <node id="1094228618062899110" at="196,44,201,9" concept="3" />
+      <scope id="1094228618062899110" at="197,39,200,42">
+        <var name="cpb" id="1094228618062899110" />
+      </scope>
+      <scope id="1094228618062899110" at="196,44,202,32" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="1094228618062899110" at="35,0,36,0" concept="7" trace="Transition" />
+      <node id="1094228618062899110" at="61,52,62,48" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="1094228618062899110" at="42,0,43,0" concept="2" trace="myConceptTransition" />
+      <node id="1094228618062899110" at="112,44,113,35" concept="6" />
+      <node id="1094228618062899110" at="344,68,345,153" concept="5" />
+      <node id="1094228618062899110" at="345,153,346,34" concept="1" />
+      <node id="1094228618062899110" at="346,34,347,71" concept="1" />
+      <node id="1094228618062899110" at="347,71,348,96" concept="1" />
+      <node id="1094228618062899110" at="348,96,349,17" concept="1" />
+      <node id="1094228618062899115" at="349,17,350,167" concept="1" />
+      <node id="1094228618062899111" at="350,167,351,201" concept="1" />
+      <node id="1094228618062899110" at="351,201,352,22" concept="6" />
+      <node id="1094228618062899110" at="344,0,354,0" concept="8" trace="createDescriptorForTransition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="1094228618062899110" at="112,44,113,35" />
+      <scope id="1094228618062899110" at="344,68,352,22">
+        <var name="b" id="1094228618062899110" />
+      </scope>
+      <scope id="1094228618062899110" at="344,0,354,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/2824865079248616304">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="2824865079248616304" at="24,0,25,0" concept="2" trace="props_IsSignal" />
+      <node id="2824865079248616304" at="123,37,124,76" concept="5" />
+      <node id="2824865079248616304" at="124,76,125,144" concept="1" />
+      <node id="2824865079248616304" at="125,144,126,40" concept="1" />
+      <node id="2824865079248616304" at="127,9,128,30" concept="6" />
+      <node id="2824865079248616304" at="122,42,127,9" concept="3" />
+      <scope id="2824865079248616304" at="123,37,126,40">
+        <var name="cpb" id="2824865079248616304" />
+      </scope>
+      <scope id="2824865079248616304" at="122,42,128,30" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="2824865079248616304" at="24,0,25,0" concept="7" trace="IsSignal" />
+      <node id="2824865079248616304" at="50,51,51,47" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="2824865079248616304" at="31,0,32,0" concept="2" trace="myConceptIsSignal" />
+      <node id="2824865079248616304" at="90,42,91,33" concept="6" />
+      <node id="2824865079248616304" at="241,66,242,152" concept="5" />
+      <node id="2824865079248616304" at="242,152,243,34" concept="1" />
+      <node id="2824865079248616304" at="243,34,244,117" concept="1" />
+      <node id="2824865079248616304" at="244,117,245,96" concept="1" />
+      <node id="2824865079248616304" at="245,96,246,17" concept="1" />
+      <node id="2824865079248616309" at="246,17,247,183" concept="1" />
+      <node id="2824865079248616307" at="247,183,248,174" concept="1" />
+      <node id="2824865079248616304" at="248,174,249,22" concept="6" />
+      <node id="2824865079248616304" at="241,0,251,0" concept="8" trace="createDescriptorForIsSignal#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="2824865079248616304" at="90,42,91,33" />
+      <scope id="2824865079248616304" at="241,66,249,22">
+        <var name="b" id="2824865079248616304" />
+      </scope>
+      <scope id="2824865079248616304" at="241,0,251,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/2824865079249580299">
+    <file name="EnumerationDescriptor_MODE.java">
+      <node id="2824865079249580299" at="14,39,15,164" concept="9" />
+      <node id="2824865079249580300" at="18,0,19,0" concept="2" trace="myMember_OUTPUT_0" />
+      <node id="2824865079250273084" at="19,0,20,0" concept="2" trace="myMember_INPUT_PULLUP_0" />
+      <node id="2824865079249580299" at="21,0,22,0" concept="2" trace="myIndex" />
+      <node id="2824865079249580299" at="22,0,23,0" concept="2" trace="myMembers" />
+      <node id="2824865079249580299" at="26,62,27,29" concept="6" />
+      <node id="2824865079249580299" at="32,68,33,21" concept="6" />
+      <node id="2824865079249580299" at="39,29,40,18" concept="6" />
+      <node id="2824865079249580300" at="43,20,44,33" concept="6" />
+      <node id="2824865079250273084" at="45,26,46,39" concept="6" />
+      <node id="2824865079249580299" at="47,5,48,16" concept="6" />
+      <node id="2824865079249580299" at="53,73,54,39" concept="5" />
+      <node id="2824865079249580299" at="55,22,56,18" concept="6" />
+      <node id="2824865079249580299" at="57,5,58,32" concept="6" />
+      <node id="2824865079249580299" at="14,0,17,0" concept="0" trace="EnumerationDescriptor_MODE#()V" />
+      <node id="2824865079249580299" at="38,88,41,5" concept="3" />
+      <node id="2824865079249580299" at="54,39,57,5" concept="3" />
+      <node id="2824865079249580299" at="24,0,29,0" concept="4" trace="getDefault#()Ljetbrains/mps/smodel/runtime/EnumerationDescriptor/MemberDescriptor;" />
+      <node id="2824865079249580299" at="30,0,35,0" concept="4" trace="getMembers#()Ljava/util/List;" />
+      <node id="2824865079249580299" at="41,5,47,5" concept="10" />
+      <node id="2824865079249580299" at="51,0,60,0" concept="4" trace="getMember#(J)Ljetbrains/mps/smodel/runtime/EnumerationDescriptor/MemberDescriptor;" />
+      <node id="2824865079249580299" at="36,0,50,0" concept="4" trace="getMember#(Ljava/lang/String;)Ljetbrains/mps/smodel/runtime/EnumerationDescriptor/MemberDescriptor;" />
+      <scope id="2824865079249580299" at="14,39,15,164" />
+      <scope id="2824865079249580299" at="26,62,27,29" />
+      <scope id="2824865079249580299" at="32,68,33,21" />
+      <scope id="2824865079249580299" at="39,29,40,18" />
+      <scope id="2824865079249580300" at="43,20,44,33" />
+      <scope id="2824865079250273084" at="45,26,46,39" />
+      <scope id="2824865079249580299" at="55,22,56,18" />
+      <scope id="2824865079249580299" at="14,0,17,0" />
+      <scope id="2824865079249580299" at="24,0,29,0" />
+      <scope id="2824865079249580299" at="30,0,35,0" />
+      <scope id="2824865079249580299" at="53,73,58,32">
+        <var name="index" id="2824865079249580299" />
+      </scope>
+      <scope id="2824865079249580299" at="51,0,60,0">
+        <var name="idValue" id="2824865079249580299" />
+      </scope>
+      <scope id="2824865079249580299" at="38,88,48,16" />
+      <scope id="2824865079249580299" at="36,0,50,0">
+        <var name="memberName" id="2824865079249580299" />
+      </scope>
+      <unit id="2824865079249580299" at="12,0,61,0" name="ArduinoML.structure.EnumerationDescriptor_MODE" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="2824865079249580299" at="43,0,44,0" concept="2" trace="myEnumerationMODE" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3658514217635213531">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="3658514217635213531" at="23,0,24,0" concept="2" trace="props_DisplayOnLCD" />
+      <node id="3658514217635213531" at="116,41,117,76" concept="5" />
+      <node id="3658514217635213531" at="117,76,118,45" concept="1" />
+      <node id="3658514217635213531" at="118,45,119,44" concept="1" />
+      <node id="3658514217635213531" at="120,9,121,34" concept="6" />
+      <node id="3658514217635213531" at="115,46,120,9" concept="3" />
+      <scope id="3658514217635213531" at="116,41,119,44">
+        <var name="cpb" id="3658514217635213531" />
+      </scope>
+      <scope id="3658514217635213531" at="115,46,121,34" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="3658514217635213531" at="23,0,24,0" concept="7" trace="DisplayOnLCD" />
+      <node id="3658514217635213531" at="49,53,50,51" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="3658514217635213531" at="30,0,31,0" concept="2" trace="myConceptDisplayOnLCD" />
+      <node id="3658514217635213531" at="88,46,89,37" concept="6" />
+      <node id="3658514217635213531" at="231,70,232,156" concept="5" />
+      <node id="3658514217635213531" at="232,156,233,34" concept="1" />
+      <node id="3658514217635213531" at="233,34,234,117" concept="1" />
+      <node id="3658514217635213531" at="234,117,235,96" concept="1" />
+      <node id="3658514217635213531" at="235,96,236,17" concept="1" />
+      <node id="3658514217635213534" at="236,17,237,200" concept="1" />
+      <node id="3658514217635213531" at="237,200,238,27" concept="1" />
+      <node id="3658514217635213531" at="238,27,239,22" concept="6" />
+      <node id="3658514217635213531" at="231,0,241,0" concept="8" trace="createDescriptorForDisplayOnLCD#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3658514217635213531" at="88,46,89,37" />
+      <scope id="3658514217635213531" at="231,70,239,22">
+        <var name="b" id="3658514217635213531" />
+      </scope>
+      <scope id="3658514217635213531" at="231,0,241,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3658514217635213536">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="3658514217635213536" at="28,0,29,0" concept="2" trace="props_Message" />
+      <node id="3658514217635213536" at="149,36,150,76" concept="5" />
+      <node id="3658514217635213536" at="150,76,151,39" concept="1" />
+      <node id="3658514217635213536" at="152,9,153,29" concept="6" />
+      <node id="3658514217635213536" at="148,41,152,9" concept="3" />
+      <scope id="3658514217635213536" at="149,36,151,39">
+        <var name="cpb" id="3658514217635213536" />
+      </scope>
+      <scope id="3658514217635213536" at="148,41,153,29" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="3658514217635213536" at="28,0,29,0" concept="7" trace="Message" />
+      <node id="3658514217635213536" at="54,54,55,46" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="3658514217635213536" at="35,0,36,0" concept="2" trace="myConceptMessage" />
+      <node id="3658514217635213536" at="98,41,99,32" concept="6" />
+      <node id="3658514217635213536" at="277,65,278,151" concept="5" />
+      <node id="3658514217635213536" at="278,151,279,33" concept="1" />
+      <node id="3658514217635213536" at="279,33,280,71" concept="1" />
+      <node id="3658514217635213536" at="280,71,281,96" concept="1" />
+      <node id="3658514217635213536" at="281,96,282,17" concept="1" />
+      <node id="3658514217635213541" at="282,17,283,110" concept="1" />
+      <node id="3658514217635213536" at="283,110,284,22" concept="6" />
+      <node id="3658514217635213536" at="277,0,286,0" concept="8" trace="createDescriptorForMessage#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3658514217635213536" at="98,41,99,32" />
+      <scope id="3658514217635213536" at="277,65,284,22">
+        <var name="b" id="3658514217635213536" />
+      </scope>
+      <scope id="3658514217635213536" at="277,0,286,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3658514217635213543">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="3658514217635213543" at="34,0,35,0" concept="2" trace="props_StringMessage" />
+      <node id="3658514217635213543" at="190,42,191,76" concept="5" />
+      <node id="3658514217635213543" at="191,76,192,35" concept="1" />
+      <node id="3658514217635213543" at="192,35,193,45" concept="1" />
+      <node id="3658514217635213543" at="194,9,195,35" concept="6" />
+      <node id="3658514217635213543" at="189,47,194,9" concept="3" />
+      <scope id="3658514217635213543" at="190,42,193,45">
+        <var name="cpb" id="3658514217635213543" />
+      </scope>
+      <scope id="3658514217635213543" at="189,47,195,35" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="3658514217635213543" at="34,0,35,0" concept="7" trace="StringMessage" />
+      <node id="3658514217635213543" at="60,44,61,52" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="3658514217635213543" at="41,0,42,0" concept="2" trace="myConceptStringMessage" />
+      <node id="3658514217635213543" at="110,47,111,38" concept="6" />
+      <node id="3658514217635213543" at="334,71,335,157" concept="5" />
+      <node id="3658514217635213543" at="335,157,336,34" concept="1" />
+      <node id="3658514217635213543" at="336,34,337,107" concept="1" />
+      <node id="3658514217635213543" at="337,107,338,96" concept="1" />
+      <node id="3658514217635213543" at="338,96,339,17" concept="1" />
+      <node id="3658514217635213544" at="339,17,340,113" concept="1" />
+      <node id="3658514217635213543" at="340,113,341,30" concept="1" />
+      <node id="3658514217635213543" at="341,30,342,22" concept="6" />
+      <node id="3658514217635213543" at="334,0,344,0" concept="8" trace="createDescriptorForStringMessage#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3658514217635213543" at="110,47,111,38" />
+      <scope id="3658514217635213543" at="334,71,342,22">
+        <var name="b" id="3658514217635213543" />
+      </scope>
+      <scope id="3658514217635213543" at="334,0,344,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3658514217635213546">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="3658514217635213546" at="18,0,19,0" concept="2" trace="props_BrickMessage" />
+      <node id="3658514217635213546" at="81,41,82,76" concept="5" />
+      <node id="3658514217635213546" at="82,76,83,35" concept="1" />
+      <node id="3658514217635213546" at="83,35,84,44" concept="1" />
+      <node id="3658514217635213546" at="85,9,86,34" concept="6" />
+      <node id="3658514217635213546" at="80,46,85,9" concept="3" />
+      <scope id="3658514217635213546" at="81,41,84,44">
+        <var name="cpb" id="3658514217635213546" />
+      </scope>
+      <scope id="3658514217635213546" at="80,46,86,34" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="3658514217635213546" at="18,0,19,0" concept="7" trace="BrickMessage" />
+      <node id="3658514217635213546" at="44,44,45,51" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="3658514217635213546" at="25,0,26,0" concept="2" trace="myConceptBrickMessage" />
+      <node id="3658514217635213546" at="78,46,79,37" concept="6" />
+      <node id="3658514217635213546" at="183,70,184,156" concept="5" />
+      <node id="3658514217635213546" at="184,156,185,34" concept="1" />
+      <node id="3658514217635213546" at="185,34,186,107" concept="1" />
+      <node id="3658514217635213546" at="186,107,187,96" concept="1" />
+      <node id="3658514217635213546" at="187,96,188,17" concept="1" />
+      <node id="3658514217635213547" at="188,17,189,169" concept="1" />
+      <node id="3658514217635213546" at="189,169,190,29" concept="1" />
+      <node id="3658514217635213546" at="190,29,191,22" concept="6" />
+      <node id="3658514217635213546" at="183,0,193,0" concept="8" trace="createDescriptorForBrickMessage#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3658514217635213546" at="78,46,79,37" />
+      <scope id="3658514217635213546" at="183,70,191,22">
+        <var name="b" id="3658514217635213546" />
+      </scope>
+      <scope id="3658514217635213546" at="183,0,193,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3994557386216983732">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="3994557386216983732" at="25,0,26,0" concept="2" trace="props_LCD" />
+      <node id="3994557386216983732" at="130,32,131,76" concept="5" />
+      <node id="3994557386216983732" at="131,76,132,35" concept="1" />
+      <node id="3994557386216983732" at="132,35,133,35" concept="1" />
+      <node id="3994557386216983732" at="134,9,135,25" concept="6" />
+      <node id="3994557386216983732" at="129,37,134,9" concept="3" />
+      <scope id="3994557386216983732" at="130,32,133,35">
+        <var name="cpb" id="3994557386216983732" />
+      </scope>
+      <scope id="3994557386216983732" at="129,37,135,25" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="3994557386216983732" at="25,0,26,0" concept="7" trace="LCD" />
+      <node id="3994557386216983732" at="51,47,52,42" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="3994557386216983732" at="32,0,33,0" concept="2" trace="myConceptLCD" />
+      <node id="3994557386216983732" at="92,37,93,28" concept="6" />
+      <node id="3994557386216983732" at="251,61,252,147" concept="5" />
+      <node id="3994557386216983732" at="252,147,253,34" concept="1" />
+      <node id="3994557386216983732" at="253,34,254,108" concept="1" />
+      <node id="3994557386216983732" at="254,108,255,96" concept="1" />
+      <node id="3994557386216983732" at="255,96,256,17" concept="1" />
+      <node id="3994557386216983732" at="256,17,257,19" concept="1" />
+      <node id="3994557386216983732" at="257,19,258,22" concept="6" />
+      <node id="3994557386216983732" at="251,0,260,0" concept="8" trace="createDescriptorForLCD#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3994557386216983732" at="92,37,93,28" />
+      <scope id="3994557386216983732" at="251,61,258,22">
+        <var name="b" id="3994557386216983732" />
+      </scope>
+      <scope id="3994557386216983732" at="251,0,260,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3994557386217034004">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="3994557386217034004" at="32,0,33,0" concept="2" trace="props_SignalActuator" />
+      <node id="3994557386217034004" at="176,43,177,76" concept="5" />
+      <node id="3994557386217034004" at="177,76,178,35" concept="1" />
+      <node id="3994557386217034004" at="178,35,179,46" concept="1" />
+      <node id="3994557386217034004" at="180,9,181,36" concept="6" />
+      <node id="3994557386217034004" at="175,48,180,9" concept="3" />
+      <scope id="3994557386217034004" at="176,43,179,46">
+        <var name="cpb" id="3994557386217034004" />
+      </scope>
+      <scope id="3994557386217034004" at="175,48,181,36" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="3994557386217034004" at="32,0,33,0" concept="7" trace="SignalActuator" />
+      <node id="3994557386217034004" at="58,51,59,53" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="3994557386217034004" at="39,0,40,0" concept="2" trace="myConceptSignalActuator" />
+      <node id="3994557386217034004" at="106,48,107,39" concept="6" />
+      <node id="3994557386217034004" at="314,72,315,158" concept="5" />
+      <node id="3994557386217034004" at="315,158,316,34" concept="1" />
+      <node id="3994557386217034004" at="316,34,317,108" concept="1" />
+      <node id="3994557386217034004" at="317,108,318,96" concept="1" />
+      <node id="3994557386217034004" at="318,96,319,17" concept="1" />
+      <node id="3994557386217034004" at="319,17,320,22" concept="6" />
+      <node id="3994557386217034004" at="314,0,322,0" concept="8" trace="createDescriptorForSignalActuator#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3994557386217034004" at="106,48,107,39" />
+      <scope id="3994557386217034004" at="314,72,320,22">
+        <var name="b" id="3994557386217034004" />
+      </scope>
+      <scope id="3994557386217034004" at="314,0,322,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3994557386217034072">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="3994557386217034072" at="22,0,23,0" concept="2" trace="props_DisplayMessage" />
+      <node id="3994557386217034072" at="109,43,110,76" concept="5" />
+      <node id="3994557386217034072" at="110,76,111,49" concept="1" />
+      <node id="3994557386217034072" at="111,49,112,46" concept="1" />
+      <node id="3994557386217034072" at="113,9,114,36" concept="6" />
+      <node id="3994557386217034072" at="108,48,113,9" concept="3" />
+      <scope id="3994557386217034072" at="109,43,112,46">
+        <var name="cpb" id="3994557386217034072" />
+      </scope>
+      <scope id="3994557386217034072" at="108,48,114,36" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="3994557386217034072" at="22,0,23,0" concept="7" trace="DisplayMessage" />
+      <node id="3994557386217034072" at="48,51,49,53" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="3994557386217034072" at="29,0,30,0" concept="2" trace="myConceptDisplayMessage" />
+      <node id="3994557386217034072" at="86,48,87,39" concept="6" />
+      <node id="3994557386217034072" at="221,72,222,158" concept="5" />
+      <node id="3994557386217034072" at="222,158,223,34" concept="1" />
+      <node id="3994557386217034072" at="223,34,224,117" concept="1" />
+      <node id="3994557386217034072" at="224,117,225,96" concept="1" />
+      <node id="3994557386217034072" at="225,96,226,17" concept="1" />
+      <node id="3994557386217034075" at="226,17,227,113" concept="1" />
+      <node id="3994557386217034072" at="227,113,228,31" concept="1" />
+      <node id="3994557386217034072" at="228,31,229,22" concept="6" />
+      <node id="3994557386217034072" at="221,0,231,0" concept="8" trace="createDescriptorForDisplayMessage#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3994557386217034072" at="86,48,87,39" />
+      <scope id="3994557386217034072" at="221,72,229,22">
+        <var name="b" id="3994557386217034072" />
+      </scope>
+      <scope id="3994557386217034072" at="221,0,231,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3994557386217034077">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="3994557386217034077" at="21,0,22,0" concept="2" trace="props_DisplayBrick" />
+      <node id="3994557386217034077" at="102,41,103,76" concept="5" />
+      <node id="3994557386217034077" at="103,76,104,47" concept="1" />
+      <node id="3994557386217034077" at="104,47,105,44" concept="1" />
+      <node id="3994557386217034077" at="106,9,107,34" concept="6" />
+      <node id="3994557386217034077" at="101,46,106,9" concept="3" />
+      <scope id="3994557386217034077" at="102,41,105,44">
+        <var name="cpb" id="3994557386217034077" />
+      </scope>
+      <scope id="3994557386217034077" at="101,46,107,34" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="3994557386217034077" at="21,0,22,0" concept="7" trace="DisplayBrick" />
+      <node id="3994557386217034077" at="47,44,48,51" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="3994557386217034077" at="28,0,29,0" concept="2" trace="myConceptDisplayBrick" />
+      <node id="3994557386217034077" at="84,46,85,37" concept="6" />
+      <node id="3994557386217034077" at="211,70,212,156" concept="5" />
+      <node id="3994557386217034077" at="212,156,213,34" concept="1" />
+      <node id="3994557386217034077" at="213,34,214,117" concept="1" />
+      <node id="3994557386217034077" at="214,117,215,96" concept="1" />
+      <node id="3994557386217034077" at="215,96,216,17" concept="1" />
+      <node id="5072681090435037163" at="216,17,217,169" concept="1" />
+      <node id="3994557386217034077" at="217,169,218,29" concept="1" />
+      <node id="3994557386217034077" at="218,29,219,22" concept="6" />
+      <node id="3994557386217034077" at="211,0,221,0" concept="8" trace="createDescriptorForDisplayBrick#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3994557386217034077" at="84,46,85,37" />
+      <scope id="3994557386217034077" at="211,70,219,22">
+        <var name="b" id="3994557386217034077" />
+      </scope>
+      <scope id="3994557386217034077" at="211,0,221,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3994557386217113151">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="3994557386217113151" at="31,0,32,0" concept="2" trace="props_SignalAction" />
+      <node id="3994557386217113151" at="169,41,170,76" concept="5" />
+      <node id="3994557386217113151" at="170,76,171,142" concept="1" />
+      <node id="3994557386217113151" at="171,142,172,44" concept="1" />
+      <node id="3994557386217113151" at="173,9,174,34" concept="6" />
+      <node id="3994557386217113151" at="168,46,173,9" concept="3" />
+      <scope id="3994557386217113151" at="169,41,172,44">
+        <var name="cpb" id="3994557386217113151" />
+      </scope>
+      <scope id="3994557386217113151" at="168,46,174,34" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="3994557386217113151" at="31,0,32,0" concept="7" trace="SignalAction" />
+      <node id="3994557386217113151" at="57,45,58,51" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="3994557386217113151" at="38,0,39,0" concept="2" trace="myConceptSignalAction" />
+      <node id="3994557386217113151" at="104,46,105,37" concept="6" />
+      <node id="3994557386217113151" at="304,70,305,156" concept="5" />
+      <node id="3994557386217113151" at="305,156,306,34" concept="1" />
+      <node id="3994557386217113151" at="306,34,307,106" concept="1" />
+      <node id="3994557386217113151" at="307,106,308,96" concept="1" />
+      <node id="3994557386217113151" at="308,96,309,17" concept="1" />
+      <node id="3994557386217113296" at="309,17,310,177" concept="1" />
+      <node id="3994557386217113152" at="310,177,311,172" concept="1" />
+      <node id="3994557386217113151" at="311,172,312,22" concept="6" />
+      <node id="3994557386217113151" at="304,0,314,0" concept="8" trace="createDescriptorForSignalAction#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3994557386217113151" at="104,46,105,37" />
+      <scope id="3994557386217113151" at="304,70,312,22">
+        <var name="b" id="3994557386217113151" />
+      </scope>
+      <scope id="3994557386217113151" at="304,0,314,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/4652155511397604325">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="4652155511397604325" at="20,0,21,0" concept="2" trace="props_Delay" />
+      <node id="4652155511397604325" at="95,34,96,76" concept="5" />
+      <node id="4652155511397604325" at="96,76,97,39" concept="1" />
+      <node id="4652155511397604325" at="97,39,98,37" concept="1" />
+      <node id="4652155511397604325" at="99,9,100,27" concept="6" />
+      <node id="4652155511397604325" at="94,39,99,9" concept="3" />
+      <scope id="4652155511397604325" at="95,34,98,37">
+        <var name="cpb" id="4652155511397604325" />
+      </scope>
+      <scope id="4652155511397604325" at="94,39,100,27" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="4652155511397604325" at="20,0,21,0" concept="7" trace="Delay" />
+      <node id="4652155511397604325" at="46,51,47,44" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="4652155511397604325" at="27,0,28,0" concept="2" trace="myConceptDelay" />
+      <node id="4652155511397604325" at="82,39,83,30" concept="6" />
+      <node id="4652155511397604325" at="202,63,203,149" concept="5" />
+      <node id="4652155511397604325" at="203,149,204,34" concept="1" />
+      <node id="4652155511397604325" at="204,34,205,106" concept="1" />
+      <node id="4652155511397604325" at="205,106,206,96" concept="1" />
+      <node id="4652155511397604325" at="206,96,207,17" concept="1" />
+      <node id="4652155511397604326" at="207,17,208,113" concept="1" />
+      <node id="4652155511397604325" at="208,113,209,22" concept="6" />
+      <node id="4652155511397604325" at="202,0,211,0" concept="8" trace="createDescriptorForDelay#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="4652155511397604325" at="82,39,83,30" />
+      <scope id="4652155511397604325" at="202,63,209,22">
+        <var name="b" id="4652155511397604325" />
+      </scope>
+      <scope id="4652155511397604325" at="202,0,211,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5072681090432943627">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="5072681090432943627" at="19,0,20,0" concept="2" trace="props_ClearDisplay" />
+      <node id="5072681090432943627" at="88,41,89,76" concept="5" />
+      <node id="5072681090432943627" at="89,76,90,43" concept="1" />
+      <node id="5072681090432943627" at="90,43,91,44" concept="1" />
+      <node id="5072681090432943627" at="92,9,93,34" concept="6" />
+      <node id="5072681090432943627" at="87,46,92,9" concept="3" />
+      <scope id="5072681090432943627" at="88,41,91,44">
+        <var name="cpb" id="5072681090432943627" />
+      </scope>
+      <scope id="5072681090432943627" at="87,46,93,34" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="5072681090432943627" at="19,0,20,0" concept="7" trace="ClearDisplay" />
+      <node id="5072681090432943627" at="45,51,46,51" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="5072681090432943627" at="26,0,27,0" concept="2" trace="myConceptClearDisplay" />
+      <node id="5072681090432943627" at="80,46,81,37" concept="6" />
+      <node id="5072681090432943627" at="193,70,194,156" concept="5" />
+      <node id="5072681090432943627" at="194,156,195,34" concept="1" />
+      <node id="5072681090432943627" at="195,34,196,117" concept="1" />
+      <node id="5072681090432943627" at="196,117,197,96" concept="1" />
+      <node id="5072681090432943627" at="197,96,198,17" concept="1" />
+      <node id="5072681090432943627" at="198,17,199,25" concept="1" />
+      <node id="5072681090432943627" at="199,25,200,22" concept="6" />
+      <node id="5072681090432943627" at="193,0,202,0" concept="8" trace="createDescriptorForClearDisplay#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="5072681090432943627" at="80,46,81,37" />
+      <scope id="5072681090432943627" at="193,70,200,22">
+        <var name="b" id="5072681090432943627" />
+      </scope>
+      <scope id="5072681090432943627" at="193,0,202,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5072681090433772979">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="5072681090433772979" at="13,0,14,0" concept="2" trace="props_ActionForActuator" />
+      <node id="5072681090433772979" at="49,46,50,76" concept="5" />
+      <node id="5072681090433772979" at="50,76,51,49" concept="1" />
+      <node id="5072681090433772979" at="52,9,53,39" concept="6" />
+      <node id="5072681090433772979" at="48,51,52,9" concept="3" />
+      <scope id="5072681090433772979" at="49,46,51,49">
+        <var name="cpb" id="5072681090433772979" />
+      </scope>
+      <scope id="5072681090433772979" at="48,51,53,39" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="5072681090433772979" at="13,0,14,0" concept="7" trace="ActionForActuator" />
+      <node id="5072681090433772979" at="39,45,40,56" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="5072681090433772979" at="20,0,21,0" concept="2" trace="myConceptActionForActuator" />
+      <node id="5072681090433772979" at="68,51,69,42" concept="6" />
+      <node id="5072681090433772979" at="136,75,137,161" concept="5" />
+      <node id="5072681090433772979" at="137,161,138,33" concept="1" />
+      <node id="5072681090433772979" at="138,33,139,106" concept="1" />
+      <node id="5072681090433772979" at="139,106,140,96" concept="1" />
+      <node id="5072681090433772979" at="140,96,141,17" concept="1" />
+      <node id="5072681090433772982" at="141,17,142,172" concept="1" />
+      <node id="5072681090433772979" at="142,172,143,22" concept="6" />
+      <node id="5072681090433772979" at="136,0,145,0" concept="8" trace="createDescriptorForActionForActuator#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="5072681090433772979" at="68,51,69,42" />
+      <scope id="5072681090433772979" at="136,75,143,22">
+        <var name="b" id="5072681090433772979" />
+      </scope>
+      <scope id="5072681090433772979" at="136,0,145,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5743974466822256391">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="5743974466822256391" at="17,0,18,0" concept="2" trace="props_Brick" />
+      <node id="5743974466822256391" at="75,34,76,76" concept="5" />
+      <node id="5743974466822256391" at="76,76,77,37" concept="1" />
+      <node id="5743974466822256391" at="78,9,79,27" concept="6" />
+      <node id="5743974466822256391" at="74,39,78,9" concept="3" />
+      <scope id="5743974466822256391" at="75,34,77,37">
+        <var name="cpb" id="5743974466822256391" />
+      </scope>
+      <scope id="5743974466822256391" at="74,39,79,27" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="5743974466822256391" at="17,0,18,0" concept="7" trace="Brick" />
+      <node id="5743974466822256391" at="43,42,44,44" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="5743974466822256391" at="24,0,25,0" concept="2" trace="myConceptBrick" />
+      <node id="5743974466822256391" at="76,39,77,30" concept="6" />
+      <node id="5743974466822256391" at="174,63,175,149" concept="5" />
+      <node id="5743974466822256391" at="175,149,176,33" concept="1" />
+      <node id="5743974466822256391" at="176,33,177,71" concept="1" />
+      <node id="5743974466822256391" at="177,71,178,96" concept="1" />
+      <node id="5743974466822256391" at="178,96,179,17" concept="1" />
+      <node id="5072681090435485101" at="179,17,180,110" concept="1" />
+      <node id="5743974466822256391" at="180,110,181,22" concept="6" />
+      <node id="5743974466822256391" at="174,0,183,0" concept="8" trace="createDescriptorForBrick#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="5743974466822256391" at="76,39,77,30" />
+      <scope id="5743974466822256391" at="174,63,181,22">
+        <var name="b" id="5743974466822256391" />
+      </scope>
+      <scope id="5743974466822256391" at="174,0,183,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5743974466822290406">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="5743974466822290406" at="30,0,31,0" concept="2" trace="props_Sensor" />
+      <node id="5743974466822290406" at="162,35,163,76" concept="5" />
+      <node id="5743974466822290406" at="163,76,164,35" concept="1" />
+      <node id="5743974466822290406" at="164,35,165,38" concept="1" />
+      <node id="5743974466822290406" at="166,9,167,28" concept="6" />
+      <node id="5743974466822290406" at="161,40,166,9" concept="3" />
+      <scope id="5743974466822290406" at="162,35,165,38">
+        <var name="cpb" id="5743974466822290406" />
+      </scope>
+      <scope id="5743974466822290406" at="161,40,167,28" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="5743974466822290406" at="30,0,31,0" concept="7" trace="Sensor" />
+      <node id="5743974466822290406" at="56,41,57,45" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="5743974466822290406" at="37,0,38,0" concept="2" trace="myConceptSensor" />
+      <node id="5743974466822290406" at="102,40,103,31" concept="6" />
+      <node id="5743974466822290406" at="295,64,296,150" concept="5" />
+      <node id="5743974466822290406" at="296,150,297,34" concept="1" />
+      <node id="5743974466822290406" at="297,34,298,105" concept="1" />
+      <node id="5743974466822290406" at="298,105,299,96" concept="1" />
+      <node id="5743974466822290406" at="299,96,300,17" concept="1" />
+      <node id="5743974466822290406" at="300,17,301,22" concept="1" />
+      <node id="5743974466822290406" at="301,22,302,22" concept="6" />
+      <node id="5743974466822290406" at="295,0,304,0" concept="8" trace="createDescriptorForSensor#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="5743974466822290406" at="102,40,103,31" />
+      <scope id="5743974466822290406" at="295,64,302,22">
+        <var name="b" id="5743974466822290406" />
+      </scope>
+      <scope id="5743974466822290406" at="295,0,304,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5743974466822507820">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="5743974466822507820" at="27,0,28,0" concept="2" trace="props_LogicalOperator" />
+      <node id="5743974466822507820" at="143,44,144,76" concept="5" />
+      <node id="5743974466822507820" at="144,76,145,47" concept="1" />
+      <node id="5743974466822507820" at="146,9,147,37" concept="6" />
+      <node id="5743974466822507820" at="142,49,146,9" concept="3" />
+      <scope id="5743974466822507820" at="143,44,145,47">
+        <var name="cpb" id="5743974466822507820" />
+      </scope>
+      <scope id="5743974466822507820" at="142,49,147,37" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="5743974466822507820" at="27,0,28,0" concept="7" trace="LogicalOperator" />
+      <node id="5743974466822507820" at="53,56,54,54" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="5743974466822507820" at="34,0,35,0" concept="2" trace="myConceptLogicalOperator" />
+      <node id="5743974466822507820" at="96,49,97,40" concept="6" />
+      <node id="5743974466822507820" at="267,73,268,159" concept="5" />
+      <node id="5743974466822507820" at="268,159,269,33" concept="1" />
+      <node id="5743974466822507820" at="269,33,270,117" concept="1" />
+      <node id="5743974466822507820" at="270,117,271,96" concept="1" />
+      <node id="5743974466822507820" at="271,96,272,17" concept="1" />
+      <node id="5743974466822594913" at="272,17,273,198" concept="1" />
+      <node id="5743974466822594915" at="273,198,274,199" concept="1" />
+      <node id="5743974466822507820" at="274,199,275,22" concept="6" />
+      <node id="5743974466822507820" at="267,0,277,0" concept="8" trace="createDescriptorForLogicalOperator#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="5743974466822507820" at="96,49,97,40" />
+      <scope id="5743974466822507820" at="267,73,275,22">
+        <var name="b" id="5743974466822507820" />
+      </scope>
+      <scope id="5743974466822507820" at="267,0,277,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5743974466822594918">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="5743974466822594918" at="15,0,16,0" concept="2" trace="props_And" />
+      <node id="5743974466822594918" at="61,32,62,76" concept="5" />
+      <node id="5743974466822594918" at="62,76,63,37" concept="1" />
+      <node id="5743974466822594918" at="63,37,64,35" concept="1" />
+      <node id="5743974466822594918" at="65,9,66,25" concept="6" />
+      <node id="5743974466822594918" at="60,37,65,9" concept="3" />
+      <scope id="5743974466822594918" at="61,32,64,35">
+        <var name="cpb" id="5743974466822594918" />
+      </scope>
+      <scope id="5743974466822594918" at="60,37,66,25" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="5743974466822594918" at="15,0,16,0" concept="7" trace="And" />
+      <node id="5743974466822594918" at="41,47,42,42" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="5743974466822594918" at="22,0,23,0" concept="2" trace="myConceptAnd" />
+      <node id="5743974466822594918" at="72,37,73,28" concept="6" />
+      <node id="5743974466822594918" at="154,61,155,147" concept="5" />
+      <node id="5743974466822594918" at="155,147,156,34" concept="1" />
+      <node id="5743974466822594918" at="156,34,157,115" concept="1" />
+      <node id="5743974466822594918" at="157,115,158,96" concept="1" />
+      <node id="5743974466822594918" at="158,96,159,17" concept="1" />
+      <node id="5743974466822594918" at="159,17,160,19" concept="1" />
+      <node id="5743974466822594918" at="160,19,161,22" concept="6" />
+      <node id="5743974466822594918" at="154,0,163,0" concept="8" trace="createDescriptorForAnd#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="5743974466822594918" at="72,37,73,28" />
+      <scope id="5743974466822594918" at="154,61,161,22">
+        <var name="b" id="5743974466822594918" />
+      </scope>
+      <scope id="5743974466822594918" at="154,0,163,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5743974466823962165">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="5743974466823962165" at="26,0,27,0" concept="2" trace="props_LogicalExpression" />
+      <node id="5743974466823962165" at="137,46,138,76" concept="5" />
+      <node id="5743974466823962165" at="138,76,139,49" concept="1" />
+      <node id="5743974466823962165" at="140,9,141,39" concept="6" />
+      <node id="5743974466823962165" at="136,51,140,9" concept="3" />
+      <scope id="5743974466823962165" at="137,46,139,49">
+        <var name="cpb" id="5743974466823962165" />
+      </scope>
+      <scope id="5743974466823962165" at="136,51,141,39" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="5743974466823962165" at="26,0,27,0" concept="7" trace="LogicalExpression" />
+      <node id="5743974466823962165" at="52,42,53,56" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="5743974466823962165" at="33,0,34,0" concept="2" trace="myConceptLogicalExpression" />
+      <node id="5743974466823962165" at="94,51,95,42" concept="6" />
+      <node id="5743974466823962165" at="260,75,261,161" concept="5" />
+      <node id="5743974466823962165" at="261,161,262,33" concept="1" />
+      <node id="5743974466823962165" at="262,33,263,96" concept="1" />
+      <node id="5743974466823962165" at="263,96,264,17" concept="1" />
+      <node id="5743974466823962165" at="264,17,265,22" concept="6" />
+      <node id="5743974466823962165" at="260,0,267,0" concept="8" trace="createDescriptorForLogicalExpression#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="5743974466823962165" at="94,51,95,42" />
+      <scope id="5743974466823962165" at="260,75,265,22">
+        <var name="b" id="5743974466823962165" />
+      </scope>
+      <scope id="5743974466823962165" at="260,0,267,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/5743974466823962243">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="5743974466823962243" at="29,0,30,0" concept="2" trace="props_Or" />
+      <node id="5743974466823962243" at="155,31,156,76" concept="5" />
+      <node id="5743974466823962243" at="156,76,157,36" concept="1" />
+      <node id="5743974466823962243" at="157,36,158,34" concept="1" />
+      <node id="5743974466823962243" at="159,9,160,24" concept="6" />
+      <node id="5743974466823962243" at="154,36,159,9" concept="3" />
+      <scope id="5743974466823962243" at="155,31,158,34">
+        <var name="cpb" id="5743974466823962243" />
+      </scope>
+      <scope id="5743974466823962243" at="154,36,160,24" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="5743974466823962243" at="29,0,30,0" concept="7" trace="Or" />
+      <node id="5743974466823962243" at="55,46,56,41" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="5743974466823962243" at="36,0,37,0" concept="2" trace="myConceptOr" />
+      <node id="5743974466823962243" at="100,36,101,27" concept="6" />
+      <node id="5743974466823962243" at="286,60,287,146" concept="5" />
+      <node id="5743974466823962243" at="287,146,288,34" concept="1" />
+      <node id="5743974466823962243" at="288,34,289,115" concept="1" />
+      <node id="5743974466823962243" at="289,115,290,96" concept="1" />
+      <node id="5743974466823962243" at="290,96,291,17" concept="1" />
+      <node id="5743974466823962243" at="291,17,292,18" concept="1" />
+      <node id="5743974466823962243" at="292,18,293,22" concept="6" />
+      <node id="5743974466823962243" at="286,0,295,0" concept="8" trace="createDescriptorForOr#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="5743974466823962243" at="100,36,101,27" />
+      <scope id="5743974466823962243" at="286,60,293,22">
+        <var name="b" id="5743974466823962243" />
+      </scope>
+      <scope id="5743974466823962243" at="286,0,295,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814830">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="6833034162690814830" at="16,0,17,0" concept="2" trace="props_App" />
+      <node id="6833034162690814830" at="68,32,69,76" concept="5" />
+      <node id="6833034162690814830" at="69,76,70,35" concept="1" />
+      <node id="6833034162690814830" at="70,35,71,35" concept="1" />
+      <node id="6833034162690814830" at="72,9,73,25" concept="6" />
+      <node id="6833034162690814830" at="67,37,72,9" concept="3" />
+      <scope id="6833034162690814830" at="68,32,71,35">
+        <var name="cpb" id="6833034162690814830" />
+      </scope>
+      <scope id="6833034162690814830" at="67,37,73,25" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="6833034162690814830" at="16,0,17,0" concept="7" trace="App" />
+      <node id="6833034162690814830" at="42,42,43,42" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="6833034162690814830" at="23,0,24,0" concept="2" trace="myConceptApp" />
+      <node id="6833034162690814830" at="74,37,75,28" concept="6" />
+      <node id="6833034162690814830" at="163,61,164,147" concept="5" />
+      <node id="6833034162690814830" at="164,147,165,33" concept="1" />
+      <node id="6833034162690814830" at="165,33,166,71" concept="1" />
+      <node id="6833034162690814830" at="166,71,167,76" concept="1" />
+      <node id="6833034162690814830" at="167,76,168,96" concept="1" />
+      <node id="6833034162690814830" at="168,96,169,17" concept="1" />
+      <node id="6833034162690814840" at="169,17,170,199" concept="1" />
+      <node id="6833034162690814841" at="170,199,171,199" concept="1" />
+      <node id="6833034162690814830" at="171,199,172,22" concept="6" />
+      <node id="6833034162690814830" at="163,0,174,0" concept="8" trace="createDescriptorForApp#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="6833034162690814830" at="74,37,75,28" />
+      <scope id="6833034162690814830" at="163,61,172,22">
+        <var name="b" id="6833034162690814830" />
+      </scope>
+      <scope id="6833034162690814830" at="163,0,174,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814832">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="6833034162690814832" at="14,0,15,0" concept="2" trace="props_Actuator" />
+      <node id="6833034162690814832" at="55,37,56,76" concept="5" />
+      <node id="6833034162690814832" at="56,76,57,40" concept="1" />
+      <node id="6833034162690814832" at="58,9,59,30" concept="6" />
+      <node id="6833034162690814832" at="54,42,58,9" concept="3" />
+      <scope id="6833034162690814832" at="55,37,57,40">
+        <var name="cpb" id="6833034162690814832" />
+      </scope>
+      <scope id="6833034162690814832" at="54,42,59,30" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="6833034162690814832" at="14,0,15,0" concept="7" trace="Actuator" />
+      <node id="6833034162690814832" at="40,56,41,47" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="6833034162690814832" at="21,0,22,0" concept="2" trace="myConceptActuator" />
+      <node id="6833034162690814832" at="70,42,71,33" concept="6" />
+      <node id="6833034162690814832" at="145,66,146,152" concept="5" />
+      <node id="6833034162690814832" at="146,152,147,33" concept="1" />
+      <node id="6833034162690814832" at="147,33,148,105" concept="1" />
+      <node id="6833034162690814832" at="148,105,149,96" concept="1" />
+      <node id="6833034162690814832" at="149,96,150,17" concept="1" />
+      <node id="6833034162690814832" at="150,17,151,24" concept="1" />
+      <node id="6833034162690814832" at="151,24,152,22" concept="6" />
+      <node id="6833034162690814832" at="145,0,154,0" concept="8" trace="createDescriptorForActuator#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="6833034162690814832" at="70,42,71,33" />
+      <scope id="6833034162690814832" at="145,66,152,22">
+        <var name="b" id="6833034162690814832" />
+      </scope>
+      <scope id="6833034162690814832" at="145,0,154,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814834">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="6833034162690814834" at="33,0,34,0" concept="2" trace="props_State" />
+      <node id="6833034162690814834" at="183,34,184,76" concept="5" />
+      <node id="6833034162690814834" at="184,76,185,35" concept="1" />
+      <node id="6833034162690814834" at="185,35,186,37" concept="1" />
+      <node id="6833034162690814834" at="187,9,188,27" concept="6" />
+      <node id="6833034162690814834" at="182,39,187,9" concept="3" />
+      <scope id="6833034162690814834" at="183,34,186,37">
+        <var name="cpb" id="6833034162690814834" />
+      </scope>
+      <scope id="6833034162690814834" at="182,39,188,27" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="6833034162690814834" at="33,0,34,0" concept="7" trace="State" />
+      <node id="6833034162690814834" at="59,53,60,44" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="6833034162690814834" at="40,0,41,0" concept="2" trace="myConceptState" />
+      <node id="6833034162690814834" at="108,39,109,30" concept="6" />
+      <node id="6833034162690814834" at="322,63,323,149" concept="5" />
+      <node id="6833034162690814834" at="323,149,324,34" concept="1" />
+      <node id="6833034162690814834" at="324,34,325,71" concept="1" />
+      <node id="6833034162690814834" at="325,71,326,96" concept="1" />
+      <node id="6833034162690814834" at="326,96,327,17" concept="1" />
+      <node id="6833034162690865667" at="327,17,328,116" concept="1" />
+      <node id="6833034162690814842" at="328,116,329,199" concept="1" />
+      <node id="1094228618062899345" at="329,199,330,202" concept="1" />
+      <node id="6833034162690814834" at="330,202,331,21" concept="1" />
+      <node id="6833034162690814834" at="331,21,332,22" concept="6" />
+      <node id="6833034162690814834" at="322,0,334,0" concept="8" trace="createDescriptorForState#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="6833034162690814834" at="108,39,109,30" />
+      <scope id="6833034162690814834" at="322,63,332,22">
+        <var name="b" id="6833034162690814834" />
+      </scope>
+      <scope id="6833034162690814834" at="322,0,334,0" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814837">
+    <file name="EnumerationDescriptor_SIGNAL.java">
+      <node id="6833034162690814837" at="14,41,15,166" concept="9" />
+      <node id="6833034162690814838" at="18,0,19,0" concept="2" trace="myMember_HIGH_0" />
+      <node id="6833034162690814839" at="19,0,20,0" concept="2" trace="myMember_LOW_0" />
+      <node id="6833034162690814837" at="21,0,22,0" concept="2" trace="myIndex" />
+      <node id="6833034162690814837" at="22,0,23,0" concept="2" trace="myMembers" />
+      <node id="6833034162690814837" at="26,62,27,27" concept="6" />
+      <node id="6833034162690814837" at="32,68,33,21" concept="6" />
+      <node id="6833034162690814837" at="39,29,40,18" concept="6" />
+      <node id="6833034162690814838" at="43,18,44,31" concept="6" />
+      <node id="6833034162690814839" at="45,17,46,30" concept="6" />
+      <node id="6833034162690814837" at="47,5,48,16" concept="6" />
+      <node id="6833034162690814837" at="53,73,54,39" concept="5" />
+      <node id="6833034162690814837" at="55,22,56,18" concept="6" />
+      <node id="6833034162690814837" at="57,5,58,32" concept="6" />
+      <node id="6833034162690814837" at="14,0,17,0" concept="0" trace="EnumerationDescriptor_SIGNAL#()V" />
+      <node id="6833034162690814837" at="38,88,41,5" concept="3" />
+      <node id="6833034162690814837" at="54,39,57,5" concept="3" />
+      <node id="6833034162690814837" at="24,0,29,0" concept="4" trace="getDefault#()Ljetbrains/mps/smodel/runtime/EnumerationDescriptor/MemberDescriptor;" />
+      <node id="6833034162690814837" at="30,0,35,0" concept="4" trace="getMembers#()Ljava/util/List;" />
+      <node id="6833034162690814837" at="41,5,47,5" concept="10" />
+      <node id="6833034162690814837" at="51,0,60,0" concept="4" trace="getMember#(J)Ljetbrains/mps/smodel/runtime/EnumerationDescriptor/MemberDescriptor;" />
+      <node id="6833034162690814837" at="36,0,50,0" concept="4" trace="getMember#(Ljava/lang/String;)Ljetbrains/mps/smodel/runtime/EnumerationDescriptor/MemberDescriptor;" />
+      <scope id="6833034162690814837" at="14,41,15,166" />
+      <scope id="6833034162690814837" at="26,62,27,27" />
+      <scope id="6833034162690814837" at="32,68,33,21" />
+      <scope id="6833034162690814837" at="39,29,40,18" />
+      <scope id="6833034162690814838" at="43,18,44,31" />
+      <scope id="6833034162690814839" at="45,17,46,30" />
+      <scope id="6833034162690814837" at="55,22,56,18" />
+      <scope id="6833034162690814837" at="14,0,17,0" />
+      <scope id="6833034162690814837" at="24,0,29,0" />
+      <scope id="6833034162690814837" at="30,0,35,0" />
+      <scope id="6833034162690814837" at="53,73,58,32">
+        <var name="index" id="6833034162690814837" />
+      </scope>
+      <scope id="6833034162690814837" at="51,0,60,0">
+        <var name="idValue" id="6833034162690814837" />
+      </scope>
+      <scope id="6833034162690814837" at="38,88,48,16" />
+      <scope id="6833034162690814837" at="36,0,50,0">
+        <var name="memberName" id="6833034162690814837" />
+      </scope>
+      <unit id="6833034162690814837" at="12,0,61,0" name="ArduinoML.structure.EnumerationDescriptor_SIGNAL" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="6833034162690814837" at="44,0,45,0" concept="2" trace="myEnumerationSIGNAL" />
+    </file>
+  </root>
+  <root nodeRef="r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/6833034162690814843">
+    <file name="ConceptPresentationAspectImpl.java">
+      <node id="6833034162690814843" at="12,0,13,0" concept="2" trace="props_Action" />
+      <node id="6833034162690814843" at="43,35,44,76" concept="5" />
+      <node id="6833034162690814843" at="44,76,45,38" concept="1" />
+      <node id="6833034162690814843" at="46,9,47,28" concept="6" />
+      <node id="6833034162690814843" at="42,40,46,9" concept="3" />
+      <scope id="6833034162690814843" at="43,35,45,38">
+        <var name="cpb" id="6833034162690814843" />
+      </scope>
+      <scope id="6833034162690814843" at="42,40,47,28" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <node id="6833034162690814843" at="12,0,13,0" concept="7" trace="Action" />
+      <node id="6833034162690814843" at="38,116,39,45" concept="1" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <node id="6833034162690814843" at="19,0,20,0" concept="2" trace="myConceptAction" />
+      <node id="6833034162690814843" at="66,40,67,31" concept="6" />
+      <node id="6833034162690814843" at="128,64,129,150" concept="5" />
+      <node id="6833034162690814843" at="129,150,130,33" concept="1" />
+      <node id="6833034162690814843" at="130,33,131,96" concept="1" />
+      <node id="6833034162690814843" at="131,96,132,17" concept="1" />
+      <node id="6833034162690814843" at="132,17,133,22" concept="1" />
+      <node id="6833034162690814843" at="133,22,134,22" concept="6" />
+      <node id="6833034162690814843" at="128,0,136,0" concept="8" trace="createDescriptorForAction#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="6833034162690814843" at="66,40,67,31" />
+      <scope id="6833034162690814843" at="128,64,134,22">
+        <var name="b" id="6833034162690814843" />
+      </scope>
+      <scope id="6833034162690814843" at="128,0,136,0" />
+    </file>
+  </root>
+</debug-info>
+

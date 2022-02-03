@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <uses language="l:2e3cba7b-5084-4845-b5f4-2a0a99894cca:ArduinoML" />
+  <uses module="be2af039-3aef-4d2a-98d7-19f3c0ac4333(ArduinoML.runtime)" kind="rt" />
+</dependenciesRoot>
+
