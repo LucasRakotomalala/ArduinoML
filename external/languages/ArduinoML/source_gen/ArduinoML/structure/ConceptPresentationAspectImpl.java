@@ -18,8 +18,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BrickMessage;
   private ConceptPresentation props_ClearDisplay;
   private ConceptPresentation props_Delay;
-  private ConceptPresentation props_DisplayBrick;
-  private ConceptPresentation props_DisplayMessage;
   private ConceptPresentation props_DisplayOnLCD;
   private ConceptPresentation props_IsSignal;
   private ConceptPresentation props_LCD;
@@ -98,20 +96,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Delay = cpb.create();
         }
         return props_Delay;
-      case LanguageConceptSwitch.DisplayBrick:
-        if (props_DisplayBrick == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("display brick");
-          props_DisplayBrick = cpb.create();
-        }
-        return props_DisplayBrick;
-      case LanguageConceptSwitch.DisplayMessage:
-        if (props_DisplayMessage == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("display message");
-          props_DisplayMessage = cpb.create();
-        }
-        return props_DisplayMessage;
       case LanguageConceptSwitch.DisplayOnLCD:
         if (props_DisplayOnLCD == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

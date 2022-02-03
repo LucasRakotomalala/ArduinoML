@@ -25,8 +25,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptBrickMessage = createDescriptorForBrickMessage();
   /*package*/ final ConceptDescriptor myConceptClearDisplay = createDescriptorForClearDisplay();
   /*package*/ final ConceptDescriptor myConceptDelay = createDescriptorForDelay();
-  /*package*/ final ConceptDescriptor myConceptDisplayBrick = createDescriptorForDisplayBrick();
-  /*package*/ final ConceptDescriptor myConceptDisplayMessage = createDescriptorForDisplayMessage();
   /*package*/ final ConceptDescriptor myConceptDisplayOnLCD = createDescriptorForDisplayOnLCD();
   /*package*/ final ConceptDescriptor myConceptIsSignal = createDescriptorForIsSignal();
   /*package*/ final ConceptDescriptor myConceptLCD = createDescriptorForLCD();
@@ -56,7 +54,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionForActuator, myConceptActuator, myConceptAnd, myConceptApp, myConceptBrick, myConceptBrickMessage, myConceptClearDisplay, myConceptDelay, myConceptDisplayBrick, myConceptDisplayMessage, myConceptDisplayOnLCD, myConceptIsSignal, myConceptLCD, myConceptLogicalExpression, myConceptLogicalOperator, myConceptMessage, myConceptOr, myConceptSensor, myConceptSignalAction, myConceptSignalActuator, myConceptState, myConceptStringMessage, myConceptTransition);
+    return Arrays.asList(myConceptAction, myConceptActionForActuator, myConceptActuator, myConceptAnd, myConceptApp, myConceptBrick, myConceptBrickMessage, myConceptClearDisplay, myConceptDelay, myConceptDisplayOnLCD, myConceptIsSignal, myConceptLCD, myConceptLogicalExpression, myConceptLogicalOperator, myConceptMessage, myConceptOr, myConceptSensor, myConceptSignalAction, myConceptSignalActuator, myConceptState, myConceptStringMessage, myConceptTransition);
   }
 
   @Override
@@ -81,10 +79,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptClearDisplay;
       case LanguageConceptSwitch.Delay:
         return myConceptDelay;
-      case LanguageConceptSwitch.DisplayBrick:
-        return myConceptDisplayBrick;
-      case LanguageConceptSwitch.DisplayMessage:
-        return myConceptDisplayMessage;
       case LanguageConceptSwitch.DisplayOnLCD:
         return myConceptDisplayOnLCD;
       case LanguageConceptSwitch.IsSignal:
@@ -206,26 +200,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/4652155511397604325");
     b.version(2);
     b.property("millis", 0x408fc6ca18badbe6L).type(PrimitiveTypeId.INTEGER).origin("4652155511397604326").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForDisplayBrick() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "DisplayBrick", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c75861115dL);
-    b.class_(false, false, false);
-    b.super_("ArduinoML.structure.ActionForActuator", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c89356256db3L);
-    b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3994557386217034077");
-    b.version(2);
-    b.associate("brick", 0x4665c8935638b7ebL).target(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4fb6b2583ddab707L).optional(false).origin("5072681090435037163").done();
-    b.alias("display brick");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForDisplayMessage() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "DisplayMessage", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x376f84c758611158L);
-    b.class_(false, false, false);
-    b.super_("ArduinoML.structure.ActionForActuator", 0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL, 0x4665c89356256db3L);
-    b.origin("r:0b8baeac-fdc0-4209-befa-dbc848c21b02(ArduinoML.structure)/3994557386217034072");
-    b.version(2);
-    b.property("message", 0x376f84c75861115bL).type(PrimitiveTypeId.STRING).origin("3994557386217034075").done();
-    b.alias("display message");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDisplayOnLCD() {

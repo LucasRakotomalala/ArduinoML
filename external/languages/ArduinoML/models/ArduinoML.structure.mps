@@ -232,29 +232,6 @@
     <property role="TrG5h" value="SignalActuator" />
     <ref role="1TJDcQ" node="5VjO5SPiRdK" resolve="Actuator" />
   </node>
-  <node concept="1TIwiD" id="3tJxctooh5o">
-    <property role="EcuMT" value="3994557386217034072" />
-    <property role="TrG5h" value="DisplayMessage" />
-    <property role="34LRSv" value="display message" />
-    <ref role="1TJDcQ" node="4p_M9dm9mQN" resolve="ActionForActuator" />
-    <node concept="1TJgyi" id="3tJxctooh5r" role="1TKVEl">
-      <property role="IQ2nx" value="3994557386217034075" />
-      <property role="TrG5h" value="message" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="3tJxctooh5t">
-    <property role="EcuMT" value="3994557386217034077" />
-    <property role="TrG5h" value="DisplayBrick" />
-    <property role="34LRSv" value="display brick" />
-    <ref role="1TJDcQ" node="4p_M9dm9mQN" resolve="ActionForActuator" />
-    <node concept="1TJgyj" id="4p_M9dmebvF" role="1TKVEi">
-      <property role="IQ2ns" value="5072681090435037163" />
-      <property role="20kJfa" value="brick" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="4YQG_wXQFs7" resolve="Brick" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="3tJxctoo$oZ">
     <property role="EcuMT" value="3994557386217113151" />
     <property role="TrG5h" value="SignalAction" />

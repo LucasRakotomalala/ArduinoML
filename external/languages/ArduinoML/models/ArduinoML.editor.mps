@@ -166,8 +166,8 @@
             </node>
           </node>
         </node>
-        <node concept="3F0ifn" id="2sNVXaz1fJ5" role="3EZMnx">
-          <property role="3F0ifm" value="evaluate to" />
+        <node concept="3F0ifn" id="e8RknGsYeW" role="3EZMnx">
+          <property role="3F0ifm" value="evaluates to" />
         </node>
         <node concept="3F0A7n" id="2sNVXaz1fIp" role="3EZMnx">
           <ref role="1NtTu8" to="hs33:2sNVXaz1fHP" resolve="signalToEval" />
@@ -298,60 +298,6 @@
       <node concept="l2Vlx" id="1LI9UnkIBxk" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="1LI9UnkIBBi">
-    <ref role="1XX52x" to="hs33:3tJxctooh5o" resolve="DisplayMessage" />
-    <node concept="3EZMnI" id="1LI9UnkIBBk" role="2wV5jI">
-      <node concept="3F0ifn" id="1LI9UnkIBBu" role="3EZMnx">
-        <property role="3F0ifm" value="display" />
-      </node>
-      <node concept="3F0A7n" id="1LI9UnkIBB$" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:3tJxctooh5r" resolve="message" />
-      </node>
-      <node concept="3F0ifn" id="1LI9UnkIBBR" role="3EZMnx">
-        <property role="3F0ifm" value="on" />
-      </node>
-      <node concept="1iCGBv" id="1LI9UnkIBC1" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:4p_M9dm9mQQ" resolve="actuator" />
-        <node concept="1sVBvm" id="1LI9UnkIBC3" role="1sWHZn">
-          <node concept="3F0A7n" id="1LI9UnkIBCd" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="l2Vlx" id="1LI9UnkIBBn" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="1LI9UnkIBCI">
-    <ref role="1XX52x" to="hs33:3tJxctooh5t" resolve="DisplayBrick" />
-    <node concept="3EZMnI" id="1LI9UnkIBCN" role="2wV5jI">
-      <node concept="3F0ifn" id="1LI9UnkIBCU" role="3EZMnx">
-        <property role="3F0ifm" value="display value of" />
-      </node>
-      <node concept="1iCGBv" id="1LI9UnkIBD0" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:4p_M9dmebvF" resolve="brick" />
-        <node concept="1sVBvm" id="1LI9UnkIBD2" role="1sWHZn">
-          <node concept="3F0A7n" id="1LI9UnkIBDa" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="1LI9UnkIBDq" role="3EZMnx">
-        <property role="3F0ifm" value="on" />
-      </node>
-      <node concept="1iCGBv" id="1LI9UnkIBDC" role="3EZMnx">
-        <ref role="1NtTu8" to="hs33:4p_M9dm9mQQ" resolve="actuator" />
-        <node concept="1sVBvm" id="1LI9UnkIBDE" role="1sWHZn">
-          <node concept="3F0A7n" id="1LI9UnkIBDQ" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="l2Vlx" id="1LI9UnkIBCQ" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="1LI9UnkIBE0">
     <ref role="1XX52x" to="hs33:3tJxctoo$oZ" resolve="SignalAction" />
     <node concept="3EZMnI" id="1LI9UnkIBE2" role="2wV5jI">
@@ -365,7 +311,7 @@
         </node>
       </node>
       <node concept="3F0ifn" id="1LI9UnkIBEw" role="3EZMnx">
-        <property role="3F0ifm" value="become" />
+        <property role="3F0ifm" value="becomes" />
       </node>
       <node concept="3F0A7n" id="1LI9UnkIBEG" role="3EZMnx">
         <ref role="1NtTu8" to="hs33:3tJxctoo$rg" resolve="signal" />

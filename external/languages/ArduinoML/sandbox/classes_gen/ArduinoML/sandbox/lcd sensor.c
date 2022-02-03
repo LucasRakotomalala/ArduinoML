@@ -11,7 +11,7 @@ void state_display_sensor();
 
 // Declaring available actuators
 LiquidCrystal lcd(2,3,4,5,6,7,8);
-#define button 5
+#define button 10
 
 // Declaring states
 long time = 0; long debounce = 200;             // Debouncing mechanism initialisation
@@ -24,7 +24,7 @@ void state_display_sensor() {
     char val[2];
     strcpy(str, "button");
     strcat(str, ":=");
-    sprintf(val, "%d", digitalRead(5));
+    sprintf(val, "%d", digitalRead(10));
     strcat(str, val);
     lcd.print(str);
   }

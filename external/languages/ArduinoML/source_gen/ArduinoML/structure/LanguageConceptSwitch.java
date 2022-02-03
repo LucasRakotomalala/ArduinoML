@@ -18,21 +18,19 @@ public final class LanguageConceptSwitch {
   public static final int BrickMessage = 6;
   public static final int ClearDisplay = 7;
   public static final int Delay = 8;
-  public static final int DisplayBrick = 9;
-  public static final int DisplayMessage = 10;
-  public static final int DisplayOnLCD = 11;
-  public static final int IsSignal = 12;
-  public static final int LCD = 13;
-  public static final int LogicalExpression = 14;
-  public static final int LogicalOperator = 15;
-  public static final int Message = 16;
-  public static final int Or = 17;
-  public static final int Sensor = 18;
-  public static final int SignalAction = 19;
-  public static final int SignalActuator = 20;
-  public static final int State = 21;
-  public static final int StringMessage = 22;
-  public static final int Transition = 23;
+  public static final int DisplayOnLCD = 9;
+  public static final int IsSignal = 10;
+  public static final int LCD = 11;
+  public static final int LogicalExpression = 12;
+  public static final int LogicalOperator = 13;
+  public static final int Message = 14;
+  public static final int Or = 15;
+  public static final int Sensor = 16;
+  public static final int SignalAction = 17;
+  public static final int SignalActuator = 18;
+  public static final int State = 19;
+  public static final int StringMessage = 20;
+  public static final int Transition = 21;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x2e3cba7b50844845L, 0xb5f42a0a99894ccaL);
@@ -45,8 +43,6 @@ public final class LanguageConceptSwitch {
     builder.put(0x32c5a74c1bdcf0eaL, BrickMessage);
     builder.put(0x4665c8935618c60bL, ClearDisplay);
     builder.put(0x408fc6ca18badbe5L, Delay);
-    builder.put(0x376f84c75861115dL, DisplayBrick);
-    builder.put(0x376f84c758611158L, DisplayMessage);
     builder.put(0x32c5a74c1bdcf0dbL, DisplayOnLCD);
     builder.put(0x2733efd2a304fb70L, IsSignal);
     builder.put(0x376f84c758604cb4L, LCD);

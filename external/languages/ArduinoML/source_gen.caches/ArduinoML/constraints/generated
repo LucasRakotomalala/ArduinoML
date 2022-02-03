@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-2sgfgg0vms79tsxx7v2on0bq367486n">
-  <files names="BrickMessage_Constraints.java:Brick_Constraints.java:ConstraintsAspectDescriptor.java:DisplayMessage_Constraints.java:Sensor_Constraints.java:StringMessage_Constraints.java:Transition_Constraints.java" />
+<product version="3" modelHash="-8sl5qq5cblsp9tfnop5v09uszei3m47">
+  <files names="BrickMessage_Constraints.java:Brick_Constraints.java:ConstraintsAspectDescriptor.java:Sensor_Constraints.java:StringMessage_Constraints.java:Transition_Constraints.java" />
 </product>
 

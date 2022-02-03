@@ -19,6 +19,8 @@ long time = 0; long debounce = 200;             // Debouncing mechanism initiali
 void state_hello_world() {
     lcd.setCursor(0, 0);
   lcd.print("Hello World");
+  lcd.setCursor(0, 1);
+  lcd.print("Bye World");
 
   boolean guard = millis() - time > debounce;  // debounce guard
 
