@@ -13,11 +13,11 @@ Langage utilisé : **Groovy**
 
 ### Scénarios avancés
 
-- *Specifying Execution Frequency*
-- *Remote Communication*
-- *Exception Throwing*
-- *Supporting the LCD screen*
-- *Handling Analogical Bricks*
+- [ ] Specifying Execution Frequency
+- [ ] Remote Communication
+- [ ] Exception Throwing
+- [x] Supporting the LCD screen
+- [ ] Handling Analogical Bricks
 
 ## DSL externe
 
@@ -25,15 +25,15 @@ Langage utilisé : **MPS**
 
 ### Scénarios basiques
 
-- [ ] Scénario 1
-- [ ] Scénario 2
-- [ ] Scénario 3
-- [ ] Scénario 4
+- [x] Scénario 1
+- [x] Scénario 2
+- [x] Scénario 3
+- [x] Scénario 4
 
 ### Scénarios avancés
 
-- *Specifying Execution Frequency*
-- *Remote Communication*
-- *Exception Throwing*
-- *Supporting the LCD screen*
-- *Handling Analogical Bricks*
+- [ ] Specifying Execution Frequency
+- [ ] Remote Communication
+- [ ] Exception Throwing
+- [x] Supporting the LCD screen
+- [ ] Handling Analogical Bricks
